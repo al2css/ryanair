@@ -1,15 +1,20 @@
-var RyanairApp = angular.module('RyanairApp', ['ngRoute', 'ngTouch', 'ngSanitize', 'ui.bootstrap']);
+var RyanairApp = angular.module('RyanairApp', ['ngRoute', 'ngTouch', 'ngSanitize']);
 
 RyanairApp.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider
-            .when('/home', {
-                controller: 'HomeCtrl',
-                templateUrl: 'app/partials/_home.html',
-                controllerAs: 'home'
+            .when('/destinations', {
+                controller: 'DestinationsCtrl',
+                templateUrl: 'app/partials/_destinations.html',
+                controllerAs: 'destinations'
+            })
+            .when('/map', {
+                controller: 'MapCtrl',
+                templateUrl: 'app/partials/_map.html',
+                controllerAs: 'map'
             })
             .otherwise({
-                redirectTo: '/home'
+                redirectTo: '/destinations'
             });
     }
 ]);

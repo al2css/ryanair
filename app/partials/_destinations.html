@@ -1,0 +1,17 @@
+<div class="menu" id="menu" data-ng-include="'app/partials/_menu.html'"></div>
+
+<div class="inside_page destinations"> 
+	<section class="title"><h1>{{ destinations.title }}</h1></section>
+	
+	<div class="clear"></div>	 
+
+	 <input type="text" class="inbox__search" ng-model="destinations.search" value="" placeholder="Search by Country or City ">
+
+	<div class="clear"></div>	 
+
+	<div id="class" ng-repeat="airport in destinations.airports | orderBy : 'name' | filter: destinations.search">
+         <a href="javascript:;" ng-click="openInfoWindow($event, airport)">{{airport.name}}</a>
+    </div>
+
+	<div class="clear"></div>
+</div>
