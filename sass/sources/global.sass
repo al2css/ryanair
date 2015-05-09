@@ -1,0 +1,758 @@
+// Main application stylesheet file
+// @version 1.0
+
+$max_width: 1400px
+$max_width2: 990px
+$min_width: 320px
+
+// breakpoints
+$phone: 767px !default
+$tablet: 1024px !default
+$pc: 1280px !default
+$pc_huge: 1450px !default
+
+$menu_orange: #f39c12
+$menu_green: #00ae4a
+$menu_red: #c0392b
+$menu_blue: #2c3e50
+$menu_gray: #898787
+$menu_light_blue: #f39c12
+
+$gray_title: #353535
+
+
+$border_color: #ddd
+
+$default_red: #c0392b
+
+$draggable_width: 100
+$draggable_height: 100
+$dropzone_height: 700
+
+// IMPORTS ===============================
+@import common/base.sass
+@import common/reset.sass
+
+// Modules
+.mobileonly
+	:display none
+	:visibility hidden
+.hide
+	:display none
+	:visibility hidden
+	+opacity(0)
+.hidden
+	:visibility hidden
+
+.clearfix:before,
+.clearfix:after
+	:content " "
+	:display table
+.clearfix:after 
+	:clear both
+.clearfix
+	:zoom 1
+	:*zoom 1
+.clear
+	:clear both
+	:display block
+	:width 100%
+	:line-height 0px
+	:height 0px
+	:padding 0 !important
+	:margin 0 !important
+.bold, strong
+	:font-weight 700 !important
+.center
+	:text-align center !important
+.caps
+	:text-transform uppercase
+
+.muiemica
+	:display flex
+	:float left
+
+html
+	:width 100%
+	:height 100%
+
+body
+	// :font-family $open-sans
+	// :font-family $varela-round
+	:font-family $lato
+	:font-weight 300
+	:color #231f20
+	:background-color #FFF
+	:font-size 100%
+	:height 100%
+	:width 100%
+	+media-query(phone)
+		:font-size 80%
+	+media-query(tablet)
+		:font-size 90%
+	+media-query(pc)
+		:font-size 100%
+	+media-query(pc_huge)
+		:font-size 100%
+
+a
+	:color #231f20
+	:outline none
+	+media-query(phone)
+
+	&:hover, &:visited, &:focus, &:active
+		:outline none
+
+img
+	:max-width 100%
+	:vertical-align middle
+	:border 0
+	:outline none
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
+	// :background-color white !important
+	:background-color rgb(250, 255, 189) !important
+
+textarea
+	:resize none
+
+form
+	:width 100%
+	:float left
+	:text-align left
+	:padding 0
+	:margin 0
+	:display block
+	:border 0px none
+
+textarea, input[type="text"], input[type="number"], input[type="password"], input[type="submit"], input[type="email"], input[type="tel"], button, , input[type="file"], input[type="number"], input[type="url"]
+	:outline none !important
+
+a
+	:text-decoration none
+	:outline none
+	+unselectable
+	:color #1d1d1b
+
+h1,h2,h3,h4,h5,h6,p
+	:line-height 150%
+	:margin-bottom 10px
+	:width 100%
+	:display block
+	:float left
+	:text-align left
+	:font-weight 300
+
+h1
+	:margin-bottom 10px
+
+ul, ul li
+	:list-style none
+
+// *, *::before, *::after
+	// +border_box
+
+
+html, body, button 
+	:-webkit-font-smoothing antialiased
+	:font-smoothing antialiased
+
+button
+	:border 0px none
+	:outline none
+	:cursor pointer
+
+input[type="submit"]
+	:outline none
+	:cursor pointer
+
+div
+	:display block
+	:text-align left
+	:padding 0
+	:margin 0
+
+body
+	&.home
+		// +transition(all 0.2s ease-in)
+		// :background
+		// 	:color white
+		// 	:image image_url(unquote("bg_home_day.jpg"))
+		// 	:repeat no-repeat
+		// 	:position center center
+		// 	:attachment fixed
+		// 	:size cover
+		// :-webkit-background-size cover
+		// :-moz-background-size cover
+		// :-o-background-size cover
+		// :background-size cover
+		// +media-query(phone)
+		// 	:background-image none
+
+		// &.day
+		// 	:background
+		// 		:image image_url(unquote("bg_home_day.jpg"))
+		// 	+media-query(phone)
+		// 		:background-image none
+
+		// &.night
+		// 	:background
+		// 		:image image_url(unquote("bg_home_night.jpg"))
+		// 	+media-query(phone)
+		// 		:background-image none
+
+		// #page
+		// 	:height 100%
+		// 	:background
+		// 		:color transparent
+		// 		:image none
+
+		// 	.wrapper
+		// 		:position absolute
+		// 		:left 0
+		// 		:bottom 0
+		// 		+media-query(phone)
+		// 			:position relative
+		// 			:bottom auto
+		// 			:left auto
+		// 		+media-query(tablet)
+		// 			:bottom 0
+		// 			:margin-bottom 0
+		// 		+media-query(pc)
+		// 			:bottom 0%
+		// 			:margin-bottom 0
+		// 		+media-query(pc_huge)
+		// 			:bottom 4%
+		// 			:margin-bottom 0
+
+	#site
+		:width 100%
+		:height 100%
+		:min-width $min_width !important
+		:clear both
+		:padding 0
+		:margin 0 auto
+		:display block
+		// :background
+		// 	:color transparent
+		// 	:image image_url(unquote("accelaero_aeroline_bg.jpg"))
+		// 	:repeat no-repeat
+		// 	:position 80% top
+		:position relative
+		:z-index 1000
+		:-webkit-backface-visibility hidden
+		:-moz-backface-visibility hidden
+		:-ms-backface-visibility hidden
+		:-o-backface-visibility hidden
+		:backface-visibility hidden
+		+unselectable
+
+		.title
+			:float left
+			:width 100%
+			:padding 0
+			:margin 20px 0
+			:clear both
+			+border_box
+			:padding 0 10px
+
+		.content
+			:float left
+			:width 100%
+			:clear both
+			:padding 0
+			:margin 0
+			:display block
+			// +transition(all 0.2s ease-in)
+			
+			.flightsRoadmap
+				:float left
+				:width 100%
+				:clear both
+				:margin 0 0 20px 0
+				+border_box
+				:padding 0px
+				:background
+					:color rgba(237, 186, 198, 0.4)
+				:height 80px
+				:position relative
+
+				.timespan
+					:position absolute
+					:top 0
+					:left 0
+					:width 100%
+					:height 100%
+					:z-index 1
+					:text-align left
+
+					&> div
+						:float left
+						:text-align left
+						:padding 0
+						:margin 0
+						:display inline-block
+						:height 100%
+						:position relative
+						:width 8.3333%
+						:background
+							:color transparent
+
+						&.current_hour
+							:background
+								:color rgba(190, 89, 27, 0.1)
+
+						&> span
+							:position absolute
+							:top 3px
+							:left 10px
+							:font-weight 300 !important
+							:font-size 0.7em
+							:color black
+							:color rgba(0,0,0,0.6)
+							:text-shadow 0px 1px 0px rgba(255, 255, 255, 0.8)
+						
+						&> q
+							:display block
+							:position absolute
+							:width 1px
+							:height 100%
+							:left 0
+							:top 0
+							:bottom 0
+							:box-shadow 1px 0px 0px rgba(255,255,255,0.2)
+							:background
+								:color rgba(0,0,0,0.1)
+							+unselectable
+
+				.roadmap
+					:float left
+					// :position relative
+					:position absolute
+					:bottom 0px
+					:left 0px
+					:z-index 10
+					:text-align left
+					:padding 25px 0 0 0
+					:margin 0
+					:height 100%
+					:width auto
+					+prepare_animation
+					:-webkit-animation-name bounceIn
+					:-moz-animation-name bounceIn
+					:-ms-animation-name bounceIn
+					:-o-animation-name bounceIn
+					:animation-name bounceIn
+					// :-webkit-animation-delay 1s
+					// :-moz-animation-delay 1s
+					// :-ms-animation-delay 1s
+					// :-o-animation-delay 1s
+					// :animation-delay 1s
+					+border_box
+					@for $i from 1 through 24
+						&:nth-child(#{$i})
+							// :z-index 10 + (35 - $i)
+							// :top 45 - (5 * $i)px
+							:-webkit-animation-delay #{$i/10}s
+							:-moz-animation-delay #{$i/10}s
+							:-o-animation-delay #{$i/10}s
+							:-ms-animation-delay #{$i/10}s
+							:animation-delay #{$i/10}s
+
+							// &> h2
+								// :margin-top #{$i*5}px
+
+					&> q
+						:position absolute
+						:top 25px
+						:bottom 0px
+						:left 0px
+						:width 2px
+						:background
+							:color rgba(0,0,0,0.6)
+
+					&> h2
+						:margin 0
+						:font-size 0.48em
+						:font-weight 700
+						:padding 0 0 0 5px
+						:color black
+						:text-shadow 0px 1px 0px rgba(255, 255, 255, 0.8)
+
+						.tooltip
+							:width 250px !important
+
+						.tooltip-inner
+							:max-width 100% !important
+							:width auto !important
+							:text-shadow 0 0 0 rgba(0,0,0,0)
+
+			
+			.menu
+				:float left
+				:width 100%
+				:clear both
+				:margin 0 0 20px 0
+				+border_box
+				:padding 10px
+
+				.main_menu
+					:float left
+					:width 100%
+					:clear both
+					:padding 0
+					:margin 0
+					:text-align left
+
+					&> li
+						:display inline
+						:float left
+
+						&> a
+							:padding 10px
+							:display inline-block
+							:float left
+							:color black
+
+						&.current
+							&> a
+								:color red
+			
+			.inside_page, .login_page
+				:float left
+				:width 100%
+				:clear both
+				:padding 0
+				:margin 0
+				:display block
+				:background
+					:color rgb(219, 218, 218)
+				:position relative
+				:z-index 10
+				+prepare_animation
+				:-webkit-animation-name fadeInDown
+				:-moz-animation-name fadeInDown
+				:-ms-animation-name fadeInDown
+				:-o-animation-name fadeInDown
+				:animation-name fadeInDown
+
+				// my_flights
+				// .all_assigned_flights, .closest_flights, .all_available_flights, .flight_details
+				
+				&> div
+					:float left
+					:width 100%
+					:clear both
+					:padding 0
+					:margin 0
+					:text-align left
+					:position relative
+
+					&.error
+						+prepare_animation
+						:-webkit-animation-name bounceIn
+						:-moz-animation-name bounceIn
+						:-ms-animation-name bounceIn
+						:-o-animation-name bounceIn
+						:animation-name bounceIn
+						:background
+							:color red
+
+					&.module
+						&.directive
+
+							&> div
+								:float left
+								:width 100%
+								:clear both
+								:padding 0
+								:margin 0
+								:text-align left
+								:position relative
+
+								.search-bar
+									:float left
+									:width 100%
+									:clear both
+									:padding 0
+									:margin 0
+									:text-align left
+									:position relative
+
+									&> div
+										:float left
+										:position relative
+										:padding 0
+										:margin 0
+									
+										&.inbox__count
+											:float left
+											:width 80%
+
+										&.inbox__search__box
+											:float right
+											:width auto
+											:padding 0 20px
+
+
+								.inbox__list
+									&> li
+										:float left
+										:width 100%
+										:clear both
+										:width 100%
+										:margin 0 0 20px 0
+										:display block
+										:padding 20px
+										+border_box
+
+										&.unread
+											&> div
+												:font-weight 700
+												p
+													:font-weight 700
+
+										&> div
+											:float left
+											:position relative
+											:width 50%
+
+											&.inbox__list-info
+												:float left
+												:width 80%
+											&.inbox__list-actions
+												:float right
+												:width auto
+												:padding 0 20px
+
+										&.no-emails
+											:background
+												:color red
+
+
+					.flight, .flight_details
+						:float left
+						:width 25%
+						:padding 20px
+						+border_box
+						:text-align left
+						:margin 0
+						:position relative
+
+						h2, p
+							:float left
+							:text-align left
+							:padding 0
+							:margin 0 0 5px 0
+							:clear both
+							:width 100%
+							:font-size 1em
+
+						h2
+							:font-weight 300
+							:font-size 1.4em
+
+						p
+							&.size1
+								:margin-bottom 20px
+								:font-size 1.1em
+
+
+					.flight_details
+						:width 100%
+
+			
+
+			.login_page
+				:background
+					:color white
+					:text-align center
+
+	
+.advancedLoader
+	:display none
+	:display block
+	:width 60px
+	:height 60px
+	:position absolute
+	:z-index 1001
+	:top 50%
+	:left 50%
+	:margin -30px auto
+	:text-align center
+	:-webkit-animation rotate 2.0s infinite linear
+	:-moz-animation rotate 2.0s infinite linear
+	:-ms-animation rotate 2.0s infinite linear
+	:-o-animation rotate 2.0s infinite linear
+	:animation rotate 2.0s infinite linear
+	+unselectable
+	:cursor default
+
+	&:before,
+	&:after 
+		:content ''
+		:width 60%
+		:height 60%
+		:display inline-block
+		:position absolute
+		:top 0
+		:background-color $menu_red
+		+gradient($menu_red, $menu_red, unquote("noiz.png"))
+		+radius(100%)
+		:-webkit-animation bounceSmall 2.0s infinite ease-in-out
+		:-moz-animation bounceSmall 2.0s infinite ease-in-out
+		:-ms-animation bounceSmall 2.0s infinite ease-in-out
+		:-o-animation bounceSmall 2.0s infinite ease-in-out
+		:animation bounceSmall 2.0s infinite ease-in-out
+		
+
+	&:after 
+		:top auto
+		:bottom 0px
+		:-webkit-animation-delay -1s
+		:-moz-animation-delay -1s
+		:-ms-animation-delay -1s
+		:-o-animation-delay -1s
+		:animation-delay -1s
+
+
+
+.loading-overlay
+	:display block
+	:width 100%
+	:height 100%
+	:clear both
+	:position fixed
+	:z-index 4000
+	:top 0
+	:left 0
+	:right 0
+	:bottom 0
+	:background
+		:color rgba(0,0,0,0.5)
+
+
+	.loading-overlay-inner
+		:display table
+		:vertical-align middle
+		:text-align center
+		:position relative
+		:width 100%
+		:height 100%
+
+		.loading-overlay-contents
+			:display table-cell
+			:vertical-align middle
+			:padding 50px
+			:text-align center
+
+		.loading-overlay-body
+			:position relative
+			:display inline-block
+			:text-align center
+			:max-width 70%
+			:perspective 300px
+
+			&> strong
+				:margin 0 auto
+				:text-align center
+
+		.loading-overlay-symbol
+			:display block
+			:position absolute
+			:left 50%
+			:top 50%
+			:animation loading-overlay-animation-2d 4s infinite linear
+
+			&.csstransforms3d
+				:-webkit-animation block
+				:-webkit-transform-style preserve-3d
+				:-webkit-transform rotateZ(30deg)
+
+				.picto
+					:-webkit-animation loading-overlay-animation-3d 3s infinite linear
+
+
+		.picto, .picto-block
+			:position relative
+			:padding 0 15px
+
+			&:after
+				:position absolute
+				:top 50%
+				:left 50%
+				:margin-left -15px
+				:margin-top -15px
+				:font-family $swiss-piktos
+				:font-size 4em
+				:color #47423f
+				:content attr(data-icon)
+				:text-align left
+				:font-style normal
+				:font-weight normal
+				:font-variant normal
+				:text-transform none !important
+				:speak none
+				:display inline-block
+				:text-decoration none
+				:width 30px
+				:line-height 1em
+				:-webkit-font-smoothing antialiased
+
+
+		.picto
+			:display inline
+			:display -webkit-inline-box
+			:min-height 1ex
+			:max-height 1em
+			:letter-spacing 1ex
+			:text-decoration none
+			:padding 0
+
+			&:before
+				:content ''
+
+		.picto-block
+			:display inline-block
+			:vertical-align middle
+			:letter-spacing -1ex
+			:text-decoration none
+			:width 30px
+			:height 30px
+			:max-height none
+			:padding 0
+			+border_box
+
+		.picto-large
+			:padding 0 30px
+
+			&.after
+				:width 60px
+				:height 60px
+				:margin-left -30px
+				:margin-top -30px
+				:font-size 5em
+
+		.picto-gray:after
+			:color $menu_gray
+
+		.picto-orange:after
+			:color $menu_orange
+
+		.picto-blue:after
+			:color $menu_blue
+
+		.picto-green:after
+			:color $menu_green
+
+		.picto-red:after
+			:color $menu_red
+
+		.picto-white:after
+			:color white
+
+		// pictolists
+		.picto-flight:after
+			content: ""
+
+		

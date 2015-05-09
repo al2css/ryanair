@@ -1,0 +1,54 @@
+<div class="menu" id="menu" data-ng-include="'app/partials/_menu.html'"></div>
+
+<div class="inside_page available_flights"> 
+	<section class="title"><h1>Pick your flights for <strong>{{ availableFlights.flights.date * 1000 | date : format : timezone | uppercase }}</strong></h1></section>
+
+
+	<!-- Closest flights start -->
+	<div class="closest_flights error" ng-show="!availableFlights.flights.closest_flights.length">
+		<section class="title"><strong>No flights available!</strong></section>
+	</div>
+	<div class="closest_flights" ng-show="availableFlights.flights.closest_flights.length">
+		<section class="title"><strong>Closest flights</strong></section>
+
+		<div class="flight" ng-repeat="availableFlights in availableFlights.flights.closest_flights" title="" tooltip-placement="top" tooltip-html-unsafe="Departure: <b>{{ availableFlights.departing_time * 1000 | date:'MMM d, y HH:mm' }}</b> <br /> Arrival: <b>{{ availableFlights.landing_time * 1000 | date:'MMM d, y HH:mm' }}</b>">
+			<h2>{{ availableFlights.from_code }} - {{ availableFlights.to_code }} # {{ availableFlights.id }}</h2>
+			<p><strong>{{ availableFlights.flight_code }}</strong> landing to {{ availableFlights.to_code }} {{ availableFlights.landing_time * 1000 | date:'HH:mm' }}</p>
+			<p class="size1"><strong>Departing {{ availableFlights.departing_time * 1000 | date:'HH:mm' }}</strong></p>
+			<p><strong>{{ availableFlights.passenger_booked }}</strong> Passengers Booked</p>
+			<p><strong>{{ availableFlights.forecasted_bags }}</strong> Forecasted Bags</p>
+			<a href="javascript:;" title="Add to my flights" class="addtomy_flights_button" ng-click="addToMyFlights(availableFlights, $index, $parent.availableFlights.flights.closest_flights);">Add to my flights</a>
+			<div class="clear"></div>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+	<!-- Closest flights end -->
+
+	<!-- All available flights start -->
+	<div class="all_available_flights error" ng-show="!availableFlights.flights.all_flights.length">
+		<section class="title"><strong>No flights available!</strong></section>
+	</div>
+	<div class="all_available_flights" ng-show="availableFlights.flights.all_flights.length">
+		<section class="title"><strong>Available flights</strong> later today</section>
+
+		<!-- <div class="flight" ng-repeat="availableFlights in availableFlights.flights.all_flights | orderBy:'departing_time'"> -->
+		<div class="flight" ng-repeat="availableFlights in availableFlights.flights.all_flights" title="" tooltip-placement="top" tooltip-html-unsafe="Departure: <b>{{ availableFlights.departing_time * 1000 | date:'MMM d, y HH:mm' }}</b> <br /> Arrival: <b>{{ availableFlights.landing_time * 1000 | date:'MMM d, y HH:mm' }}</b>">
+			<h2>{{ availableFlights.from_code }} - {{ availableFlights.to_code }} # {{ availableFlights.id }}</h2>
+			<p><strong>{{ availableFlights.flight_code }}</strong> landing to {{ availableFlights.to_code }} {{ availableFlights.landing_time * 1000 | date:'HH:mm' }}</p>
+			<p class="size1"><strong>Departing {{ availableFlights.departing_time * 1000 | date:'HH:mm' }}</strong></p>
+			<p><strong>{{ availableFlights.passenger_booked }}</strong> Passengers Booked</p>
+			<p><strong>{{ availableFlights.forecasted_bags }}</strong> Forecasted Bags</p>
+			<a href="javascript:;" title="Add to my flights" class="addtomy_flights_button" ng-click="addToMyFlights(availableFlights, $index, $parent.availableFlights.flights.all_flights);">Add to my flights</a>
+			<div class="clear"></div>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+	<!-- All available flights end -->
+
+	<div class="clear"></div>
+</div>
+
+
+<div class="flightsRoadmap" id="flightsRoadmap" data-ng-include="'app/partials/_flightsRoadmap.html'"></div>

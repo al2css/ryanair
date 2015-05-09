@@ -1,0 +1,25 @@
+{
+  "name": "weight-balance",
+  "version": "0.1.1",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-imagemin": "^0.6.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-sass": "^0.7.3",
+    "connect-livereload": "^0.4.0",
+    "grunt-contrib-compass": "^0.7.2",
+    "grunt-concurrent": "^0.5.0",
+    "grunt-este-watch": "^0.1.16",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-imgo": "^0.1.1",
+    "grunt-tinypng": "^0.5.3",
+    "jshint-stylish": "^0.1.5",
+    "grunt-concat-sourcemap": "^0.4.1",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-autoprefixer": "^2.2.0",
+    "css-condense": "0.0.6"
+  }
+}

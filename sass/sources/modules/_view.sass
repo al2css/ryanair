@@ -1,0 +1,1362 @@
+$tooltip_red: #ed1c24
+
+#site	
+	.animated-view
+		:margin 0 auto
+		:max-width $max_width
+		:float none
+		:padding 0
+
+		.container
+			:width 100%
+			+prepare_animation
+			:-webkit-animation-name fadeInDown
+			:-moz-animation-name fadeInDown
+			:-ms-animation-name fadeInDown
+			:-o-animation-name fadeInDown
+			:animation-name fadeInDown
+			:float left
+
+			&> div
+				:width 100%
+				:clear both
+				:margin 0px
+				:padding 0
+				:float left
+				:display block
+
+				&.identification
+					:max-width $max_width2
+					:width auto
+					:clear both
+					:margin 0 auto
+					:padding 0
+					:float none
+					:display block
+
+					.content
+						:float right
+						:width 62%
+						:padding 0
+						:margin 0
+						:position relative
+						:min-height 330px
+						+media-query(tablet)
+							:width 52%
+							:min-height auto
+						+media-query(phone)
+							:width 100%
+							:clear both
+							:margin 0 0 10px 0
+							:float left
+							:padding 10px
+							:min-height auto
+
+						.small_text
+							:font-size 1.5em
+							:margin-bottom 5px
+							+media-query(phone)
+								:font-size 1.9em
+
+						p
+							:float left
+							:text-align left
+							:padding 0px
+							:margin 0 0 20px 0
+							:clear both
+							:width 100%
+							:line-height 130%
+							:font-size 1em
+							:font-weight 300
+							+media-query(phone)
+								:font-size 130%
+
+						form
+							:width 100%
+							:clear both
+							:margin 0
+							:padding 0
+							:float left
+							:display block
+							:border 0px none
+
+						.fields
+							:float left
+							:text-align left
+							:margin 0 0 15px 0
+							:width 100%
+							:clear both
+							:position relative
+
+
+						.breadcrumbs
+							:float left
+							:text-align center
+							:width 100%
+							:clear both
+							:height 100px
+							:line-height 90px
+							:margin 0 0 50px 0
+							+media-query(phone)
+								:height auto
+								:line-height 100%
+								:padding 10px 0
+								:margin 10px 0 0 0
+
+							ul
+								:float left
+								:text-align center
+								:width 100%
+								:clear both
+
+								li
+									:display inline-block
+									:padding 0 5px 0 40px
+									:color #b3b3b3
+									:text-transform uppercase
+									:font-weight 500
+									:font-size 0.7em
+									:text-shadow 0 1px 0 rgba(255,255,255,0.5)
+									:background
+										:image image_url(unquote("li_separator.jpg"))
+										:repeat no-repeat
+										:position left center
+									+media-query(phone)
+										:font-size 90%
+										:padding 0 5px
+										:background transparent
+
+									&:first-child
+										:background transparent
+										:padding-left 0px
+
+									a
+										:color #b3b3b3
+										:text-transform uppercase
+										:cursor default
+										:padding 5px 0
+										:display inline-block
+
+										&.completed
+											:color #ed1c24
+
+						.action_butons
+							:float left
+							:text-align left
+							:display block
+							:padding 0px
+							:margin 50px 0 10px 0
+							:width 100%
+							+media-query(phone)
+								:margin 10px 0
+
+							&> a
+								:float left
+								:display block
+								:text-align center
+								:margin 0 0 0 20px
+								:text-transform uppercase
+								:color white
+								:font-size 1.2em
+								:font-weight 700
+								:text-shadow 0 1px 0px rgba(0,0,0,0.2)
+								+transition(all 0.2s ease-in)
+								:padding 130px 0 0 0
+								+unselectable
+								+media-query(phone)
+									:margin-left 0px
+									:margin-bottom 30px
+									:float left
+									:clear both
+									:display block
+									:width 100%
+									:padding-top 120px
+
+								&.print
+									:background
+										:image image_url(unquote("print_boardingpass.png"))
+										:repeat no-repeat
+										:position top center
+									+media-query(phone)
+										:background-size 80px auto
+										:padding-top 100px
+
+								&.email
+									:background
+										:image image_url(unquote("email_boardingpass.png"))
+										:repeat no-repeat
+										:position top center
+									+media-query(phone)
+										:background-size 80px auto
+
+								span
+									:display inlin-block
+									:padding 5px 10px
+									:margin 0
+									:color white
+									:background-color #da0000
+									+radius(5px, bottom-right)
+									:text-align center
+
+								&:first-child
+									:margin-left 0px
+
+								&:hover
+									+scale(1.1)
+									+opacity(0.7)
+
+
+						.all_available_passengers
+							:display block
+							:float left
+							:width 100%
+							:clear both
+							:text-align left
+							:position relative
+							:padding 0
+							:margin 10px 0 0 0
+							+media-query(phone)
+								:margin-top 30px
+
+							.gray
+								:margin-bottom 20px
+								:margin-top 20px
+
+							&:first-child
+								:margin-top 0px
+								+media-query(phone)
+									:margin-top 30px
+
+						.all_passengers_listed
+							:display block
+							:float left
+							:width 100%
+							:clear both
+							:text-align left
+							:padding 0
+							:margin 10px 0
+
+							li
+								:float left
+								:display block
+								:width 100%
+								:clear both
+								:text-align left
+								:padding 8px 10px
+								:margin 0
+								:border-bottom 1px solid #d2d2d2
+								:position relative
+
+								&:first-child
+									:border-top 1px solid #d2d2d2
+
+								&.checked
+									:background-color #e5fced
+
+									&> span
+										:display block
+
+									input[type="checkbox"]
+										:display none
+
+									.edit_single
+										:display block
+
+								&> span
+									:position absolute
+									:top 50%
+									:right 10px
+									:width 130px
+									:height 26px
+									:line-height 26px
+									:background-color #00e24a
+									:margin-top -13px
+									:text-transform uppercase
+									:color white
+									:text-shadow 0 1px 0 rgba(0,0,0,0.2)
+									:font-weight 700
+									:font-size 0.65em
+									:display none
+									:padding 0 10px
+									:text-align center
+									+ellipsis
+									+media-query(phone)
+										:font-size 0.9em
+										:width 100px
+
+								.edit_single
+									:display none
+									:position absolute
+									:top 50%
+									:right 160px
+									:float left
+									:text-indent -5000em
+									:background
+										:image image_url(unquote("edit_icon.png"))
+										:repeat no-repeat
+										:position 0 0
+										:size 15px 15px
+									:text-align left
+									:width 15px
+									:height 15px
+									:margin 0
+									:margin-top -7px
+									:padding 0
+									+media-query(phone)
+										:right 123px
+
+									&:hover
+										+opacity(0.6)
+
+								.select_passenger_name
+									:display inline-block
+									:float left
+									+unselectable
+									:padding 5px 0
+									:width 60%
+									:text-align left
+									:font-weight 500
+									:font-size 1em
+									:margin 0 0 0 25px
+									+transition(all 0.2s ease-in)
+									:cursor pointer
+									:color #4d4d4d
+									+media-query(phone)
+										:font-size 1.4em
+										:width 47%
+										:margin-left 15px
+
+									&:hover
+										:color #d12329
+
+								input[type="checkbox"]
+									:float left
+									:position absolute
+									:top 50%
+									:margin-top -6px
+									:left 10px
+									+media-query(phone)
+										:margin-top -6px
+										:left 5px
+						
+						.back_to_all_passengers
+							:float left
+							:text-align left
+							:margin 0 0 20px 0
+							:display inline-block
+							:padding 0 5px 0 40px
+							:color #b3b3b3
+							:text-transform uppercase
+							:font-weight 500
+							:font-size 0.7em
+							:text-shadow 0 1px 0 rgba(255,255,255,0.5)
+							:clear both
+							:background
+								:image image_url(unquote("li_separator.jpg"))
+								:repeat no-repeat
+								:position left center
+							+media-query(phone)
+								:font-size 130%
+								:margin 10px 0 20px 0
+								:text-align center
+								:width 100%
+								:clear both
+								:display inline-block
+								:background transparent
+								:padding 0 5px
+
+							&:hover
+								:color black
+
+						.change_passenger_drop
+							:float right
+							:text-align left
+							:display block
+							:clear both
+							:width 60%
+							:padding 0
+							:margin 0 30px 0 0
+							:font-size 0.9em
+							:font-weight 300
+							:position relative
+							:outline none
+							:cursor pointer
+							:background
+								:color white
+								:image image_url(unquote("arrow_down.png"))
+								:repeat no-repeat
+								:position 96% center
+							+media-query(phone)
+								:font-size 120%
+								:width 100%
+								:clear both
+								:padding 0
+								:margin 0 0 15px 0
+
+							.disabled
+								:display none
+
+							select
+								:background transparent
+								:width 100%
+								:padding 5px 5px 5px 5px
+								:font-size 0.9em
+								:line-height 1
+								:border 1px solid #a3a3a3
+								+radius(0px)
+								:height 40px
+								:-webkit-appearance none
+								:-moz-appearance-name none
+								:-ms-appearance-name none
+								:-o-appearance-name none
+								:appearance-name none
+								:outline none
+
+						.flight_details
+							:float left
+							:text-align left
+							:display block
+							:padding 0px
+							:margin 10px 0 50px 0
+							:width 100%
+
+							.change_seats
+								:float left
+								:display inline-block
+								:padding 5px 10px
+								:margin 0
+								:color white
+								:background-color #da0000
+								:text-transform uppercase
+								:text-shadow 0 1px 0 rgba(0,0,0,0.2)
+								:font-size 0.7em
+								:font-weight 700
+								+transition(all 0.2s ease-in)
+								+radius(5px, bottom-right)
+								+media-query(phone)
+									:font-size 1.3em
+
+								&:hover
+									+opacity(0.7)
+
+							&> div
+								:float left
+								:text-align left
+								:display inline-block
+								:margin 0 8px
+
+								&:first-child
+									:margin-left 0px
+
+								&.date
+									:width 115px
+									:height 150px
+									+radius(4px)
+									:position relative
+									:box-shadow 0 0 5px 2px #e4e4e4
+									+unselectable
+									:cursor default
+									:text-align center
+
+									&> span, &> em, &> strong
+										:z-index 10
+										:position absolute
+										:text-transform uppercase
+
+									&> span
+										:top 14px
+										:left 0px
+										:width 100%
+										:text-align center
+										:font-size 0.8em
+										:color #797979
+										:font-weight 500
+										+media-query(phone)
+											:font-size 1.2em
+
+									&> em
+										:bottom 8px
+										:left 0px
+										:font-style normal
+										:width 100%
+										:text-align center
+										:font-size 0.6em
+										:color white
+										:font-weight 500
+										:text-shadow 0 1px 0 rgba(0,0,0,0.3)
+										+media-query(phone)
+											:font-size 1.1em
+
+										small
+											+radius(7px)
+											:padding 1px 8px
+											:background-color #646464
+
+									&> strong
+										:top 0%
+										:left 0px
+										:text-transform uppercase
+										:text-align center
+										:display block
+										:width 100%
+										:height 150px
+										:line-height 150px
+										:clear both
+										:font-weight 700
+										:font-size 4.9em
+										+media-query(phone)
+											:font-size 7em
+
+									&> q
+										:width 111px
+										:height 21px
+										:background
+											:image image_url(unquote("misc1.png"))
+											:repeat no-repeat
+											:position 0 0
+
+										:position absolute
+										:top 50%
+										:margin-top -10px
+										:left 50%
+										:margin-left -55px
+										:z-index 20
+
+								&.box
+									:margin-top 30px
+									+media-query(phone)
+										// :clear right
+										:margin 0 0 10px 10px
+
+									.seats_changed
+										:display none	
+
+									p
+										:float left
+										:text-align left
+										:padding 0
+										:margin 0
+										:clear both
+										:width 100%
+										:line-height 100%
+										:font-size 1em
+										:font-weight 300
+										:text-transform uppercase
+										:font-weight 500
+
+										small, strong, span
+											:float left
+											:display block
+											:margin 0 0 8px 0
+
+										small
+											:font-size 0.8em
+											+media-query(phone)
+												:font-size 1.1em
+
+										span
+											:font-size 1.6em
+											+media-query(phone)
+												:font-size 1.9em
+
+										strong
+											:font-weight 700
+											:font-size 1.8em
+											:margin-bottom 13px
+											+media-query(phone)
+												:font-size 2.5em
+
+									&.departure
+										:width 25%
+										+media-query(phone)
+											:width 30%
+									&.arrival
+										:width 25%
+										+media-query(phone)
+											:width 30%
+									&.seat
+										:margin-right 0px
+
+									&.selected
+										:background-color #da0000
+										:color white
+										:text-shadow 0 1px 0 rgba(0,0,0,0.2)
+										:padding 10px
+
+										.change_seats
+											:display none
+
+										.seats_changed
+											:display block
+
+
+						.label
+							:width 35%
+							:float left
+							:text-align left
+							:display block
+							:font-weight 700
+							:font-size 0.9em
+							:padding 10px 0
+							:margin 0
+							+unselectable
+							+media-query(phone)
+								:font-size 120%
+								:width 100%
+								:clear both
+								:padding 0
+								:margin 0 0 3px 0
+
+							&.big
+								:float left
+								:width 90%
+								:font-weight 300
+								+media-query(phone)
+									:font-size 120%
+									:width 82%
+									:clear none
+									:padding 0
+									:margin 0 0 3px 2%
+
+						.input_checkbox
+							:float left
+							:display inline-block
+							:margin 15px 15px 0 0
+
+						.input_text
+							:float left
+							:text-align left
+							:padding 5px
+							:width 60%
+							:border 1px solid #a3a3a3
+							+transition(all 0.2s ease-in)
+							:height 40px
+							:font-size 0.9em
+							:font-weight 300
+							:position relative
+							:background-color white
+							+media-query(phone)
+								:font-size 120%
+								:width 100%
+								:clear both
+								:padding 0 10px
+								:margin 0 0 3px 0
+
+							&.date
+								:background
+									:image image_url(unquote("calendar_icon.png"))
+									:repeat no-repeat
+									:position 96% center
+
+							&:focus
+								:box-shadow 0px 0px 10px 1px rgba(0,0,0,0.2) inset
+
+							&.error
+								:box-shadow 0px 0px 10px 3px rgba(249, 11, 11, 0.2) inset
+								:border 1px solid red
+
+						.select
+							:float left
+							:text-align left
+							:padding 0px
+							:width 60%
+							:font-size 0.9em
+							:font-weight 300
+							:position relative
+							:outline none
+							:cursor pointer
+							:background
+								:color white
+								:image image_url(unquote("arrow_down.png"))
+								:repeat no-repeat
+								:position 96% center
+							+media-query(phone)
+								:font-size 120%
+								:width 100%
+								:clear both
+								:padding 0
+								:margin 0 0 3px 0
+
+							select
+								:background transparent
+								:width 100%
+								:padding 5px
+								:font-size 0.9em
+								:line-height 1
+								:border 1px solid #a3a3a3
+								+radius(0px)
+								:height 40px
+								:-webkit-appearance none
+								:-moz-appearance-name none
+								:-ms-appearance-name none
+								:-o-appearance-name none
+								:appearance-name none
+								:outline none
+
+						.input_submit
+							:float right
+							:border 0px none
+							:background-color #da0000
+							+gradient(#da0000, #da0000, unquote("noiz.png"))
+							:height 40px
+							:line-height 40px
+							:text-align center
+							:padding 0 20px
+							:margin 10px 5% 10px 0
+							:font-size 1em
+							:font-weight 700
+							:color white
+							:text-shadow 0 1px 0 rgba(0,0,0,0.3)
+							+transition(all 0.2s ease-in)
+							+unselectable
+							:border 0px none
+							+media-query(phone)
+								:font-size 120%
+								:float left
+								:width 100%
+								:clear both
+								:padding 0
+								:margin 10px 0
+
+							&:hover
+								+opacity(0.7)
+
+							&:disabled
+								:cursor default
+								:background-color #d0cece
+								+gradient(#d0cece, #d0cece, unquote("noiz.png"))
+
+								&:hover
+									+opacity(1)
+
+							&.right
+								:margin-right 10px
+
+
+				&.seatmap
+					:position relative
+					:float left
+					:width 100%
+					:height 1693px
+					:padding 0
+					:clear both
+					+unselectable
+					:margin-bottom 0px
+					:background
+						:image image_url(unquote("aircraft_map.jpg"))
+						:repeat no-repeat
+						:position center top
+					+media-query(phone)
+						:background transparent
+						:height auto
+						:padding-bottom 20px
+
+					.left_sidebar
+						:float left
+						:display block
+						:width 44%
+						:padding 0
+						:margin 0
+						:position relative
+						+media-query(phone)
+							:width 100%
+							:clear both
+							:margin 0 0 10px 0
+
+						.general	
+							:font-weight 500
+
+						&> p
+							:color #706f6f
+							:font-size 1em
+							:text-transform uppercase
+							:float left
+							:width 100%
+							:line-height 150%
+							:font-weight 500
+							:height 265px
+							:overflow hidden
+							+media-query(phone)
+								:font-size 1.1em
+								:height auto
+
+						.sidebar_board
+							:float left
+							:padding 0px
+							:margin 20px 0
+							:width 60%
+							:position relative
+							+media-query(phone)
+								:width 100%
+								:clear both
+								:margin 10px 0
+							.sidebar_board_top
+								:float left
+								:padding 0px
+								:margin 0
+								:width 100%
+								:border 1px solid #eaeaeb
+								:clear both
+
+								&> div
+									:float left
+									:text-align left
+									:padding 20px
+									:display block
+									:width 100%
+									:clear both
+									:background-color white
+									:margin 3px 0 0px 0
+									+media-query(phone)
+										:padding 10px
+
+									&:first-child
+										:margin-top 0px
+
+									&> h4, &> p
+										:float left
+										:text-align left
+										:font-weight 500
+										:margin 0 0 10px 0
+										:display block
+										:clear both
+										:width 100%
+										:line-height 140%
+										:text-transform uppercase
+
+										strong
+											:font-weight 700
+
+									&> h4
+										:font-size 1.2em
+
+									&> p
+										:font-size 1em
+
+										strong
+											:font-size 1.2em
+
+									ul.seats_selected
+										:float left
+										:text-align left
+										:padding 0
+										:margin 10px 0 0px 0
+										:display block
+										:width 100%
+										:clear both
+
+										&> li
+											:float left
+											:width 82px
+											:height 82px
+											:position relative
+											:display inline-block
+											:background
+												:image image_url(unquote("aircraft_seats.jpg"))
+												:repeat no-repeat
+												:position right top
+											:margin 0 1px 35px 0
+											:text-align center
+											+bgpos(82px * -2, 0)
+											// :line-height 82px
+											
+											&.current
+												+bgpos(82px * -1, 0)
+											&.selected
+												+bgpos(82px * 0, 0)
+
+											span
+												:position absolute
+												:width 82px
+												:text-align center
+												:left 0px
+												:bottom -22px
+												:font-size 1em
+												:font-weight 700
+												+media-query(phone)
+													:font-size 1.1em
+
+
+									&.depart
+									&.return
+
+									&.closed
+										:background-color #d3d3d3
+										
+										&> p, ul.seats_selected
+											:display none
+
+									&.completed
+										:background-color #d3d3d3
+
+							.selected_seats
+								:width 100%
+								:float left
+								:text-align center
+								:margin 20px 0
+								:font-weight 700
+								:font-size 1.1em
+								+media-query(phone)
+									:margin 10px 0				
+									:font-size 1.2em
+
+							.continue_button
+								:width 100%
+								:float left
+								:display block
+								:height 58px
+								:line-height 58px
+								:background-color #e30613
+								:color #FFF
+								:text-transform uppercase
+								:font-size 0.9em
+								:font-weight 700
+								:border 1px solid #c30410
+								:padding 0 25px
+								+transition(all 0.2s ease-in)
+								:text-shadow 0 1px 0 rgba(0,0,0,0.3)
+								+ellipsis
+								:text-align center
+								+media-query(phone)
+									:height 30px
+									:line-height 30px
+									:padding 0px 5px
+									:margin 10px 0
+									:font-size 1.1em
+
+								&:hover
+									+opacity(0.7)
+
+								&.disabled
+									:background-color #bcbcbc
+									:color #8c8c8b
+									:border 1px solid #A8A8A3
+									:cursor default
+									:text-shadow 0 1px 0 rgba(255,255,255,0.3)	
+
+
+					.skip_seat_selection
+						:position absolute
+						:top 0px
+						:right 0px
+						:height 58px
+						:line-height 58px
+						:background-color #bcbcbc
+						:color #8c8c8b
+						:text-transform uppercase
+						:font-size 0.9em
+						:font-weight 700
+						:border 1px solid #A8A8A3
+						:padding 0 25px
+						+transition(all 0.2s ease-in)
+						:text-shadow 0 1px 0 rgba(255,255,255,0.3)
+						+media-query(phone)
+							:height 30px
+							:line-height 30px
+							:position relative
+							:top auto
+							:left auto
+							:right auto
+							:float left
+							:width 100%
+							:clear both
+							:display block
+							:text-align center
+							:padding 0px 5px
+							+ellipsis
+							:margin 10px 0
+							:font-size 1.1em
+
+						&:hover
+							+opacity(0.7)	
+
+					.aircraft
+						:position absolute
+						:top 335px
+						:right 50%
+						:margin-right -455px
+						:padding 0px
+						:width 633px
+						+media-query(phone)
+							:position relative
+							:margin 0 auto
+							:width 100%
+							:float none
+							:top auto
+							:right auto
+							:left auto
+							:clear both
+							:margin-top 50px
+							:padding 0
+
+						.seats
+							:width 100%
+							:float left
+							:height auto
+							:text-align left
+							:padding 0
+							:margin 0
+							+media-query(phone)
+								:width 100%
+
+							&> ul
+								:float left
+								:padding 0
+								:margin 0
+								:width 100%
+								:clear both
+								:display block
+
+								&.one
+									li
+										:width 145px
+										+media-query(phone)
+											:width 40%
+
+										&.isAisle
+											+media-query(phone)
+												:width 8%
+
+								&.two
+									li
+										:width 67px
+										+media-query(phone)
+											:width 18%
+
+										&.isAisle
+											+media-query(phone)
+												:width 8%
+
+								&.three
+									li
+										:width 41px
+										+media-query(phone)
+											:width 11%
+											:margin 10px 1.8% 0 1.9%
+
+										&.isAisle
+											+media-query(phone)
+												:width 8%
+
+								li
+									:float left
+									:text-align center
+									:height 35px
+									:line-height 36px
+									:border 1px solid #d7d7d7
+									:margin 11px 5px 0 5px
+									:font-size 0.7em
+									:font-weight 700
+									// :overflow hidden
+									// :background-color white
+									+gradient(#fff, #fff, unquote("noiz.png"))
+									:text-shadow 0 1px 0 rgba(255,255,255,0.8)
+									+transition(all 0.2s ease-in)
+									:cursor pointer
+									:box-shadow 0 0 8px 0px rgba(0, 0, 0, 0.3) inset
+									:position relative
+									+media-query(phone)
+										:margin 10px 2% 0 2%
+										:font-size 1.1em
+
+									.seat_price
+										:display none
+										:position absolute
+										:top -7px
+										:left 5px
+										:width 15px
+										:height 15px
+										:float left
+										:background
+											:image image_url(unquote("dollar.png"))
+											:repeat no-repeat
+											:position 0 0
+										+media-query(phone)
+											:display none
+
+										&> span
+											:position absolute
+											:bottom 22px
+											:left 50%
+											:margin-left -70px
+											:float left
+											:text-align left
+											:width 140px
+											:padding 5px
+											+gradient(#008d36, #008d36, unquote("noiz.png"))
+											:color white
+											:font-size 0.9em
+											:text-shadow 0 1px 0 rgba(0,0,0,0.3)
+											+media-query(phone)
+												:display none
+
+											q
+												:position absolute
+												:bottom -5px
+												:left 50%
+												:margin-left -5px
+												+css_triangle(5px, #008d36, bottom)
+
+											strong, p
+												:width 100%
+												:text-align left
+												:display block
+												:clear both
+												:line-height 110%
+												:margin 0
+												:padding 0
+												:font-weight 500
+
+											strong
+												:font-weight 700
+												:text-transform uppercase
+
+											b
+												:font-weight 700
+												:text-transform uppercase	
+
+
+									&.isAisle
+										:width 312px
+										:border 0px none
+										:background-color transparent
+										:cursor default
+										:text-indent -5000em
+										+opacity(0)
+										:border 1px dashed #bbbdbf
+										:border-top 0px none
+										:border-bottom 0px none
+										+media-query(phone)
+											+opacity(0.4)
+											:background-color white
+
+										&:hover
+											:border 1px dashed #bbbdbf
+											:border-top 0px none
+											:border-bottom 0px none
+
+											.seat_price
+												:display none
+
+									&:hover
+										:border 1px solid #e01e25
+
+										.seat_price
+											:display block
+											+media-query(phone)
+												:display none
+
+									&.unavailable
+										// :background-color #b8bbbb
+										+gradient(#b8bbbb, #b8bbbb, unquote("noiz.png"))
+										:cursor default
+
+										&:hover
+											:border 1px dashed #b8bbbb
+
+										.seat_price
+											:display none
+
+									&.selected
+										:background-color #e01e25
+										+gradient(#e01e25, #e01e25, unquote("noiz.png"))
+										:color white
+										:text-shadow 0 1px 0 rgba(0,0,0,0.3)
+										// :box-shadow 0px 1px 1px 0px rgba(255,255,255, 0.7) inset				
+
+				
+				.sidebar
+					:float left
+					:width 322px
+					:height 867px
+					:display block
+					:padding 0px
+					:margin 0px
+					:position relative
+					+unselectable
+					:text-shadow 0 1px 0 rgba(0,0,0,0.3)
+					:background
+						:image image_url(unquote("sidebar_big.jpg"))
+						:repeat no-repeat
+						:position 0 0
+					+media-query(phone)
+						:width 100%
+						:height 200px
+						:overflow hidden
+						:background transparent
+						:background-color #ed1c24
+						+gradient(#ed1c24, #ed1c24, unquote("noiz.png"))
+
+					&.small
+						:height 327px
+						:width 322px
+						:background
+							:image image_url(unquote("sidebar_small.jpg"))
+							:repeat no-repeat
+							:position 0 0
+						+media-query(phone)
+							:width 100%
+							:height 200px
+							:overflow hidden
+							:background transparent
+							:background-color #ed1c24
+							+gradient(#ed1c24, #ed1c24, unquote("noiz.png"))
+
+						.logo
+							:top 20px
+							+media-query(phone)
+								:top 2px
+
+						.title
+							:text-align center
+							:margin-top 110px
+							:font-size 4em
+							+media-query(phone)
+								:margin-top 90px
+
+							em
+								:font-size 79%
+								:font-style normal
+								:font-weight 300
+								:padding 0
+								:margin 0
+								:clear both
+								:width 100%
+								:display block
+								:text-align center
+								:float left
+
+					.logo
+						:position absolute
+						:top 50px
+						:left 50%
+						:width 242px
+						:height 81px
+						:margin-left -121px
+						:text-align left
+						:text-indent -5000em
+						:background
+							:image image_url(unquote("logo_airarabia.png"))
+							:repeat no-repeat
+							:position center center
+							:size 242px 81px
+						+media-query(phone)
+							:top 2px
+							:background-size 180px auto
+
+					.title
+						:color white
+						:width 100%
+						:font-size 4.5em
+						:line-height 100%
+						:clear both
+						:float left
+						:text-align center
+						:text-transform uppercase
+						:font-weight 300
+						:padding 0px
+						:margin 160px 0 0 0
+						+media-query(phone)
+							:margin-top 90px
+
+						em
+							:font-size 79%
+							:font-style normal
+							:font-weight 300
+							:padding 0
+							:margin 0
+							:clear both
+							:width 100%
+							:display block
+							:text-align center
+							:float left						
+
+
+
+.selectboxit-btn
+	+gradient(#FFFFFF, #FFFFFF)
+
+	&:hover
+		+gradient(#FFFFFF, #FFFFFF)
+
+.selectboxit-container
+	:float left
+	:width 100%
+	:clear both
+
+.selectboxit-container .selectboxit
+	:width 100% !important
+	+media-query(phone)
+		:clear both
+
+.selectboxit-btn.selectboxit-enabled:hover, .selectboxit-btn.selectboxit-enabled:focus, .selectboxit-btn.selectboxit-enabled:active 
+	:color #333333
+	:background-color #FFF
+
+
+.selectboxit-btn.selectboxit-enabled:hover, .selectboxit-btn.selectboxit-enabled:focus 
+	:color #333333
+	:text-decoration none
+	:background-color #FFF
+
+.selectboxit-default-arrow
+	+css_triangle(5px, #a8a8a7, bottom)
+
+.selectboxit-container .selectboxit
+	:margin 3px 0 0 0
+	+radius(0px)
+	:cursor pointer
+	:display block
+	:float left
+	:border 1px solid #a3a3a3
+	:background-color white
+
+.selectboxit-container .selectboxit-options
+	:max-width 100% !important
+	:width 100% !important
+	:min-width 0 !important
+	// :display block
+
+.selectboxit-container span, .selectboxit-container .selectboxit-options a
+	:height 40px
+	:line-height 40px
+	// :font-size 0.9em !important
+	:font-weight 500 !important
+	:color #231f20
+	:max-width 100% !important
+	+media-query(phone)
+		:font-size 1.1em
+		:height 40px
+		:line-height 40px
+
+.selectboxit-container .selectboxit-options a
+	:height 35px
+	:line-height 35px
+	:float left
+	:text-align left
+	:width 100%
+	:font-weight 500 !important
+	:color #231f20
+	:font-size 0.9em !important
+
+	&:hover
+		+gradient(#e30613,#e30613)
+
+.selectboxit-list > .selectboxit-focus > .selectboxit-option-anchor
+	+gradient(#e30613,#e30613)
+
+.selectboxit-container .selectboxit-options
+	+radius(0px)
+	:top 54px
+	+media-query(phone)
+		:top 45px
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,448 @@
+// Base stylesheet file
+
+// @version 1.0
+
+// Imports ============================================================
+@import paths.sass
+@import animate.sass
+
+// Colors ============================================================
+
+$heading_blue: #1d4059
+$dark_grey: #4c4c4c
+
+// Fonts ==============================================================
+
+$sans-serif: Arial, Helvetica, sans-serif
+$varela-round: "Varela Round", sans-serif
+$open-sans: "Open Sans",sans-serif
+$roboto: "Roboto", sans-serif
+$lato: "Lato", sans-serif
+$swiss-piktos: "Lato", sans-serif
+
+// Testing ============================================================
+
+=transition($effect)
+	:transition  unquote($effect)
+
+=show
+	:border unquote("1px solid red")
+
+// Mixins ============================================================
+
+// Misc
+
+=ellipsis
+	:overflow hidden
+	:text-overflow ellipsis
+	:white-space nowrap
+
+=bgpos($x, $y, $important: false)
+	@if $important == false
+		:background-position $x $y
+	@else
+		:background-position $x $y unquote("!important")
+
+// Opacity
+
+=opacity($value, $important: false)
+	@if $important == false
+		:opacity $value
+
+	@else
+		:opacity $value unquote("!important")
+
+
+// Border-box
+
+=border_box
+	:box-sizing border-box
+
+// Grayscale
+=grayscale
+	:filter grayscale(100%)
+	:-webkit-filter grayscale(100%)
+	:filter gray
+	:filter url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")
+
+// Blur
+=blur($nr)
+	:-webkit-filter blur($nr)
+	:-moz-filter blur($nr)
+	:-o-filter blur($nr)
+	:-ms-filter blur($nr)
+	:filter blur($nr)
+
+// CSS Triangle
+
+=css_triangle($triangle-size, $triangle-color, $triangle-direction)
+	:content ""
+	:display block
+	:width 0
+	:height 0
+	@if $triangle-direction == top
+		:border-bottom $triangle-size solid $triangle-color
+		:border-left $triangle-size solid transparent
+		:border-right $triangle-size solid transparent
+	@if $triangle-direction == bottom
+		:border-top $triangle-size solid $triangle-color
+		:border-left $triangle-size solid transparent
+		:border-right $triangle-size solid transparent
+	@if $triangle-direction == left
+		:border-right $triangle-size solid $triangle-color
+		:border-top $triangle-size solid transparent
+		:border-bottom $triangle-size solid transparent
+	@if $triangle-direction == right
+		:border-left $triangle-size solid $triangle-color
+		:border-top $triangle-size solid transparent
+		:border-bottom $triangle-size solid transparent
+
+// Text Shadow
+
+=text-shadow($color, $x, $y, $blur, $important: false)
+	@if $important == false
+		:text-shadow $color $x $y #{$blur}px
+		// :-ms-filter = "progid:DXImageTransform.Microsoft.Shadow(Color=#{!color},Direction=135,Strength=#{!blur})"
+	@else
+		:text-shadow $color $x $y #{$blur}px unquote("!important")
+
+=text_shadow($color, $x, $y, $blur, $important: false)
+	@if $important == false
+		:text-shadow $color $x $y #{$blur}px
+		// :-ms-filter = "progid:DXImageTransform.Microsoft.Shadow(Color=#{!color},Direction=135,Strength=#{!blur})"
+	@else
+		:text-shadow $color $x $y #{$blur}px unquote("!important")
+
+// Rounded borders
+
+=radius($border_radius: 5px, $side: none)
+	@if $side == none
+		:border-radius $border_radius
+	@else
+		@if $side == top
+			:-moz-border-radius-topleft $border_radius
+			:-moz-border-radius-topright $border_radius
+			:-webkit-border-radius $border_radius $border_radius 0 0
+			:border-radius $border_radius $border_radius 0 0
+		@if $side == bottom
+			:-moz-border-radius-bottomright $border_radius
+			:-moz-border-radius-bottomleft $border_radius
+			:-webkit-border-radius 0 0 $border_radius $border_radius
+			:border-radius 0 0 $border_radius $border_radius
+		@if $side == left
+			:-moz-border-radius-topleft $border_radius
+			:-moz-border-radius-bottomleft $border_radius
+			:-webkit-border-radius $border_radius 0 0 $border_radius
+			:border-radius $border_radius 0 0 $border_radius
+		@if $side == right
+			:-moz-border-radius-topright $border_radius
+			:-moz-border-radius-bottomright $border_radius
+			:-webkit-border-radius 0 $border_radius $border_radius 0
+			:border-radius 0 $border_radius $border_radius 0
+		@if $side == top-left
+			:-moz-border-radius-topleft $border_radius
+			:-webkit-border-radius $border_radius 0 0 0
+			:border-radius $border_radius 0 0 0
+		@if $side == top-right
+			:-moz-border-radius-topright $border_radius
+			:-webkit-border-radius 0 $border_radius 0 0
+			:border-radius 0 $border_radius 0 0
+		@if $side == bottom-left
+			:-moz-border-radius-bottomleft $border_radius
+			:-webkit-border-radius 0 0 0 $border_radius
+			:border-radius 0 0 0 $border_radius
+		@if $side == bottom-right
+			:-moz-border-radius-bottomright $border_radius
+			:-webkit-border-radius 0 0 $border_radius 0
+			:border-radius 0 0 $border_radius 0
+
+
+
+=rounded_borders($width: 5px, $rounding: 5px, $border: false, $color: unquote("#CCC"))
+	:border-radius $rounding $rounding
+	@if $border == true
+		:border $width $color solid
+
+// Text-overflow
+
+=text_overflow($type: ellipsis)
+	:text-overflow $type
+
+// Has-layout
+
+=has_layout
+	:zoom 1
+
+// Float
+
+=float($side)
+	:float $side
+	:display inline
+
+// Quick Clearfix
+
+=quick-clearfix
+	+has_layout
+	:overflow hidden
+
+// Clearfix
+
+=clearfix
+	+has_layout
+	:display inline-block
+	&:after
+		:content unquote(".")
+		:display block
+		:height 0
+		:clear both
+		:visibility hidden
+
+// Crisp text
+
+=crisp
+	:text-shadow rgba(0, 0, 0, 0.01) 0 0 0
+
+// Sharpen image
+
+=sharpen
+	:image-rendering -moz-crisp-edges
+	:-ms-interpolation-mode nearest-neighbor
+
+// High Quality images
+
+=high_quality
+	:image-rendering optimizeQuality
+	:-ms-interpolation-mode bicubic
+
+// Low Quality images
+
+=low_quality
+	:image-rendering optimizeSpeed
+
+// Inherit partens styles
+
+=inherit
+	:font inherit
+	:color inherit
+	:background inherit
+	:border inherit
+	:text-decoration inherit
+	:text-shadow inherit
+	:text-transform inherit
+
+// Hide but remain accessible
+
+=hide
+	:position absolute
+	:top -9999px
+	:left -9999px
+
+// Gradient
+
+=gradient($start, $end, $image:none)
+	@if $image == none
+		:background-color $end
+		:background-image linear-gradient($start 0%, $end 100%)
+	@else
+		:background-color $end
+		:background-image image_url($image)
+		:background-image image_url($image), linear-gradient($start 0%, $end 100%)
+
+// =grayscale
+// 	:-webkit-filter grayscale(100%)
+// 	:-moz-filter grayscale(100%)
+// 	:-ms-filter grayscale(100%)
+// 	:-o-filter grayscale(100%)
+// 	:filter grayscale(100%)
+// 	:filter url(grayscale.svg)
+// 	:filter gray
+
+// Rotation
+
+=rotate($degree)
+	:-moz-transform unquote("rotate(") + $degree + unquote("deg)")
+	:-o-transform unquote("rotate(") + $degree + unquote("deg)")
+	:-webkit-transform unquote("rotate(") + $degree + unquote("deg)")
+	:filter unquote("progid:DXImageTransform.Microsoft.BasicImage(rotation=") + $degree / 90 + unquote(")")
+	:-ms-filter unquote('"progid:DXImageTransform.Microsoft.BasicImage(rotation=') + $degree / 90 + unquote(')"')
+
+// Scale
+
+=scale($val)
+	:-webkit-transform unquote("scale(") + $val + unquote(")")
+	:-moz-transform unquote("scale(") + $val + unquote(")")
+	:-ms-transform unquote("scale(") + $val + unquote(")")
+	:-o-transform unquote("scale(") + $val + unquote(")")
+	:transform unquote("scale(") + $val + unquote(")")
+	// :-webkit-transform scale($val)
+	// :-moz-transform scale($val)
+	// :-ms-transform scale($val)
+	// :-o-transform scale($val)
+	// :transform scale($val)
+
+// Box shadow
+
+=box_shadow($xoffset, $yoffset, $blur, $color)
+	:box-shadow $xoffset $yoffset $blur $color
+
+=box-shadow($color, $xoffset, $yoffset, $blur)
+	:box-shadow $xoffset $yoffset $blur $color
+
+// Min-height. Pass in a value to set the min-height
+
+=min_height($height)
+	:min-height $height
+	:height unquote("auto !important")
+	:height $height
+
+// Animation name
+=animation_name($name)
+	:animation-name $name
+
+// Flip horizontal
+
+=flip_horizontal
+	:-moz-transform scaleX(-1)
+	:-webkit-transform scaleX(-1)
+	:transform scaleX(-1)
+	:filter fliph
+
+// Flip vertical
+
+=flip_vertical
+	:-moz-transform scaleY(-1)
+	:-webkit-transform scaleY(-1)
+	:transform scaleY(-1)
+	:filter flipv
+
+
+// Disable selection
+
+=unselectable
+	:-webkit-user-select none
+	:-moz-user-select none
+	:user-select none
+
+=border_box
+	:box-sizing border-box
+
+=box_flex($flex: 1)
+	:box-flex $flex
+
+=display_box
+	:display box
+
+=user_select($param)
+	:user-select $param
+
+=flex
+	:display -webkit-box
+	:display -moz-box
+	:display -ms-flexbox
+	:display -webkit-flex
+	:display flex
+
+=translate($x: 0, $y: 0)
+	:-webkit-transform translate(#{$x}px, #{$y}px)
+	:transform translate(#{$x}px, #{$y}px)
+	:-moz-transform translate(#{$x}px, #{$y}px)
+	:-ms-transform translate(#{$x}px, #{$y}px)
+	:-o-transform translate(#{$x}px, #{$y}px)
+
+// Animation mixin
+
+=keyframes($name...)
+	@-o-keyframes $name
+		@content
+	@-moz-keyframes $name
+		@content
+	@-webkit-keyframes $name
+		@content
+	@keyframes $name
+		@content
+
+// @Font-Face
+// Cross-browser support for @font-face
+//	- !name is required, arbitrary, and what you will use in font stacks.
+//	- !font_files is required using font_files('relative_location', 'format').
+//		 - for best results use this order: woff, opentype/truetype, svg
+//	- !eot is required by IE, and is a relative location of the eot file.
+//	- postscript name is required by some browsers to look for local fonts.
+
+=font-face($name, $font_files, $eot: false, $postscript: false, $style: false)
+	@font-face
+		:font-family #{$name}
+		@if $style
+			:font-style $style
+		@if $eot
+			:src stylesheet_url($eot)
+		@if $postscript
+			:src local(#{$name}), local(#{$postscript}), #{$font_files}
+		@else
+			:src local(#{$name}), #{$font_files}
+
+
+// EXAMPLE
+//
+// +font-face("this name", font-files("this.woff", "woff", "this.otf", "opentype"), "fonts/this.eot", "thisname")
+//
+//
+//
+// will generate:
+//
+//
+//
+//	 @font-face { 
+//
+//		 font-family: 'this name'; 
+//
+//		 src: url('fonts/this.eot'); 
+//
+//		 src: local('this name'), local('thisname'), 
+//
+//			 url('this.otf') format('woff'), 
+//
+//			 url('this.woff') format('opentype'); 
+//
+//	 }
+
+
+// Media Queries Generator
+=media-query($media-query)
+	@if $media-query == phone 
+		@media only screen and (max-width:$phone - 1)
+			@content
+
+	@if $media-query == tablet 
+		@media only screen and (max-width: $tablet - 1) and (min-width:$phone)
+			@content
+
+	@if $media-query == mobile 
+		@media only screen and (max-width: $tablet - 1)
+			@content
+
+	@if $media-query == pc 
+		@media only screen and (max-width: $pc_huge - 1) and (min-width:$tablet)
+			@content
+
+	@if $media-query == pc_huge 
+		@media only screen and (min-width:$pc_huge)
+			@content
+
+	@lese
+		@media only screen and (min-width:$pc_huge)
+			@content
+
+
+// Moving IE specific CSS into @media blocks
+// To target IE 6 and 7 		# @media screen\9
+// To target IE 6, 7 and 8 		# @media \0screen\,screen\9
+// To target IE 8 				# @media \0screen
+// To target IE 8, 9 and 10 	# @media screen\0
+// To target IE 9 and 10 		# @media screen and (min-width:0\0)
+=media-screen($media-screen)
+	@if $media-screen == ie
+		@media screen\0
+			@content
+
+

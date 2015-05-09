@@ -1,0 +1,19 @@
+<div class="login_page login"> 
+	<section class="title"><h1>{{ login.title }}</h1></section>	
+
+	<form name="user_login" id="user_login" role="form" ng-submit="logIn(user)">
+		<label class="label" for="user.username">Username</label>
+		<input type="text" id="user.username" name="user.username" placeholder="" ng-model="user.username" value="" class="input_text" required ng-class="{'error' : user_login.user.username.$error.required}" />
+
+		<label class="label" for="user.password">Password</label>
+		<input type="password" id="user.password" name="user.password" placeholder="" ng-model="user.password" value="" class="input_text" required ng-class="{'error' : user_login.user.password.$error.required}" />
+
+		<button class="input_submit" ng-click="" ng-disabled="user_login.$invalid">Login</button>
+
+		<!-- <div class="alert alert-danger" ng-show="error">
+			There was a problem logging in. Please try again.
+		</div> -->
+	</form>
+
+	<div class="clear"></div>
+</div>

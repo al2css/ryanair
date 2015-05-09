@@ -1,0 +1,18 @@
+<div class="menu" id="menu" data-ng-include="'app/partials/_menu.html'"></div>
+
+<div class="inside_page one_flight"> 
+	<section class="title"><h1>Flight no. <strong>{{ flight.reqFlight.flight_code | uppercase }}</strong> from date <strong>{{ flight.reqFlight.date * 1000 | date : format : timezone | uppercase }}</strong></h1></section>
+
+	<div class="flight_details">
+		<section class="title"><strong>{{ flight.reqFlight.from }} - {{ flight.reqFlight.to }}</strong></section>
+		<p>Departure time: <strong>{{ flight.reqFlight.departing_time * 1000 | date:'HH:mm' }}</strong></p>
+		<p>Landing time: <strong>{{ flight.reqFlight.landing_time * 1000 | date:'HH:mm' }}</strong></p>
+		<p>Passengers booked: <strong>{{ flight.reqFlight.passenger_booked }}</strong></p>
+		<p>Forecasted bags: <strong>{{ flight.reqFlight.forecasted_bags }}</strong></p>
+
+		<div class="clear"></div>
+	</div>	
+
+	<div class="clear"></div>
+</div>
+

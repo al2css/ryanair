@@ -1,0 +1,6273 @@
+// Animate.css - http://daneden.me/animate
+
+body
+	//:-webkit-transform translateZ(0)
+
+=prepare_animation
+	:-webkit-backface-visibility hidden
+	:-moz-backface-visibility hidden
+	:-ms-backface-visibility hidden
+	:backface-visibility hidden
+	:-webkit-animation-duration 1s
+	:-webkit-animation-delay .2s
+	:-webkit-animation-timing-function ease
+	:-webkit-animation-fill-mode both
+	:-moz-animation-duration 1s
+	:-moz-animation-delay .2s
+	:-moz-animation-timing-function ease
+	:-moz-animation-fill-mode both
+	:-ms-animation-duration 1s
+	:-ms-animation-delay .2s
+	:-ms-animation-timing-function ease
+	:-ms-animation-fill-mode both
+	:animation-duration 1s
+	:animation-delay .2s
+	:animation-timing-function ease
+	:animation-fill-mode both
+	:-webkit-background-clip padding-box
+	:-moz-background-clip padding-box
+	:background-clip padding-box
+
+
+.animated
+	:-webkit-animation 1s ease
+	:-moz-animation 1s ease
+	:-ms-animation 1s ease
+	:-o-animation 1s ease
+	:animation 1s ease
+	:-webkit-animation-fill-mode both
+	:-moz-animation-fill-mode both
+	:-o-animation-fill-mode both
+	:animation-fill-mode both
+
+	&.hinge
+		:-webkit-animation 2s ease
+		:-moz-animation 2s ease
+		:-ms-animation 2s ease
+		:-o-animation 2s ease
+		:animation 2s ease
+
+@-webkit-keyframes flash
+	0%, 50%, 100%
+		:opacity 1
+	25%, 75%
+		:opacity 0
+
+
+@-moz-keyframes flash
+	0%, 50%, 100%
+		:opacity 1
+	25%, 75%
+		:opacity 0
+
+
+@-ms-keyframes flash
+	0%, 50%, 100%
+		:opacity 1
+	25%, 75%
+		:opacity 0
+
+
+@-o-keyframes flash
+	0%, 50%, 100%
+		:opacity 1
+	25%, 75%
+		:opacity 0
+
+
+@keyframes flash
+	0%, 50%, 100%
+		:opacity 1
+	25%, 75%
+		:opacity 0
+
+
+@-webkit-keyframes lightSpeedIn
+	0%
+		:-webkit-transform translateX(100%) skewX(-30deg)
+		:transform translateX(100%) skewX(-30deg)
+		:opacity 0
+
+	60%
+		:-webkit-transform translateX(-20%) skewX(30deg)
+		:transform translateX(-20%) skewX(30deg)
+		:opacity 1
+
+	80%
+		:-webkit-transform translateX(0%) skewX(-15deg)
+		:transform translateX(0%) skewX(-15deg)
+		:opacity 1
+
+	100%
+		:-webkit-transform translateX(0%) skewX(0deg)
+		:transform translateX(0%) skewX(0deg)
+		:opacity 1
+
+@keyframes lightSpeedIn
+	0%
+		:-webkit-transform translateX(100%) skewX(-30deg)
+		:-ms-transform translateX(100%) skewX(-30deg)
+		:transform translateX(100%) skewX(-30deg)
+		:opacity 0
+
+	60%
+		:-webkit-transform translateX(-20%) skewX(30deg)
+		:-ms-transform translateX(-20%) skewX(30deg)
+		:transform translateX(-20%) skewX(30deg)
+		:opacity 1
+
+	80%
+		:-webkit-transform translateX(0%) skewX(-15deg)
+		:-ms-transform translateX(0%) skewX(-15deg)
+		:transform translateX(0%) skewX(-15deg)
+		:opacity 1
+
+	100%
+		:-webkit-transform translateX(0%) skewX(0deg)
+		:-ms-transform translateX(0%) skewX(0deg)
+		:transform translateX(0%) skewX(0deg)
+		:opacity 1
+
+.lightSpeedIn
+	:-webkit-animation-name lightSpeedIn
+	:animation-name lightSpeedIn
+	:-webkit-animation-timing-function ease-out
+	:animation-timing-function ease-out
+
+
+.flash
+	:-webkit-animation-name flash
+	:-moz-animation-name flash
+	:-ms-animation-name flash
+	:-o-animation-name flash
+	:animation-name flash
+
+@-webkit-keyframes shake
+	0%, 100%
+		:-webkit-transform translateX(0)
+	10%, 30%, 50%, 70%, 90%
+		:-webkit-transform translateX(-10px)
+	20%, 40%, 60%, 80%
+		:-webkit-transform translateX(10px)
+
+
+@-moz-keyframes shake
+	0%, 100%
+		:-moz-transform translateX(0)
+	10%, 30%, 50%, 70%, 90%
+		:-moz-transform translateX(-10px)
+	20%, 40%, 60%, 80%
+		:-moz-transform translateX(10px)
+
+
+@-ms-keyframes shake
+	0%, 100%
+		:-ms-transform translateX(0)
+	10%, 30%, 50%, 70%, 90%
+		:-ms-transform translateX(-10px)
+	20%, 40%, 60%, 80%
+		:-ms-transform translateX(10px)
+
+
+@-o-keyframes shake
+	0%, 100%
+		:-o-transform translateX(0)
+	10%, 30%, 50%, 70%, 90%
+		:-o-transform translateX(-10px)
+	20%, 40%, 60%, 80%
+		:-o-transform translateX(10px)
+
+
+@keyframes shake
+	0%, 100%
+		:transform translateX(0)
+	10%, 30%, 50%, 70%, 90%
+		:transform translateX(-10px)
+	20%, 40%, 60%, 80%
+		:transform translateX(10px)
+
+
+.shake
+	:-webkit-animation-name shake
+	:-moz-animation-name shake
+	:-ms-animation-name shake
+	:-o-animation-name shake
+	:animation-name shake
+
+// shake less than original animation
+@-webkit-keyframes shakeLess
+	60%, 100%
+		:-webkit-transform translateX(0)
+	20%
+		:-webkit-transform translateX(-10px)
+	0%, 40%
+		:-webkit-transform translateX(10px)
+
+@-moz-keyframes shakeLess
+	60%, 100%
+		:-moz-transform translateX(0)
+	20%
+		:-moz-transform translateX(-10px)
+	0%, 40%
+		:-moz-transform translateX(10px)
+
+
+@-ms-keyframes shakeLess
+	60%, 100%
+		:-ms-transform translateX(0)
+	20%
+		:-ms-transform translateX(-10px)
+	0%, 40%
+		:-ms-transform translateX(10px)
+
+
+@-o-keyframes shakeLess
+	60%, 100%
+		:-o-transform translateX(0)
+	20%
+		:-o-transform translateX(-10px)
+	0%, 40%
+		:-o-transform translateX(10px)
+
+
+@keyframes shakeLess
+	60%, 100%
+		:transform translateX(0)
+	20%
+		:transform translateX(-10px)
+	0%, 40%
+		:transform translateX(10px)
+
+
+.shakeLess
+	:-webkit-animation-name shakeLess
+	:-moz-animation-name shakeLess
+	:-ms-animation-name shakeLess
+	:-o-animation-name shakeLess
+	:animation-name shakeLess
+
+@-webkit-keyframes bounce
+	0%, 20%, 50%, 80%, 100%
+		:-webkit-transform translateY(0)
+	40%
+		:-webkit-transform translateY(-30px)
+	60%
+		:-webkit-transform translateY(-15px)
+
+
+@-moz-keyframes bounce
+	0%, 20%, 50%, 80%, 100%
+		:-moz-transform translateY(0)
+	40%
+		:-moz-transform translateY(-30px)
+	60%
+		:-moz-transform translateY(-15px)
+
+
+@-ms-keyframes bounce
+	0%, 20%, 50%, 80%, 100%
+		:-ms-transform translateY(0)
+	40%
+		:-ms-transform translateY(-30px)
+	60%
+		:-ms-transform translateY(-15px)
+
+
+@-o-keyframes bounce
+	0%, 20%, 50%, 80%, 100%
+		:-o-transform translateY(0)
+	40%
+		:-o-transform translateY(-30px)
+	60%
+		:-o-transform translateY(-15px)
+
+
+@keyframes bounce
+	0%, 20%, 50%, 80%, 100%
+		:transform translateY(0)
+	40%
+		:transform translateY(-30px)
+	60%
+		:transform translateY(-15px)
+
+
+.bounce
+	:-webkit-animation-name bounce
+	:-moz-animation-name bounce
+	:-ms-animation-name bounce
+	:-o-animation-name bounce
+	:animation-name bounce
+
+
+@-webkit-keyframes bounceHorizontal
+	0%, 20%, 50%, 80%, 100%
+		:-webkit-transform translateX(0)
+	40%
+		:-webkit-transform translateX(-30px)
+	60%
+		:-webkit-transform translateX(-15px)
+
+
+@-moz-keyframes bounceHorizontal
+	0%, 20%, 50%, 80%, 100%
+		:-moz-transform translateX(0)
+	40%
+		:-moz-transform translateX(-30px)
+	60%
+		:-moz-transform translateX(-15px)
+
+
+@-ms-keyframes bounceHorizontal
+	0%, 20%, 50%, 80%, 100%
+		:-ms-transform translateX(0)
+	40%
+		:-ms-transform translateX(-30px)
+	60%
+		:-ms-transform translateX(-15px)
+
+
+@-o-keyframes bounceHorizontal
+	0%, 20%, 50%, 80%, 100%
+		:-o-transform translateX(0)
+	40%
+		:-o-transform translateX(-30px)
+	60%
+		:-o-transform translateX(-15px)
+
+
+@keyframes bounceHorizontal
+	0%, 20%, 50%, 80%, 100%
+		:transform translateX(0)
+	40%
+		:transform translateX(-30px)
+	60%
+		:transform translateX(-15px)
+
+
+.bounceHorizontal
+	:-webkit-animation-name bounceHorizontal
+	:-moz-animation-name bounceHorizontal
+	:-ms-animation-name bounceHorizontal
+	:-o-animation-name bounceHorizontal
+	:animation-name bounceHorizontal
+
+
+@-webkit-keyframes tada
+	0%
+		:-webkit-transform scale(1)
+	10%, 20%
+		:-webkit-transform scale(0.9) rotate(-3deg)
+	30%, 50%, 70%, 90%
+		:-webkit-transform scale(1.1) rotate(3deg)
+	40%, 60%, 80%
+		:-webkit-transform scale(1.1) rotate(-3deg)
+	100%
+		:-webkit-transform scale(1) rotate(0)
+
+
+@-moz-keyframes tada
+	0%
+		:-moz-transform scale(1)
+	10%, 20%
+		:-moz-transform scale(0.9) rotate(-3deg)
+	30%, 50%, 70%, 90%
+		:-moz-transform scale(1.1) rotate(3deg)
+	40%, 60%, 80%
+		:-moz-transform scale(1.1) rotate(-3deg)
+	100%
+		:-moz-transform scale(1) rotate(0)
+
+
+@-ms-keyframes tada
+	0%
+		:-ms-transform scale(1)
+	10%, 20%
+		:-ms-transform scale(0.9) rotate(-3deg)
+	30%, 50%, 70%, 90%
+		:-ms-transform scale(1.1) rotate(3deg)
+	40%, 60%, 80%
+		:-ms-transform scale(1.1) rotate(-3deg)
+	100%
+		:-ms-transform scale(1) rotate(0)
+
+
+@-o-keyframes tada
+	0%
+		:-o-transform scale(1)
+	10%, 20%
+		:-o-transform scale(0.9) rotate(-3deg)
+	30%, 50%, 70%, 90%
+		:-o-transform scale(1.1) rotate(3deg)
+	40%, 60%, 80%
+		:-o-transform scale(1.1) rotate(-3deg)
+	100%
+		:-o-transform scale(1) rotate(0)
+
+
+@keyframes tada
+	0%
+		:transform scale(1)
+	10%, 20%
+		:transform scale(0.9) rotate(-3deg)
+	30%, 50%, 70%, 90%
+		:transform scale(1.1) rotate(3deg)
+	40%, 60%, 80%
+		:transform scale(1.1) rotate(-3deg)
+	100%
+		:transform scale(1) rotate(0)
+
+
+.tada
+	:-webkit-animation-name tada
+	:-moz-animation-name tada
+	:-ms-animation-name tada
+	:-o-animation-name tada
+	:animation-name tada
+
+@-webkit-keyframes swing
+	20%, 40%, 60%, 80%, 100%
+		:-webkit-transform-origin top center
+	20%
+		:-webkit-transform rotate(15deg)
+	40%
+		:-webkit-transform rotate(-10deg)
+	60%
+		:-webkit-transform rotate(5deg)
+	80%
+		:-webkit-transform rotate(-5deg)
+	100%
+		:-webkit-transform rotate(0deg)
+
+
+@-moz-keyframes swing
+	20%
+		:-moz-transform rotate(15deg)
+	40%
+		:-moz-transform rotate(-10deg)
+	60%
+		:-moz-transform rotate(5deg)
+	80%
+		:-moz-transform rotate(-5deg)
+	100%
+		:-moz-transform rotate(0deg)
+
+
+@-ms-keyframes swing
+	20%
+		:-ms-transform rotate(15deg)
+	40%
+		:-ms-transform rotate(-10deg)
+	60%
+		:-ms-transform rotate(5deg)
+	80%
+		:-ms-transform rotate(-5deg)
+	100%
+		:-ms-transform rotate(0deg)
+
+
+@-o-keyframes swing
+	20%
+		:-o-transform rotate(15deg)
+	40%
+		:-o-transform rotate(-10deg)
+	60%
+		:-o-transform rotate(5deg)
+	80%
+		:-o-transform rotate(-5deg)
+	100%
+		:-o-transform rotate(0deg)
+
+
+@keyframes swing
+	20%
+		:transform rotate(15deg)
+	40%
+		:transform rotate(-10deg)
+	60%
+		:transform rotate(5deg)
+	80%
+		:transform rotate(-5deg)
+	100%
+		:transform rotate(0deg)
+
+
+.swing
+	:-webkit-transform-origin top center
+	:-moz-transform-origin top center
+	:-ms-transform-origin top center
+	:-o-transform-origin top center
+	:transform-origin top center
+	:-webkit-animation-name swing
+	:-moz-animation-name swing
+	:-ms-animation-name swing
+	:-o-animation-name swing
+	:animation-name swing
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes wobble
+	0%
+		:-webkit-transform translateX(0%)
+	15%
+		:-webkit-transform translateX(-25%) rotate(-5deg)
+	30%
+		:-webkit-transform translateX(20%) rotate(3deg)
+	45%
+		:-webkit-transform translateX(-15%) rotate(-3deg)
+	60%
+		:-webkit-transform translateX(10%) rotate(2deg)
+	75%
+		:-webkit-transform translateX(-5%) rotate(-1deg)
+	100%
+		:-webkit-transform translateX(0%)
+
+
+@-moz-keyframes wobble
+	0%
+		:-moz-transform translateX(0%)
+	15%
+		:-moz-transform translateX(-25%) rotate(-5deg)
+	30%
+		:-moz-transform translateX(20%) rotate(3deg)
+	45%
+		:-moz-transform translateX(-15%) rotate(-3deg)
+	60%
+		:-moz-transform translateX(10%) rotate(2deg)
+	75%
+		:-moz-transform translateX(-5%) rotate(-1deg)
+	100%
+		:-moz-transform translateX(0%)
+
+
+@-ms-keyframes wobble
+	0%
+		:-ms-transform translateX(0%)
+	15%
+		:-ms-transform translateX(-25%) rotate(-5deg)
+	30%
+		:-ms-transform translateX(20%) rotate(3deg)
+	45%
+		:-ms-transform translateX(-15%) rotate(-3deg)
+	60%
+		:-ms-transform translateX(10%) rotate(2deg)
+	75%
+		:-ms-transform translateX(-5%) rotate(-1deg)
+	100%
+		:-ms-transform translateX(0%)
+
+
+@-o-keyframes wobble
+	0%
+		:-o-transform translateX(0%)
+	15%
+		:-o-transform translateX(-25%) rotate(-5deg)
+	30%
+		:-o-transform translateX(20%) rotate(3deg)
+	45%
+		:-o-transform translateX(-15%) rotate(-3deg)
+	60%
+		:-o-transform translateX(10%) rotate(2deg)
+	75%
+		:-o-transform translateX(-5%) rotate(-1deg)
+	100%
+		:-o-transform translateX(0%)
+
+
+@keyframes wobble
+	0%
+		:transform translateX(0%)
+	15%
+		:transform translateX(-25%) rotate(-5deg)
+	30%
+		:transform translateX(20%) rotate(3deg)
+	45%
+		:transform translateX(-15%) rotate(-3deg)
+	60%
+		:transform translateX(10%) rotate(2deg)
+	75%
+		:transform translateX(-5%) rotate(-1deg)
+	100%
+		:transform translateX(0%)
+
+
+.wobble
+	:-webkit-animation-name wobble
+	:-moz-animation-name wobble
+	:-ms-animation-name wobble
+	:-o-animation-name wobble
+	:animation-name wobble
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes pulse
+	0%
+		:-webkit-transform scale(1)
+	50%
+		:-webkit-transform scale(1.1)
+	100%
+		:-webkit-transform scale(1)
+
+
+@-moz-keyframes pulse
+	0%
+		:-moz-transform scale(1)
+	50%
+		:-moz-transform scale(1.1)
+	100%
+		:-moz-transform scale(1)
+
+
+@-ms-keyframes pulse
+	0%
+		:-ms-transform scale(1)
+	50%
+		:-ms-transform scale(1.1)
+	100%
+		:-ms-transform scale(1)
+
+
+@-o-keyframes pulse
+	0%
+		:-o-transform scale(1)
+	50%
+		:-o-transform scale(1.1)
+	100%
+		:-o-transform scale(1)
+
+
+@keyframes pulse
+	0%
+		:transform scale(1)
+	50%
+		:transform scale(1.1)
+	100%
+		:transform scale(1)
+
+
+.pulse
+	:-webkit-animation-name pulse
+	:-moz-animation-name pulse
+	:-ms-animation-name pulse
+	:-o-animation-name pulse
+	:animation-name pulse
+
+
+@-webkit-keyframes pulseHarder
+	0%
+		:-webkit-transform scale(1)
+		:-webkit-transform-origin 50% 50%
+	50%
+		:-webkit-transform scale(1.5)
+		:-webkit-transform-origin 50% 50%
+	100%
+		:-webkit-transform scale(1)
+		:-webkit-transform-origin 50% 50%
+
+
+@-moz-keyframes pulseHarder
+	0%
+		:-moz-transform scale(1)
+		:-moz-transform-origin 50% 50%
+	50%
+		:-moz-transform scale(1.5)
+		:-moz-transform-origin 50% 50%
+	100%
+		:-moz-transform scale(1)
+		:-moz-transform-origin 50% 50%
+
+
+@-ms-keyframes pulseHarder
+	0%
+		:-ms-transform scale(1)
+		:-ms-transform-origin 50% 50%
+	50%
+		:-ms-transform scale(1.5)
+		:-ms-transform-origin 50% 50%
+	100%
+		:-ms-transform scale(1)
+		:-ms-transform-origin 50% 50%
+
+
+@-o-keyframes pulseHarder
+	0%
+		:-o-transform scale(1)
+		:-o-transform-origin 50% 50%
+	50%
+		:-o-transform scale(1.5)
+		:-o-transform-origin 50% 50%
+	100%
+		:-o-transform scale(1)
+		:-o-transform-origin 50% 50%
+
+
+@keyframes pulseHarder
+	0%
+		:transform scale(1)
+		:transform-origin 50% 50%
+	50%
+		:transform scale(1.5)
+		:transform-origin 50% 50%
+	100%
+		:transform scale(1)
+		:transform-origin 50% 50%
+
+
+.pulseHarder
+	:-webkit-animation-name pulseHarder
+	:-moz-animation-name pulseHarder
+	:-ms-animation-name pulseHarder
+	:-o-animation-name pulseHarder
+	:animation-name pulseHarder
+
+
+@-webkit-keyframes fadeIn
+	0%
+		:opacity 0
+	100%
+		:opacity 1
+
+
+@-moz-keyframes fadeIn
+	0%
+		:opacity 0
+	100%
+		:opacity 1
+
+
+@-ms-keyframes fadeIn
+	0%
+		:opacity 0
+	100%
+		:opacity 1
+
+
+@-o-keyframes fadeIn
+	0%
+		:opacity 0
+	100%
+		:opacity 1
+
+
+@keyframes fadeIn
+	0%
+		:opacity 0
+	100%
+		:opacity 1
+
+
+.fadeIn
+	:-webkit-animation-name fadeIn
+	:-moz-animation-name fadeIn
+	:-ms-animation-name fadeIn
+	:-o-animation-name fadeIn
+	:animation-name fadeIn
+
+@-webkit-keyframes fadeInUp
+	0%
+		:opacity 0
+		:-webkit-transform translateY(20px)
+	100%
+		:opacity 1
+		:-webkit-transform translateY(0)
+
+
+@-moz-keyframes fadeInUp
+	0%
+		:opacity 0
+		:-moz-transform translateY(20px)
+	100%
+		:opacity 1
+		:-moz-transform translateY(0)
+
+
+@-ms-keyframes fadeInUp
+	0%
+		:opacity 0
+		:-ms-transform translateY(20px)
+	100%
+		:opacity 1
+		:-ms-transform translateY(0)
+
+
+@-o-keyframes fadeInUp
+	0%
+		:opacity 0
+		:-o-transform translateY(20px)
+	100%
+		:opacity 1
+		:-o-transform translateY(0)
+
+
+@keyframes fadeInUp
+	0%
+		:opacity 0
+		:transform translateY(20px)
+	100%
+		:opacity 1
+		:transform translateY(0)
+
+
+.fadeInUp
+	:-webkit-animation-name fadeInUp
+	:-moz-animation-name fadeInUp
+	:-ms-animation-name fadeInUp
+	:-o-animation-name fadeInUp
+	:animation-name fadeInUp
+
+@-webkit-keyframes fadeInDown
+	0%
+		:opacity 0
+		:-webkit-transform translateY(-20px)
+	100%
+		:opacity 1
+		:-webkit-transform translateY(0)
+
+
+@-moz-keyframes fadeInDown
+	0%
+		:opacity 0
+		:-moz-transform translateY(-20px)
+	100%
+		:opacity 1
+		:-moz-transform translateY(0)
+
+
+@-ms-keyframes fadeInDown
+	0%
+		:opacity 0
+		:-ms-transform translateY(-20px)
+	100%
+		:opacity 1
+		:-ms-transform translateY(0)
+
+
+@-o-keyframes fadeInDown
+	0%
+		:opacity 0
+		:-ms-transform translateY(-20px)
+	100%
+		:opacity 1
+		:-ms-transform translateY(0)
+
+
+@keyframes fadeInDown
+	0%
+		:opacity 0
+		:transform translateY(-20px)
+	100%
+		:opacity 1
+		:transform translateY(0)
+
+
+.fadeInDown
+	:-webkit-animation-name fadeInDown
+	:-moz-animation-name fadeInDown
+	:-ms-animation-name fadeInDown
+	:-o-animation-name fadeInDown
+	:animation-name fadeInDown
+
+@-webkit-keyframes fadeInLeft
+	0%
+		:opacity 0
+		:-webkit-transform translateX(-20px)
+	100%
+		:opacity 1
+		:-webkit-transform translateX(0)
+
+
+@-moz-keyframes fadeInLeft
+	0%
+		:opacity 0
+		:-moz-transform translateX(-20px)
+	100%
+		:opacity 1
+		:-moz-transform translateX(0)
+
+
+@-ms-keyframes fadeInLeft
+	0%
+		:opacity 0
+		:-ms-transform translateX(-20px)
+	100%
+		:opacity 1
+		:-ms-transform translateX(0)
+
+
+@-o-keyframes fadeInLeft
+	0%
+		:opacity 0
+		:-o-transform translateX(-20px)
+	100%
+		:opacity 1
+		:-o-transform translateX(0)
+
+
+@keyframes fadeInLeft
+	0%
+		:opacity 0
+		:transform translateX(-20px)
+	100%
+		:opacity 1
+		:transform translateX(0)
+
+
+.fadeInLeft
+	:-webkit-animation-name fadeInLeft
+	:-moz-animation-name fadeInLeft
+	:-ms-animation-name fadeInLeft
+	:-o-animation-name fadeInLeft
+	:animation-name fadeInLeft
+
+@-webkit-keyframes fadeInRight
+	0%
+		:opacity 0
+		:-webkit-transform translateX(20px)
+	100%
+		:opacity 1
+		:-webkit-transform translateX(0)
+
+
+@-moz-keyframes fadeInRight
+	0%
+		:opacity 0
+		:-moz-transform translateX(20px)
+	100%
+		:opacity 1
+		:-moz-transform translateX(0)
+
+
+@-ms-keyframes fadeInRight
+	0%
+		:opacity 0
+		:-ms-transform translateX(20px)
+	100%
+		:opacity 1
+		:-ms-transform translateX(0)
+
+
+@-o-keyframes fadeInRight
+	0%
+		:opacity 0
+		:-o-transform translateX(20px)
+	100%
+		:opacity 1
+		:-o-transform translateX(0)
+
+
+@keyframes fadeInRight
+	0%
+		:opacity 0
+		:transform translateX(20px)
+	100%
+		:opacity 1
+		:transform translateX(0)
+
+
+.fadeInRight
+	:-webkit-animation-name fadeInRight
+	:-moz-animation-name fadeInRight
+	:-ms-animation-name fadeInRight
+	:-o-animation-name fadeInRight
+	:animation-name fadeInRight
+
+@-webkit-keyframes fadeInUpBig
+	0%
+		:opacity 0
+		:-webkit-transform translateY(2000px)
+	100%
+		:opacity 1
+		:-webkit-transform translateY(0)
+
+
+@-moz-keyframes fadeInUpBig
+	0%
+		:opacity 0
+		:-moz-transform translateY(2000px)
+	100%
+		:opacity 1
+		:-moz-transform translateY(0)
+
+
+@-ms-keyframes fadeInUpBig
+	0%
+		:opacity 0
+		:-ms-transform translateY(2000px)
+	100%
+		:opacity 1
+		:-ms-transform translateY(0)
+
+
+@-o-keyframes fadeInUpBig
+	0%
+		:opacity 0
+		:-o-transform translateY(2000px)
+	100%
+		:opacity 1
+		:-o-transform translateY(0)
+
+
+@keyframes fadeInUpBig
+	0%
+		:opacity 0
+		:transform translateY(2000px)
+	100%
+		:opacity 1
+		:transform translateY(0)
+
+
+.fadeInUpBig
+	:-webkit-animation-name fadeInUpBig
+	:-moz-animation-name fadeInUpBig
+	:-ms-animation-name fadeInUpBig
+	:-o-animation-name fadeInUpBig
+	:animation-name fadeInUpBig
+
+@-webkit-keyframes fadeInDownBig
+	0%
+		:opacity 0
+		:-webkit-transform translateY(-2000px)
+	100%
+		:opacity 1
+		:-webkit-transform translateY(0)
+
+
+@-moz-keyframes fadeInDownBig
+	0%
+		:opacity 0
+		:-moz-transform translateY(-2000px)
+	100%
+		:opacity 1
+		:-moz-transform translateY(0)
+
+
+@-ms-keyframes fadeInDownBig
+	0%
+		:opacity 0
+		:-ms-transform translateY(-2000px)
+	100%
+		:opacity 1
+		:-ms-transform translateY(0)
+
+
+@-o-keyframes fadeInDownBig
+	0%
+		:opacity 0
+		:-o-transform translateY(-2000px)
+	100%
+		:opacity 1
+		:-o-transform translateY(0)
+
+
+@keyframes fadeInDownBig
+	0%
+		:opacity 0
+		:transform translateY(-2000px)
+	100%
+		:opacity 1
+		:transform translateY(0)
+
+
+.fadeInDownBig
+	:-webkit-animation-name fadeInDownBig
+	:-moz-animation-name fadeInDownBig
+	:-ms-animation-name fadeInDownBig
+	:-o-animation-name fadeInDownBig
+	:animation-name fadeInDownBig
+
+@-webkit-keyframes fadeInLeftBig
+	0%
+		:opacity 0
+		:-webkit-transform translateX(-2000px)
+	100%
+		:opacity 1
+		:-webkit-transform translateX(0)
+
+
+@-moz-keyframes fadeInLeftBig
+	0%
+		:opacity 0
+		:-moz-transform translateX(-2000px)
+	100%
+		:opacity 1
+		:-moz-transform translateX(0)
+
+
+@-ms-keyframes fadeInLeftBig
+	0%
+		:opacity 0
+		:-ms-transform translateX(-2000px)
+	100%
+		:opacity 1
+		:-ms-transform translateX(0)
+
+
+@-o-keyframes fadeInLeftBig
+	0%
+		:opacity 0
+		:-o-transform translateX(-2000px)
+	100%
+		:opacity 1
+		:-o-transform translateX(0)
+
+
+@keyframes fadeInLeftBig
+	0%
+		:opacity 0
+		:transform translateX(-2000px)
+	100%
+		:opacity 1
+		:transform translateX(0)
+
+
+.fadeInLeftBig
+	:-webkit-animation-name fadeInLeftBig
+	:-moz-animation-name fadeInLeftBig
+	:-ms-animation-name fadeInLeftBig
+	:-o-animation-name fadeInLeftBig
+	:animation-name fadeInLeftBig
+
+@-webkit-keyframes fadeInRightBig
+	0%
+		:opacity 0
+		:-webkit-transform translateX(2000px)
+	100%
+		:opacity 1
+		:-webkit-transform translateX(0)
+
+
+@-moz-keyframes fadeInRightBig
+	0%
+		:opacity 0
+		:-moz-transform translateX(2000px)
+	100%
+		:opacity 1
+		:-moz-transform translateX(0)
+
+
+@-ms-keyframes fadeInRightBig
+	0%
+		:opacity 0
+		:-ms-transform translateX(2000px)
+	100%
+		:opacity 1
+		:-ms-transform translateX(0)
+
+
+@-o-keyframes fadeInRightBig
+	0%
+		:opacity 0
+		:-o-transform translateX(2000px)
+	100%
+		:opacity 1
+		:-o-transform translateX(0)
+
+
+@keyframes fadeInRightBig
+	0%
+		:opacity 0
+		:transform translateX(2000px)
+	100%
+		:opacity 1
+		:transform translateX(0)
+
+
+.fadeInRightBig
+	:-webkit-animation-name fadeInRightBig
+	:-moz-animation-name fadeInRightBig
+	:-ms-animation-name fadeInRightBig
+	:-o-animation-name fadeInRightBig
+	:animation-name fadeInRightBig
+
+@-webkit-keyframes fadeOut
+	0%
+		:opacity 1
+	100%
+		:opacity 0
+
+
+@-moz-keyframes fadeOut
+	0%
+		:opacity 1
+	100%
+		:opacity 0
+
+
+@-ms-keyframes fadeOut
+	0%
+		:opacity 1
+	100%
+		:opacity 0
+
+
+@-o-keyframes fadeOut
+	0%
+		:opacity 1
+	100%
+		:opacity 0
+
+
+@keyframes fadeOut
+	0%
+		:opacity 1
+	100%
+		:opacity 0
+
+
+.fadeOut
+	:-webkit-animation-name fadeOut
+	:-moz-animation-name fadeOut
+	:-ms-animation-name fadeOut
+	:-o-animation-name fadeOut
+	:animation-name fadeOut
+
+@-webkit-keyframes fadeOutUp
+	0%
+		:opacity 1
+		:-webkit-transform translateY(0)
+	100%
+		:opacity 0
+		:-webkit-transform translateY(-20px)
+
+
+@-moz-keyframes fadeOutUp
+	0%
+		:opacity 1
+		:-moz-transform translateY(0)
+	100%
+		:opacity 0
+		:-moz-transform translateY(-20px)
+
+
+@-ms-keyframes fadeOutUp
+	0%
+		:opacity 1
+		:-ms-transform translateY(0)
+	100%
+		:opacity 0
+		:-ms-transform translateY(-20px)
+
+
+@-o-keyframes fadeOutUp
+	0%
+		:opacity 1
+		:-o-transform translateY(0)
+	100%
+		:opacity 0
+		:-o-transform translateY(-20px)
+
+
+@keyframes fadeOutUp
+	0%
+		:opacity 1
+		:transform translateY(0)
+	100%
+		:opacity 0
+		:transform translateY(-20px)
+
+
+.fadeOutUp
+	:-webkit-animation-name fadeOutUp
+	:-moz-animation-name fadeOutUp
+	:-ms-animation-name fadeOutUp
+	:-o-animation-name fadeOutUp
+	:animation-name fadeOutUp
+
+
+@-webkit-keyframes fadeOutUpRotate
+	0%
+		:opacity 1
+		:-webkit-transform translateY(0)
+	80%
+		:opacity 0
+		:-webkit-transform translateY(-20px)
+	100%
+		:opacity 0
+		:-webkit-transform translateY(-20px)
+
+
+@-moz-keyframes fadeOutUpRotate
+	0%
+		:opacity 1
+		:-moz-transform translateY(0)
+	80%
+		:opacity 0
+		:-moz-transform translateY(-20px)
+	100%
+		:opacity 0
+		:-moz-transform translateY(-20px)
+
+
+@-ms-keyframes fadeOutUpRotate
+	0%
+		:opacity 1
+		:-ms-transform translateY(0)
+	80%
+		:opacity 0
+		:-ms-transform translateY(-20px)
+	100%
+		:opacity 0
+		:-ms-transform translateY(-20px)
+
+
+@-o-keyframes fadeOutUpRotate
+	0%
+		:opacity 1
+		:-o-transform translateY(0)
+	80%
+		:opacity 0
+		:-o-transform translateY(-20px)
+	100%
+		:opacity 0
+		:-o-transform translateY(-20px)
+
+
+@keyframes fadeOutUpRotate
+	0%
+		:opacity 1
+		:transform translateY(0)
+	80%
+		:opacity 0
+		:transform translateY(-20px)
+	100%
+		:opacity 0
+		:transform translateY(-20px)
+
+
+.fadeOutUpRotate
+	:-webkit-animation-name fadeOutUpRotate
+	:-moz-animation-name fadeOutUpRotate
+	:-ms-animation-name fadeOutUpRotate
+	:-o-animation-name fadeOutUpRotate
+	:animation-name fadeOutUpRotate
+
+
+@-webkit-keyframes fadeOutDown
+	0%
+		:opacity 1
+		:-webkit-transform translateY(0)
+	100%
+		:opacity 0
+		:-webkit-transform translateY(20px)
+
+
+@-moz-keyframes fadeOutDown
+	0%
+		:opacity 1
+		:-moz-transform translateY(0)
+	100%
+		:opacity 0
+		:-moz-transform translateY(20px)
+
+
+@-ms-keyframes fadeOutDown
+	0%
+		:opacity 1
+		:-ms-transform translateY(0)
+	100%
+		:opacity 0
+		:-ms-transform translateY(20px)
+
+
+@-o-keyframes fadeOutDown
+	0%
+		:opacity 1
+		:-o-transform translateY(0)
+	100%
+		:opacity 0
+		:-o-transform translateY(20px)
+
+
+@keyframes fadeOutDown
+	0%
+		:opacity 1
+		:transform translateY(0)
+	100%
+		:opacity 0
+		:transform translateY(20px)
+
+
+.fadeOutDown
+	:-webkit-animation-name fadeOutDown
+	:-moz-animation-name fadeOutDown
+	:-ms-animation-name fadeOutDown
+	:-o-animation-name fadeOutDown
+	:animation-name fadeOutDown
+
+@-webkit-keyframes fadeOutLeft
+	0%
+		:opacity 1
+		:-webkit-transform translateX(0)
+	100%
+		:opacity 0
+		:-webkit-transform translateX(-20px)
+
+
+@-moz-keyframes fadeOutLeft
+	0%
+		:opacity 1
+		:-moz-transform translateX(0)
+	100%
+		:opacity 0
+		:-moz-transform translateX(-20px)
+
+
+@-ms-keyframes fadeOutLeft
+	0%
+		:opacity 1
+		:-ms-transform translateX(0)
+	100%
+		:opacity 0
+		:-ms-transform translateX(-20px)
+
+
+@-o-keyframes fadeOutLeft
+	0%
+		:opacity 1
+		:-o-transform translateX(0)
+	100%
+		:opacity 0
+		:-o-transform translateX(-20px)
+
+
+@keyframes fadeOutLeft
+	0%
+		:opacity 1
+		:transform translateX(0)
+	100%
+		:opacity 0
+		:transform translateX(-20px)
+
+
+.fadeOutLeft
+	:-webkit-animation-name fadeOutLeft
+	:-moz-animation-name fadeOutLeft
+	:-ms-animation-name fadeOutLeft
+	:-o-animation-name fadeOutLeft
+	:animation-name fadeOutLeft
+
+@-webkit-keyframes fadeOutRight
+	0%
+		:opacity 1
+		:-webkit-transform translateX(0)
+	100%
+		:opacity 0
+		:-webkit-transform translateX(20px)
+
+
+@-moz-keyframes fadeOutRight
+	0%
+		:opacity 1
+		:-moz-transform translateX(0)
+	100%
+		:opacity 0
+		:-moz-transform translateX(20px)
+
+
+@-ms-keyframes fadeOutRight
+	0%
+		:opacity 1
+		:-ms-transform translateX(0)
+	100%
+		:opacity 0
+		:-ms-transform translateX(20px)
+
+
+@-o-keyframes fadeOutRight
+	0%
+		:opacity 1
+		:-o-transform translateX(0)
+	100%
+		:opacity 0
+		:-o-transform translateX(20px)
+
+
+@keyframes fadeOutRight
+	0%
+		:opacity 1
+		:transform translateX(0)
+	100%
+		:opacity 0
+		:transform translateX(20px)
+
+
+.fadeOutRight
+	:-webkit-animation-name fadeOutRight
+	:-moz-animation-name fadeOutRight
+	:-ms-animation-name fadeOutRight
+	:-o-animation-name fadeOutRight
+	:animation-name fadeOutRight
+
+@-webkit-keyframes fadeOutUpBig
+	0%
+		:opacity 1
+		:-webkit-transform translateY(0)
+	100%
+		:opacity 0
+		:-webkit-transform translateY(-2000px)
+
+
+@-moz-keyframes fadeOutUpBig
+	0%
+		:opacity 1
+		:-moz-transform translateY(0)
+	100%
+		:opacity 0
+		:-moz-transform translateY(-2000px)
+
+
+@-ms-keyframes fadeOutUpBig
+	0%
+		:opacity 1
+		:-ms-transform translateY(0)
+	100%
+		:opacity 0
+		:-ms-transform translateY(-2000px)
+
+
+@-o-keyframes fadeOutUpBig
+	0%
+		:opacity 1
+		:-o-transform translateY(0)
+	100%
+		:opacity 0
+		:-o-transform translateY(-2000px)
+
+
+@keyframes fadeOutUpBig
+	0%
+		:opacity 1
+		:transform translateY(0)
+	100%
+		:opacity 0
+		:transform translateY(-2000px)
+
+
+.fadeOutUpBig
+	:-webkit-animation-name fadeOutUpBig
+	:-moz-animation-name fadeOutUpBig
+	:-ms-animation-name fadeOutUpBig
+	:-o-animation-name fadeOutUpBig
+	:animation-name fadeOutUpBig
+
+@-webkit-keyframes fadeOutDownBig
+	0%
+		:opacity 1
+		:-webkit-transform translateY(0)
+	100%
+		:opacity 0
+		:-webkit-transform translateY(2000px)
+
+
+@-moz-keyframes fadeOutDownBig
+	0%
+		:opacity 1
+		:-moz-transform translateY(0)
+	100%
+		:opacity 0
+		:-moz-transform translateY(2000px)
+
+
+@-ms-keyframes fadeOutDownBig
+	0%
+		:opacity 1
+		:-ms-transform translateY(0)
+	100%
+		:opacity 0
+		:-ms-transform translateY(2000px)
+
+
+@-o-keyframes fadeOutDownBig
+	0%
+		:opacity 1
+		:-o-transform translateY(0)
+	100%
+		:opacity 0
+		:-o-transform translateY(2000px)
+
+
+@keyframes fadeOutDownBig
+	0%
+		:opacity 1
+		:transform translateY(0)
+	100%
+		:opacity 0
+		:transform translateY(2000px)
+
+
+.fadeOutDownBig
+	:-webkit-animation-name fadeOutDownBig
+	:-moz-animation-name fadeOutDownBig
+	:-ms-animation-name fadeOutDownBig
+	:-o-animation-name fadeOutDownBig
+	:animation-name fadeOutDownBig
+
+@-webkit-keyframes fadeOutLeftBig
+	0%
+		:opacity 1
+		:-webkit-transform translateX(0)
+	100%
+		:opacity 0
+		:-webkit-transform translateX(-2000px)
+
+
+@-moz-keyframes fadeOutLeftBig
+	0%
+		:opacity 1
+		:-moz-transform translateX(0)
+	100%
+		:opacity 0
+		:-moz-transform translateX(-2000px)
+
+
+@-ms-keyframes fadeOutLeftBig
+	0%
+		:opacity 1
+		:-ms-transform translateX(0)
+	100%
+		:opacity 0
+		:-ms-transform translateX(-2000px)
+
+
+@-o-keyframes fadeOutLeftBig
+	0%
+		:opacity 1
+		:-o-transform translateX(0)
+	100%
+		:opacity 0
+		:-o-transform translateX(-2000px)
+
+
+@keyframes fadeOutLeftBig
+	0%
+		:opacity 1
+		:transform translateX(0)
+	100%
+		:opacity 0
+		:transform translateX(-2000px)
+
+
+.fadeOutLeftBig
+	:-webkit-animation-name fadeOutLeftBig
+	:-moz-animation-name fadeOutLeftBig
+	:-ms-animation-name fadeOutLeftBig
+	:-o-animation-name fadeOutLeftBig
+	:animation-name fadeOutLeftBig
+
+@-webkit-keyframes fadeOutRightBig
+	0%
+		:opacity 1
+		:-webkit-transform translateX(0)
+	100%
+		:opacity 0
+		:-webkit-transform translateX(2000px)
+
+
+@-moz-keyframes fadeOutRightBig
+	0%
+		:opacity 1
+		:-moz-transform translateX(0)
+	100%
+		:opacity 0
+		:-moz-transform translateX(2000px)
+
+
+@-ms-keyframes fadeOutRightBig
+	0%
+		:opacity 1
+		:-ms-transform translateX(0)
+	100%
+		:opacity 0
+		:-ms-transform translateX(2000px)
+
+
+@-o-keyframes fadeOutRightBig
+	0%
+		:opacity 1
+		:-o-transform translateX(0)
+	100%
+		:opacity 0
+		:-o-transform translateX(2000px)
+
+
+@keyframes fadeOutRightBig
+	0%
+		:opacity 1
+		:transform translateX(0)
+	100%
+		:opacity 0
+		:transform translateX(2000px)
+
+
+.fadeOutRightBig
+	:-webkit-animation-name fadeOutRightBig
+	:-moz-animation-name fadeOutRightBig
+	:-ms-animation-name fadeOutRightBig
+	:-o-animation-name fadeOutRightBig
+	:animation-name fadeOutRightBig
+
+@-webkit-keyframes bounceIn
+	0%
+		:opacity 0
+		:-webkit-transform scale(0.3)
+	50%
+		:opacity 1
+		:-webkit-transform scale(1.05)
+	70%
+		:-webkit-transform scale(0.9)
+	100%
+		:-webkit-transform scale(1)
+
+
+@-moz-keyframes bounceIn
+	0%
+		:opacity 0
+		:-moz-transform scale(0.3)
+	50%
+		:opacity 1
+		:-moz-transform scale(1.05)
+	70%
+		:-moz-transform scale(0.9)
+	100%
+		:-moz-transform scale(1)
+
+
+@-ms-keyframes bounceIn
+	0%
+		:opacity 0
+		:-ms-transform scale(0.3)
+	50%
+		:opacity 1
+		:-ms-transform scale(1.05)
+	70%
+		:-ms-transform scale(0.9)
+	100%
+		:-ms-transform scale(1)
+
+
+@-o-keyframes bounceIn
+	0%
+		:opacity 0
+		:-o-transform scale(0.3)
+	50%
+		:opacity 1
+		:-o-transform scale(1.05)
+	70%
+		:-o-transform scale(0.9)
+	100%
+		:-o-transform scale(1)
+
+
+@keyframes bounceIn
+	0%
+		:opacity 0
+		:transform scale(0.3)
+	50%
+		:opacity 1
+		:transform scale(1.05)
+	70%
+		:transform scale(0.9)
+	100%
+		:transform scale(1)
+
+
+.bounceIn
+	:-webkit-animation-name bounceIn
+	:-moz-animation-name bounceIn
+	:-ms-animation-name bounceIn
+	:-o-animation-name bounceIn
+	:animation-name bounceIn
+
+
+
+
+@-webkit-keyframes bounceSmall
+	0%, 100%
+		:-webkit-transform scale(0)
+
+	50%
+		:-webkit-transform scale(1)
+
+@-moz-keyframes bounceSmall
+	0%, 100%
+		:-moz-transform scale(0)
+
+	50%
+		:-moz-transform scale(1)
+
+@-ms-keyframes bounceSmall
+	0%, 100%
+		:-ms-transform scale(0)
+
+	50%
+		:-ms-transform scale(1)
+
+@-o-keyframes bounceSmall
+	0%, 100%
+		:-o-transform scale(0)
+
+	50%
+		:-o-transform scale(1)
+
+@keyframes bounceSmall
+	0%, 100%
+		:transform scale(0)
+
+	50%
+		:transform scale(1)
+
+
+.bounceSmall
+	:-webkit-animation-name bounceSmall
+	:-moz-animation-name bounceSmall
+	:-ms-animation-name bounceSmall
+	:-o-animation-name bounceSmall
+	:animation-name bounceSmall
+
+
+
+
+@-webkit-keyframes bounceInUp
+	0%
+		:opacity 0
+		:-webkit-transform translateY(2000px)
+	60%
+		:opacity 1
+		:-webkit-transform translateY(-30px)
+	80%
+		:-webkit-transform translateY(10px)
+	100%
+		:-webkit-transform translateY(0)
+
+
+@-moz-keyframes bounceInUp
+	0%
+		:opacity 0
+		:-moz-transform translateY(2000px)
+	60%
+		:opacity 1
+		:-moz-transform translateY(-30px)
+	80%
+		:-moz-transform translateY(10px)
+	100%
+		:-moz-transform translateY(0)
+
+
+@-ms-keyframes bounceInUp
+	0%
+		:opacity 0
+		:-ms-transform translateY(2000px)
+	60%
+		:opacity 1
+		:-ms-transform translateY(-30px)
+	80%
+		:-ms-transform translateY(10px)
+	100%
+		:-ms-transform translateY(0)
+
+
+@-o-keyframes bounceInUp
+	0%
+		:opacity 0
+		:-o-transform translateY(2000px)
+	60%
+		:opacity 1
+		:-o-transform translateY(-30px)
+	80%
+		:-o-transform translateY(10px)
+	100%
+		:-o-transform translateY(0)
+
+
+@keyframes bounceInUp
+	0%
+		:opacity 0
+		:transform translateY(2000px)
+	60%
+		:opacity 1
+		:transform translateY(-30px)
+	80%
+		:transform translateY(10px)
+	100%
+		:transform translateY(0)
+
+
+.bounceInUp
+	:-webkit-animation-name bounceInUp
+	:-moz-animation-name bounceInUp
+	:-ms-animation-name bounceInUp
+	:-o-animation-name bounceInUp
+	:animation-name bounceInUp
+
+@-webkit-keyframes bounceInDown
+	0%
+		:opacity 0
+		:-webkit-transform translateY(-2000px)
+	60%
+		:opacity 1
+		:-webkit-transform translateY(30px)
+	80%
+		:-webkit-transform translateY(-10px)
+	100%
+		:opacity 1
+		:-webkit-transform translateY(0)
+
+
+@-moz-keyframes bounceInDown
+	0%
+		:opacity 0
+		:-moz-transform translateY(-2000px)
+	60%
+		:opacity 1
+		:-moz-transform translateY(30px)
+	80%
+		:-moz-transform translateY(-10px)
+	100%
+		:opacity 1
+		:-moz-transform translateY(0)
+
+
+@-ms-keyframes bounceInDown
+	0%
+		:opacity 0
+		:-ms-transform translateY(-2000px)
+	60%
+		:opacity 1
+		:-ms-transform translateY(30px)
+	80%
+		:-ms-transform translateY(-10px)
+	100%
+		:opacity 1
+		:-ms-transform translateY(0)
+
+
+@-o-keyframes bounceInDown
+	0%
+		:opacity 0
+		:-o-transform translateY(-2000px)
+	60%
+		:opacity 1
+		:-o-transform translateY(30px)
+	80%
+		:-o-transform translateY(-10px)
+	100%
+		:opacity 1
+		:-o-transform translateY(0)
+
+
+@keyframes bounceInDown
+	0%
+		:opacity 0
+		:transform translateY(-2000px)
+	60%
+		:opacity 1
+		:transform translateY(30px)
+	80%
+		:transform translateY(-10px)
+	100%
+		:opacity 1
+		:transform translateY(0)
+
+
+.bounceInDown
+	:-webkit-animation-name bounceInDown
+	:-moz-animation-name bounceInDown
+	:-ms-animation-name bounceInDown
+	:-o-animation-name bounceInDown
+	:animation-name bounceInDown
+
+@-webkit-keyframes bounceInLeft
+	0%
+		:opacity 0
+		:-webkit-transform translateX(-2000px)
+	60%
+		:opacity 1
+		:-webkit-transform translateX(30px)
+	80%
+		:-webkit-transform translateX(-10px)
+	100%
+		:-webkit-transform translateX(0)
+
+
+@-moz-keyframes bounceInLeft
+	0%
+		:opacity 0
+		:-moz-transform translateX(-2000px)
+	60%
+		:opacity 1
+		:-moz-transform translateX(30px)
+	80%
+		:-moz-transform translateX(-10px)
+	100%
+		:-moz-transform translateX(0)
+
+
+@-ms-keyframes bounceInLeft
+	0%
+		:opacity 0
+		:-ms-transform translateX(-2000px)
+	60%
+		:opacity 1
+		:-ms-transform translateX(30px)
+	80%
+		:-ms-transform translateX(-10px)
+	100%
+		:-ms-transform translateX(0)
+
+
+@-o-keyframes bounceInLeft
+	0%
+		:opacity 0
+		:-o-transform translateX(-2000px)
+	60%
+		:opacity 1
+		:-o-transform translateX(30px)
+	80%
+		:-o-transform translateX(-10px)
+	100%
+		:-o-transform translateX(0)
+
+
+@keyframes bounceInLeft
+	0%
+		:opacity 0
+		:transform translateX(-2000px)
+	60%
+		:opacity 1
+		:transform translateX(30px)
+	80%
+		:transform translateX(-10px)
+	100%
+		:transform translateX(0)
+
+
+.bounceInLeft
+	:-webkit-animation-name bounceInLeft
+	:-moz-animation-name bounceInLeft
+	:-ms-animation-name bounceInLeft
+	:-o-animation-name bounceInLeft
+	:animation-name bounceInLeft
+
+@-webkit-keyframes bounceInRight
+	0%
+		:opacity 0
+		:-webkit-transform translateX(2000px)
+	60%
+		:opacity 1
+		:-webkit-transform translateX(-30px)
+	80%
+		:-webkit-transform translateX(10px)
+	100%
+		:-webkit-transform translateX(0)
+
+
+@-moz-keyframes bounceInRight
+	0%
+		:opacity 0
+		:-moz-transform translateX(2000px)
+	60%
+		:opacity 1
+		:-moz-transform translateX(-30px)
+	80%
+		:-moz-transform translateX(10px)
+	100%
+		:-moz-transform translateX(0)
+
+
+@-ms-keyframes bounceInRight
+	0%
+		:opacity 0
+		:-ms-transform translateX(2000px)
+	60%
+		:opacity 1
+		:-ms-transform translateX(-30px)
+	80%
+		:-ms-transform translateX(10px)
+	100%
+		:-ms-transform translateX(0)
+
+
+@-o-keyframes bounceInRight
+	0%
+		:opacity 0
+		:-o-transform translateX(2000px)
+	60%
+		:opacity 1
+		:-o-transform translateX(-30px)
+	80%
+		:-o-transform translateX(10px)
+	100%
+		:-o-transform translateX(0)
+
+
+@keyframes bounceInRight
+	0%
+		:opacity 0
+		:transform translateX(2000px)
+	60%
+		:opacity 1
+		:transform translateX(-30px)
+	80%
+		:transform translateX(10px)
+	100%
+		:transform translateX(0)
+
+
+.bounceInRight
+	:-webkit-animation-name bounceInRight
+	:-moz-animation-name bounceInRight
+	:-ms-animation-name bounceInRight
+	:-o-animation-name bounceInRight
+	:animation-name bounceInRight
+
+@-webkit-keyframes bounceOut
+	0%
+		:-webkit-transform scale(1)
+	25%
+		:-webkit-transform scale(0.95)
+	50%
+		:opacity 1
+		:-webkit-transform scale(1.1)
+	100%
+		:opacity 0
+		:-webkit-transform scale(0.3)
+
+
+@-moz-keyframes bounceOut
+	0%
+		:-moz-transform scale(1)
+	25%
+		:-moz-transform scale(0.95)
+	50%
+		:opacity 1
+		:-moz-transform scale(1.1)
+	100%
+		:opacity 0
+		:-moz-transform scale(0.3)
+
+
+@-ms-keyframes bounceOut
+	0%
+		:-ms-transform scale(1)
+	25%
+		:-ms-transform scale(0.95)
+	50%
+		:opacity 1
+		:-ms-transform scale(1.1)
+	100%
+		:opacity 0
+		:-ms-transform scale(0.3)
+
+
+@-o-keyframes bounceOut
+	0%
+		:-o-transform scale(1)
+	25%
+		:-o-transform scale(0.95)
+	50%
+		:opacity 1
+		:-o-transform scale(1.1)
+	100%
+		:opacity 0
+		:-o-transform scale(0.3)
+
+
+@keyframes bounceOut
+	0%
+		:transform scale(1)
+	25%
+		:transform scale(0.95)
+	50%
+		:opacity 1
+		:transform scale(1.1)
+	100%
+		:opacity 0
+		:transform scale(0.3)
+
+
+.bounceOut
+	:-webkit-animation-name bounceOut
+	:-moz-animation-name bounceOut
+	:-ms-animation-name bounceOut
+	:-o-animation-name bounceOut
+	:animation-name bounceOut
+
+@-webkit-keyframes bounceOutUp
+	0%
+		:-webkit-transform translateY(0)
+	20%
+		:opacity 1
+		:-webkit-transform translateY(20px)
+	100%
+		:opacity 0
+		:-webkit-transform translateY(-2000px)
+
+
+@-moz-keyframes bounceOutUp
+	0%
+		:-moz-transform translateY(0)
+	20%
+		:opacity 1
+		:-moz-transform translateY(20px)
+	100%
+		:opacity 0
+		:-moz-transform translateY(-2000px)
+
+
+@-ms-keyframes bounceOutUp
+	0%
+		:-ms-transform translateY(0)
+	20%
+		:opacity 1
+		:-ms-transform translateY(20px)
+	100%
+		:opacity 0
+		:-ms-transform translateY(-2000px)
+
+
+@-o-keyframes bounceOutUp
+	0%
+		:-o-transform translateY(0)
+	20%
+		:opacity 1
+		:-o-transform translateY(20px)
+	100%
+		:opacity 0
+		:-o-transform translateY(-2000px)
+
+
+@keyframes bounceOutUp
+	0%
+		:transform translateY(0)
+	20%
+		:opacity 1
+		:transform translateY(20px)
+	100%
+		:opacity 0
+		:transform translateY(-2000px)
+
+
+.bounceOutUp
+	:-webkit-animation-name bounceOutUp
+	:-moz-animation-name bounceOutUp
+	:-ms-animation-name bounceOutUp
+	:-o-animation-name bounceOutUp
+	:animation-name bounceOutUp
+
+@-webkit-keyframes bounceOutDown
+	0%
+		:-webkit-transform translateY(0)
+	20%
+		:opacity 1
+		:-webkit-transform translateY(-20px)
+	100%
+		:opacity 0
+		:-webkit-transform translateY(2000px)
+
+
+@-moz-keyframes bounceOutDown
+	0%
+		:-moz-transform translateY(0)
+	20%
+		:opacity 1
+		:-moz-transform translateY(-20px)
+	100%
+		:opacity 0
+		:-moz-transform translateY(2000px)
+
+
+@-ms-keyframes bounceOutDown
+	0%
+		:-ms-transform translateY(0)
+	20%
+		:opacity 1
+		:-ms-transform translateY(-20px)
+	100%
+		:opacity 0
+		:-ms-transform translateY(2000px)
+
+
+@keyframes bounceOutDown
+	0%
+		:transform translateY(0)
+	20%
+		:opacity 1
+		:transform translateY(-20px)
+	100%
+		:opacity 0
+		:transform translateY(2000px)
+
+
+.bounceOutDown
+	:-webkit-animation-name bounceOutDown
+	:-moz-animation-name bounceOutDown
+	:-ms-animation-name bounceOutDown
+	:animation-name bounceOutDown
+
+@-webkit-keyframes bounceOutLeft
+	0%
+		:-webkit-transform translateX(0)
+	20%
+		:opacity 1
+		:-webkit-transform translateX(20px)
+	100%
+		:opacity 0
+		:-webkit-transform translateX(-2000px)
+
+
+@-moz-keyframes bounceOutLeft
+	0%
+		:-moz-transform translateX(0)
+	20%
+		:opacity 1
+		:-moz-transform translateX(20px)
+	100%
+		:opacity 0
+		:-moz-transform translateX(-2000px)
+
+
+@-ms-keyframes bounceOutLeft
+	0%
+		:-ms-transform translateX(0)
+	20%
+		:opacity 1
+		:-ms-transform translateX(20px)
+	100%
+		:opacity 0
+		:-ms-transform translateX(-2000px)
+
+
+@-o-keyframes bounceOutLeft
+	0%
+		:-o-transform translateX(0)
+	20%
+		:opacity 1
+		:-o-transform translateX(20px)
+	100%
+		:opacity 0
+		:-o-transform translateX(-2000px)
+
+
+@keyframes bounceOutLeft
+	0%
+		:transform translateX(0)
+	20%
+		:opacity 1
+		:transform translateX(20px)
+	100%
+		:opacity 0
+		:transform translateX(-2000px)
+
+
+.bounceOutLeft
+	:-webkit-animation-name bounceOutLeft
+	:-moz-animation-name bounceOutLeft
+	:-ms-animation-name bounceOutLeft
+	:-o-animation-name bounceOutLeft
+	:animation-name bounceOutLeft
+
+@-webkit-keyframes bounceOutRight
+	0%
+		:-webkit-transform translateX(0)
+	20%
+		:opacity 1
+		:-webkit-transform translateX(-20px)
+	100%
+		:opacity 0
+		:-webkit-transform translateX(2000px)
+
+
+@-moz-keyframes bounceOutRight
+	0%
+		:-moz-transform translateX(0)
+	20%
+		:opacity 1
+		:-moz-transform translateX(-20px)
+	100%
+		:opacity 0
+		:-moz-transform translateX(2000px)
+
+
+@-ms-keyframes bounceOutRight
+	0%
+		:-ms-transform translateX(0)
+	20%
+		:opacity 1
+		:-ms-transform translateX(-20px)
+	100%
+		:opacity 0
+		:-ms-transform translateX(2000px)
+
+
+@-o-keyframes bounceOutRight
+	0%
+		:-o-transform translateX(0)
+	20%
+		:opacity 1
+		:-o-transform translateX(-20px)
+	100%
+		:opacity 0
+		:-o-transform translateX(2000px)
+
+
+@keyframes bounceOutRight
+	0%
+		:transform translateX(0)
+	20%
+		:opacity 1
+		:transform translateX(-20px)
+	100%
+		:opacity 0
+		:transform translateX(2000px)
+
+
+.bounceOutRight
+	:-webkit-animation-name bounceOutRight
+	:-moz-animation-name bounceOutRight
+	:-ms-animation-name bounceOutRight
+	:-o-animation-name bounceOutRight
+	:animation-name bounceOutRight
+
+@-webkit-keyframes rotateIn
+	0%
+		:-webkit-transform-origin center center
+		:-webkit-transform rotate(-200deg)
+		:opacity 0
+	100%
+		:-webkit-transform-origin center center
+		:-webkit-transform rotate(0)
+		:opacity 1
+
+
+@-moz-keyframes rotateIn
+	0%
+		:-moz-transform-origin center center
+		:-moz-transform rotate(-200deg)
+		:opacity 0
+	100%
+		:-moz-transform-origin center center
+		:-moz-transform rotate(0)
+		:opacity 1
+
+
+@-ms-keyframes rotateIn
+	0%
+		:-ms-transform-origin center center
+		:-ms-transform rotate(-200deg)
+		:opacity 0
+	100%
+		:-ms-transform-origin center center
+		:-ms-transform rotate(0)
+		:opacity 1
+
+
+@-o-keyframes rotateIn
+	0%
+		:-o-transform-origin center center
+		:-o-transform rotate(-200deg)
+		:opacity 0
+	100%
+		:-o-transform-origin center center
+		:-o-transform rotate(0)
+		:opacity 1
+
+
+@keyframes rotateIn
+	0%
+		:transform-origin center center
+		:transform rotate(-200deg)
+		:opacity 0
+	100%
+		:transform-origin center center
+		:transform rotate(0)
+		:opacity 1
+
+
+.rotate
+	:-webkit-animation-name rotate
+	:-moz-animation-name rotate
+	:-ms-animation-name rotate
+	:-o-animation-name rotate
+	:animation-name rotate
+	
+@-webkit-keyframes rotate
+	100%
+		:-webkit-transform (rotate(360deg))
+
+@-moz-keyframes rotate
+	100%
+		:-moz-transform (rotate(360deg))
+
+@-ms-keyframes rotate
+	100%
+		:-ms-transform (rotate(360deg))
+
+@-o-keyframes rotate
+	100%
+		:-o-transform (rotate(360deg))
+
+@keyframes rotate
+	100%
+		:transform (rotate(360deg))
+
+
+
+.rotateIn
+	:-webkit-animation-name rotateIn
+	:-moz-animation-name rotateIn
+	:-ms-animation-name rotateIn
+	:-o-animation-name rotateIn
+	:animation-name rotateIn
+
+@-webkit-keyframes rotateInUpLeft
+	0%
+		:-webkit-transform-origin left bottom
+		:-webkit-transform rotate(90deg)
+		:opacity 0
+	100%
+		:-webkit-transform-origin left bottom
+		:-webkit-transform rotate(0)
+		:opacity 1
+
+
+@-moz-keyframes rotateInUpLeft
+	0%
+		:-moz-transform-origin left bottom
+		:-moz-transform rotate(90deg)
+		:opacity 0
+	100%
+		:-moz-transform-origin left bottom
+		:-moz-transform rotate(0)
+		:opacity 1
+
+
+@-ms-keyframes rotateInUpLeft
+	0%
+		:-ms-transform-origin left bottom
+		:-ms-transform rotate(90deg)
+		:opacity 0
+	100%
+		:-ms-transform-origin left bottom
+		:-ms-transform rotate(0)
+		:opacity 1
+
+
+@-o-keyframes rotateInUpLeft
+	0%
+		:-o-transform-origin left bottom
+		:-o-transform rotate(90deg)
+		:opacity 0
+	100%
+		:-o-transform-origin left bottom
+		:-o-transform rotate(0)
+		:opacity 1
+
+
+@keyframes rotateInUpLeft
+	0%
+		:transform-origin left bottom
+		:transform rotate(90deg)
+		:opacity 0
+	100%
+		:transform-origin left bottom
+		:transform rotate(0)
+		:opacity 1
+
+
+.rotateInUpLeft
+	:-webkit-animation-name rotateInUpLeft
+	:-moz-animation-name rotateInUpLeft
+	:-ms-animation-name rotateInUpLeft
+	:-o-animation-name rotateInUpLeft
+	:animation-name rotateInUpLeft
+
+@-webkit-keyframes rotateInDownLeft
+	0%
+		:-webkit-transform-origin left bottom
+		:-webkit-transform rotate(-90deg)
+		:opacity 0
+	100%
+		:-webkit-transform-origin left bottom
+		:-webkit-transform rotate(0)
+		:opacity 1
+
+
+@-moz-keyframes rotateInDownLeft
+	0%
+		:-moz-transform-origin left bottom
+		:-moz-transform rotate(-90deg)
+		:opacity 0
+	100%
+		:-moz-transform-origin left bottom
+		:-moz-transform rotate(0)
+		:opacity 1
+
+
+@-ms-keyframes rotateInDownLeft
+	0%
+		:-ms-transform-origin left bottom
+		:-ms-transform rotate(-90deg)
+		:opacity 0
+	100%
+		:-ms-transform-origin left bottom
+		:-ms-transform rotate(0)
+		:opacity 1
+
+
+@-o-keyframes rotateInDownLeft
+	0%
+		:-o-transform-origin left bottom
+		:-o-transform rotate(-90deg)
+		:opacity 0
+	100%
+		:-o-transform-origin left bottom
+		:-o-transform rotate(0)
+		:opacity 1
+
+
+@keyframes rotateInDownLeft
+	0%
+		:transform-origin left bottom
+		:transform rotate(-90deg)
+		:opacity 0
+	100%
+		:transform-origin left bottom
+		:transform rotate(0)
+		:opacity 1
+
+
+.rotateInDownLeft
+	:-webkit-animation-name rotateInDownLeft
+	:-moz-animation-name rotateInDownLeft
+	:-ms-animation-name rotateInDownLeft
+	:-o-animation-name rotateInDownLeft
+	:animation-name rotateInDownLeft
+
+@-webkit-keyframes rotateInUpRight
+	0%
+		:-webkit-transform-origin right bottom
+		:-webkit-transform rotate(-90deg)
+		:opacity 0
+	100%
+		:-webkit-transform-origin right bottom
+		:-webkit-transform rotate(0)
+		:opacity 1
+
+
+@-moz-keyframes rotateInUpRight
+	0%
+		:-moz-transform-origin right bottom
+		:-moz-transform rotate(-90deg)
+		:opacity 0
+	100%
+		:-moz-transform-origin right bottom
+		:-moz-transform rotate(0)
+		:opacity 1
+
+
+@-ms-keyframes rotateInUpRight
+	0%
+		:-ms-transform-origin right bottom
+		:-ms-transform rotate(-90deg)
+		:opacity 0
+	100%
+		:-ms-transform-origin right bottom
+		:-ms-transform rotate(0)
+		:opacity 1
+
+
+@-o-keyframes rotateInUpRight
+	0%
+		:-o-transform-origin right bottom
+		:-o-transform rotate(-90deg)
+		:opacity 0
+	100%
+		:-o-transform-origin right bottom
+		:-o-transform rotate(0)
+		:opacity 1
+
+
+@keyframes rotateInUpRight
+	0%
+		:transform-origin right bottom
+		:transform rotate(-90deg)
+		:opacity 0
+	100%
+		:transform-origin right bottom
+		:transform rotate(0)
+		:opacity 1
+
+
+.rotateInUpRight
+	:-webkit-animation-name rotateInUpRight
+	:-moz-animation-name rotateInUpRight
+	:-ms-animation-name rotateInUpRight
+	:-o-animation-name rotateInUpRight
+	:animation-name rotateInUpRight
+
+@-webkit-keyframes rotateInDownRight
+	0%
+		:-webkit-transform-origin right bottom
+		:-webkit-transform rotate(90deg)
+		:opacity 0
+	100%
+		:-webkit-transform-origin right bottom
+		:-webkit-transform rotate(0)
+		:opacity 1
+
+
+@-moz-keyframes rotateInDownRight
+	0%
+		:-moz-transform-origin right bottom
+		:-moz-transform rotate(90deg)
+		:opacity 0
+	100%
+		:-moz-transform-origin right bottom
+		:-moz-transform rotate(0)
+		:opacity 1
+
+
+@-ms-keyframes rotateInDownRight
+	0%
+		:-ms-transform-origin right bottom
+		:-ms-transform rotate(90deg)
+		:opacity 0
+	100%
+		:-ms-transform-origin right bottom
+		:-ms-transform rotate(0)
+		:opacity 1
+
+
+@-o-keyframes rotateInDownRight
+	0%
+		:-o-transform-origin right bottom
+		:-o-transform rotate(90deg)
+		:opacity 0
+	100%
+		:-o-transform-origin right bottom
+		:-o-transform rotate(0)
+		:opacity 1
+
+
+@keyframes rotateInDownRight
+	0%
+		:transform-origin right bottom
+		:transform rotate(90deg)
+		:opacity 0
+	100%
+		:transform-origin right bottom
+		:transform rotate(0)
+		:opacity 1
+
+
+.rotateInDownRight
+	:-webkit-animation-name rotateInDownRight
+	:-moz-animation-name rotateInDownRight
+	:-ms-animation-name rotateInDownRight
+	:-o-animation-name rotateInDownRight
+	:animation-name rotateInDownRight
+
+@-webkit-keyframes rotateOut
+	0%
+		:-webkit-transform-origin center center
+		:-webkit-transform rotate(0)
+		:opacity 1
+	100%
+		:-webkit-transform-origin center center
+		:-webkit-transform rotate(200deg)
+		:opacity 0
+
+
+@-moz-keyframes rotateOut
+	0%
+		:-moz-transform-origin center center
+		:-moz-transform rotate(0)
+		:opacity 1
+	100%
+		:-moz-transform-origin center center
+		:-moz-transform rotate(200deg)
+		:opacity 0
+
+
+@-ms-keyframes rotateOut
+	0%
+		:-ms-transform-origin center center
+		:-ms-transform rotate(0)
+		:opacity 1
+	100%
+		:-ms-transform-origin center center
+		:-ms-transform rotate(200deg)
+		:opacity 0
+
+
+@-o-keyframes rotateOut
+	0%
+		:-o-transform-origin center center
+		:-o-transform rotate(0)
+		:opacity 1
+	100%
+		:-o-transform-origin center center
+		:-o-transform rotate(200deg)
+		:opacity 0
+
+
+@keyframes rotateOut
+	0%
+		:transform-origin center center
+		:transform rotate(0)
+		:opacity 1
+	100%
+		:transform-origin center center
+		:transform rotate(200deg)
+		:opacity 0
+
+
+.rotateOut
+	:-webkit-animation-name rotateOut
+	:-moz-animation-name rotateOut
+	:-ms-animation-name rotateOut
+	:-o-animation-name rotateOut
+	:animation-name rotateOut
+
+@-webkit-keyframes rotateOutUpLeft
+	0%
+		:-webkit-transform-origin left bottom
+		:-webkit-transform rotate(0)
+		:opacity 1
+	100%
+		:-webkit-transform-origin left bottom
+		:-webkit-transform rotate(-90deg)
+		:opacity 0
+
+
+@-moz-keyframes rotateOutUpLeft
+	0%
+		:-moz-transform-origin left bottom
+		:-moz-transform rotate(0)
+		:opacity 1
+	100%
+		:-moz-transform-origin left bottom
+		:-moz-transform rotate(-90deg)
+		:opacity 0
+
+
+@-ms-keyframes rotateOutUpLeft
+	0%
+		:-ms-transform-origin left bottom
+		:-ms-transform rotate(0)
+		:opacity 1
+	100%
+		:-ms-transform-origin left bottom
+		:-ms-transform rotate(-90deg)
+		:opacity 0
+
+
+@-o-keyframes rotateOutUpLeft
+	0%
+		:-o-transform-origin left bottom
+		:-o-transform rotate(0)
+		:opacity 1
+	100%
+		:-o-transform-origin left bottom
+		:-o-transform rotate(-90deg)
+		:opacity 0
+
+
+@keyframes rotateOutUpLeft
+	0%
+		:transform-origin left bottom
+		:transform rotate(0)
+		:opacity 1
+	100%
+		:-transform-origin left bottom
+		:-transform rotate(-90deg)
+		:opacity 0
+
+
+.rotateOutUpLeft
+	:-webkit-animation-name rotateOutUpLeft
+	:-moz-animation-name rotateOutUpLeft
+	:-ms-animation-name rotateOutUpLeft
+	:-o-animation-name rotateOutUpLeft
+	:animation-name rotateOutUpLeft
+
+@-webkit-keyframes rotateOutDownLeft
+	0%
+		:-webkit-transform-origin left bottom
+		:-webkit-transform rotate(0)
+		:opacity 1
+	100%
+		:-webkit-transform-origin left bottom
+		:-webkit-transform rotate(90deg)
+		:opacity 0
+
+
+@-moz-keyframes rotateOutDownLeft
+	0%
+		:-moz-transform-origin left bottom
+		:-moz-transform rotate(0)
+		:opacity 1
+	100%
+		:-moz-transform-origin left bottom
+		:-moz-transform rotate(90deg)
+		:opacity 0
+
+
+@-ms-keyframes rotateOutDownLeft
+	0%
+		:-ms-transform-origin left bottom
+		:-ms-transform rotate(0)
+		:opacity 1
+	100%
+		:-ms-transform-origin left bottom
+		:-ms-transform rotate(90deg)
+		:opacity 0
+
+
+@-o-keyframes rotateOutDownLeft
+	0%
+		:-o-transform-origin left bottom
+		:-o-transform rotate(0)
+		:opacity 1
+	100%
+		:-o-transform-origin left bottom
+		:-o-transform rotate(90deg)
+		:opacity 0
+
+
+@keyframes rotateOutDownLeft
+	0%
+		:transform-origin left bottom
+		:transform rotate(0)
+		:opacity 1
+	100%
+		:transform-origin left bottom
+		:transform rotate(90deg)
+		:opacity 0
+
+
+.rotateOutDownLeft
+	:-webkit-animation-name rotateOutDownLeft
+	:-moz-animation-name rotateOutDownLeft
+	:-ms-animation-name rotateOutDownLeft
+	:-o-animation-name rotateOutDownLeft
+	:animation-name rotateOutDownLeft
+
+@-webkit-keyframes rotateOutUpRight
+	0%
+		:-webkit-transform-origin right bottom
+		:-webkit-transform rotate(0)
+		:opacity 1
+	100%
+		:-webkit-transform-origin right bottom
+		:-webkit-transform rotate(90deg)
+		:opacity 0
+
+
+@-moz-keyframes rotateOutUpRight
+	0%
+		:-moz-transform-origin right bottom
+		:-moz-transform rotate(0)
+		:opacity 1
+	100%
+		:-moz-transform-origin right bottom
+		:-moz-transform rotate(90deg)
+		:opacity 0
+
+
+@-ms-keyframes rotateOutUpRight
+	0%
+		:-ms-transform-origin right bottom
+		:-ms-transform rotate(0)
+		:opacity 1
+	100%
+		:-ms-transform-origin right bottom
+		:-ms-transform rotate(90deg)
+		:opacity 0
+
+
+@-o-keyframes rotateOutUpRight
+	0%
+		:-o-transform-origin right bottom
+		:-o-transform rotate(0)
+		:opacity 1
+	100%
+		:-o-transform-origin right bottom
+		:-o-transform rotate(90deg)
+		:opacity 0
+
+
+@keyframes rotateOutUpRight
+	0%
+		:transform-origin right bottom
+		:transform rotate(0)
+		:opacity 1
+	100%
+		:transform-origin right bottom
+		:transform rotate(90deg)
+		:opacity 0
+
+
+.rotateOutUpRight
+	:-webkit-animation-name rotateOutUpRight
+	:-moz-animation-name rotateOutUpRight
+	:-ms-animation-name rotateOutUpRight
+	:-o-animation-name rotateOutUpRight
+	:animation-name rotateOutUpRight
+
+@-webkit-keyframes rotateOutDownRight
+	0%
+		:-webkit-transform-origin right bottom
+		:-webkit-transform rotate(0)
+		:opacity 1
+	100%
+		:-webkit-transform-origin right bottom
+		:-webkit-transform rotate(-90deg)
+		:opacity 0
+
+
+@-moz-keyframes rotateOutDownRight
+	0%
+		:-moz-transform-origin right bottom
+		:-moz-transform rotate(0)
+		:opacity 1
+	100%
+		:-moz-transform-origin right bottom
+		:-moz-transform rotate(-90deg)
+		:opacity 0
+
+
+@-ms-keyframes rotateOutDownRight
+	0%
+		:-ms-transform-origin right bottom
+		:-ms-transform rotate(0)
+		:opacity 1
+	100%
+		:-ms-transform-origin right bottom
+		:-ms-transform rotate(-90deg)
+		:opacity 0
+
+
+@-o-keyframes rotateOutDownRight
+	0%
+		:-o-transform-origin right bottom
+		:-o-transform rotate(0)
+		:opacity 1
+	100%
+		:-o-transform-origin right bottom
+		:-o-transform rotate(-90deg)
+		:opacity 0
+
+
+@keyframes rotateOutDownRight
+	0%
+		:transform-origin right bottom
+		:transform rotate(0)
+		:opacity 1
+	100%
+		:transform-origin right bottom
+		:transform rotate(-90deg)
+		:opacity 0
+
+
+.rotateOutDownRight
+	:-webkit-animation-name rotateOutDownRight
+	:-moz-animation-name rotateOutDownRight
+	:-ms-animation-name rotateOutDownRight
+	:-o-animation-name rotateOutDownRight
+	:animation-name rotateOutDownRight
+
+@-webkit-keyframes hinge
+	0%
+		:-webkit-transform rotate(0)
+		:-webkit-transform-origin top left
+		:-webkit-animation-timing-function ease-in-out
+	20%, 60%
+		:-webkit-transform rotate(80deg)
+		:-webkit-transform-origin top left
+		:-webkit-animation-timing-function ease-in-out
+	40%
+		:-webkit-transform rotate(60deg)
+		:-webkit-transform-origin top left
+		:-webkit-animation-timing-function ease-in-out
+	80%
+		:-webkit-transform rotate(60deg) translateY(0)
+		:opacity 1
+		:-webkit-transform-origin top left
+		:-webkit-animation-timing-function ease-in-out
+	100%
+		:-webkit-transform translateY(700px)
+		:opacity 0
+
+
+@-moz-keyframes hinge
+	0%
+		:-moz-transform rotate(0)
+		:-moz-transform-origin top left
+		:-moz-animation-timing-function ease-in-out
+	20%, 60%
+		:-moz-transform rotate(80deg)
+		:-moz-transform-origin top left
+		:-moz-animation-timing-function ease-in-out
+	40%
+		:-moz-transform rotate(60deg)
+		:-moz-transform-origin top left
+		:-moz-animation-timing-function ease-in-out
+	80%
+		:-moz-transform rotate(60deg) translateY(0)
+		:opacity 1
+		:-moz-transform-origin top left
+		:-moz-animation-timing-function ease-in-out
+	100%
+		:-moz-transform translateY(700px)
+		:opacity 0
+
+
+@-ms-keyframes hinge
+	0%
+		:-ms-transform rotate(0)
+		:-ms-transform-origin top left
+		:-ms-animation-timing-function ease-in-out
+	20%, 60%
+		:-ms-transform rotate(80deg)
+		:-ms-transform-origin top left
+		:-ms-animation-timing-function ease-in-out
+	40%
+		:-ms-transform rotate(60deg)
+		:-ms-transform-origin top left
+		:-ms-animation-timing-function ease-in-out
+	80%
+		:-ms-transform rotate(60deg) translateY(0)
+		:opacity 1
+		:-ms-transform-origin top left
+		:-ms-animation-timing-function ease-in-out
+	100%
+		:-ms-transform translateY(700px)
+		:opacity 0
+
+
+@-o-keyframes hinge
+	0%
+		:-o-transform rotate(0)
+		:-o-transform-origin top left
+		:-o-animation-timing-function ease-in-out
+	20%, 60%
+		:-o-transform rotate(80deg)
+		:-o-transform-origin top left
+		:-o-animation-timing-function ease-in-out
+	40%
+		:-o-transform rotate(60deg)
+		:-o-transform-origin top left
+		:-o-animation-timing-function ease-in-out
+	80%
+		:-o-transform rotate(60deg) translateY(0)
+		:opacity 1
+		:-o-transform-origin top left
+		:-o-animation-timing-function ease-in-out
+	100%
+		:-o-transform translateY(700px)
+		:opacity 0
+
+
+@keyframes hinge
+	0%
+		:transform rotate(0)
+		:transform-origin top left
+		:animation-timing-function ease-in-out
+	20%, 60%
+		:transform rotate(80deg)
+		:transform-origin top left
+		:animation-timing-function ease-in-out
+	40%
+		:transform rotate(60deg)
+		:transform-origin top left
+		:animation-timing-function ease-in-out
+	80%
+		:transform rotate(60deg) translateY(0)
+		:opacity 1
+		:transform-origin top left
+		:animation-timing-function ease-in-out
+	100%
+		:transform translateY(700px)
+		:opacity 0
+
+
+.hinge
+	:-webkit-animation-name hinge
+	:-moz-animation-name hinge
+	:-ms-animation-name hinge
+	:-o-animation-name hinge
+	:animation-name hinge
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide8 */
+
+@-webkit-keyframes rollIn
+	0%
+		:opacity 0
+		:-webkit-transform translateX(-100%) rotate(-120deg)
+	100%
+		:opacity 1
+		:-webkit-transform translateX(0px) rotate(0deg)
+
+
+@-moz-keyframes rollIn
+	0%
+		:opacity 0
+		:-moz-transform translateX(-100%) rotate(-120deg)
+	100%
+		:opacity 1
+		:-moz-transform translateX(0px) rotate(0deg)
+
+
+@-ms-keyframes rollIn
+	0%
+		:opacity 0
+		:-ms-transform translateX(-100%) rotate(-120deg)
+	100%
+		:opacity 1
+		:-ms-transform translateX(0px) rotate(0deg)
+
+
+@-o-keyframes rollIn
+	0%
+		:opacity 0
+		:-o-transform translateX(-100%) rotate(-120deg)
+	100%
+		:opacity 1
+		:-o-transform translateX(0px) rotate(0deg)
+
+
+@keyframes rollIn
+	0%
+		:opacity 0
+		:transform translateX(-100%) rotate(-120deg)
+	100%
+		:opacity 1
+		:transform translateX(0px) rotate(0deg)
+
+
+.rollIn
+	:-webkit-animation-name rollIn
+	:-moz-animation-name rollIn
+	:-ms-animation-name rollIn
+	:-o-animation-name rollIn
+	:animation-name rollIn
+
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes showMessage
+	0%
+		:opacity 0
+		:-webkit-transform translateY(-100%)
+	100%
+		:opacity 1
+		:-webkit-transform translateY(0px)
+
+
+@-moz-keyframes showMessage
+	0%
+		:opacity 0
+		:-moz-transform translateY(-100%)
+	100%
+		:opacity 1
+		:-moz-transform translateY(0%)
+
+
+@-ms-keyframes showMessage
+	0%
+		:opacity 0
+		:-moz-transform translateY(-100%)
+	100%
+		:opacity 1
+		:-moz-transform translateY(0%)
+
+
+@-o-keyframes showMessage
+	0%
+		:opacity 0
+		:-moz-transform translateY(-100%)
+	100%
+		:opacity 1
+		:-moz-transform translateY(0%)
+
+
+@keyframes showMessage
+	0%
+		:opacity 0
+		:-moz-transform translateY(-100%)
+	100%
+		:opacity 1
+		:-moz-transform translateY(0%)
+
+
+.showMessage
+	:-webkit-animation-name showMessage
+	:-moz-animation-name showMessage
+	:-ms-animation-name showMessage
+	:-o-animation-name showMessage
+	:animation-name showMessage
+
+
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes rollOut
+	0%
+		:opacity 1
+		:-webkit-transform translateX(0px) rotate(0deg)
+	100%
+		:opacity 0
+		:-webkit-transform translateX(100%) rotate(120deg)
+
+
+@-moz-keyframes rollOut
+	0%
+		:opacity 1
+		:-moz-transform translateX(0px) rotate(0deg)
+	100%
+		:opacity 0
+		:-moz-transform translateX(100%) rotate(120deg)
+
+
+@-ms-keyframes rollOut
+	0%
+		:opacity 1
+		:-ms-transform translateX(0px) rotate(0deg)
+	100%
+		:opacity 0
+		:-ms-transform translateX(100%) rotate(120deg)
+
+
+@-o-keyframes rollOut
+	0%
+		:opacity 1
+		:-o-transform translateX(0px) rotate(0deg)
+	100%
+		:opacity 0
+		:-o-transform translateX(100%) rotate(120deg)
+
+
+@keyframes rollOut
+	0%
+		:opacity 1
+		:transform translateX(0px) rotate(0deg)
+	100%
+		:opacity 0
+		:transform translateX(100%) rotate(120deg)
+
+
+.rollOut
+	:-webkit-animation-name rollOut
+	:-moz-animation-name rollOut
+	:-ms-animation-name rollOut
+	:-o-animation-name rollOut
+	:animation-name rollOut
+
+@-webkit-keyframes flip
+	0%
+		:-webkit-transform perspective(400px) rotateY(0)
+		:-webkit-animation-timing-function ease-out
+
+	40%
+		:-webkit-transform perspective(400px) translateZ(150px) rotateY(170deg)
+		:-webkit-animation-timing-function ease-out
+
+	50%
+		:-webkit-transform perspective(400px) translateZ(150px) rotateY(190deg) scale(1)
+		:-webkit-animation-timing-function ease-in
+
+	80%
+		:-webkit-transform perspective(400px) rotateY(360deg) scale(.95)
+		:-webkit-animation-timing-function ease-in
+
+	100%
+		:-webkit-transform perspective(400px) scale(1)
+		:-webkit-animation-timing-function ease-in
+
+
+@-moz-keyframes flip
+	0%
+		:-moz-transform perspective(400px) rotateY(0)
+		:-moz-animation-timing-function ease-out
+
+	40%
+		:-moz-transform perspective(400px) translateZ(150px) rotateY(170deg)
+		:-moz-animation-timing-function ease-out
+
+	50%
+		:-moz-transform perspective(400px) translateZ(150px) rotateY(190deg) scale(1)
+		:-moz-animation-timing-function ease-in
+
+	80%
+		:-moz-transform perspective(400px) rotateY(360deg) scale(.95)
+		:-moz-animation-timing-function ease-in
+
+	100%
+		:-moz-transform perspective(400px) scale(1)
+		:-moz-animation-timing-function ease-in
+
+
+@-o-keyframes flip
+	0%
+		:-o-transform perspective(400px) rotateY(0)
+		:-o-animation-timing-function ease-out
+
+	40%
+		:-o-transform perspective(400px) translateZ(150px) rotateY(170deg)
+		:-o-animation-timing-function ease-out
+
+	50%
+		:-o-transform perspective(400px) translateZ(150px) rotateY(190deg) scale(1)
+		:-o-animation-timing-function ease-in
+
+	80%
+		:-o-transform perspective(400px) rotateY(360deg) scale(.95)
+		:-o-animation-timing-function ease-in
+
+	100%
+		:-o-transform perspective(400px) scale(1)
+		:-o-animation-timing-function ease-in
+
+
+@keyframes flip
+	0%
+		:transform perspective(400px) rotateY(0)
+		:animation-timing-function ease-out
+
+	40%
+		:transform perspective(400px) translateZ(150px) rotateY(170deg)
+		:animation-timing-function ease-out
+
+	50%
+		:transform perspective(400px) translateZ(150px) rotateY(190deg) scale(1)
+		:animation-timing-function ease-in
+
+	80%
+		:transform perspective(400px) rotateY(360deg) scale(.95)
+		:animation-timing-function ease-in
+
+	100%
+		:transform perspective(400px) scale(1)
+		:animation-timing-function ease-in
+
+.flip
+	:-webkit-transform-style preserve-3d
+	:-moz-transform-style preserve-3d
+	:-o-transform-style preserve-3d
+	:transform-style preserve-3d
+	:-webkit-backface-visibility visible !important
+	:-webkit-animation-name flip
+	:-moz-backface-visibility visible !important
+	:-moz-animation-name flip
+	:-o-backface-visibility visible !important
+	:-o-animation-name flip
+	:backface-visibility visible !important
+	:animation-name flip
+
+@-webkit-keyframes flipOutX
+	0%
+		:-webkit-transform perspective(400px) rotateX(0deg)
+		:opacity 1
+
+	100%
+		:-webkit-transform perspective(400px) rotateX(90deg)
+		:opacity 0
+
+
+
+@-moz-keyframes flipOutX
+	0%
+		:-moz-transform perspective(400px) rotateX(0deg)
+		:opacity 1
+
+	100%
+		:-moz-transform perspective(400px) rotateX(90deg)
+		:opacity 0
+
+
+
+@-o-keyframes flipOutX
+	0%
+		:-o-transform perspective(400px) rotateX(0deg)
+		:opacity 1
+
+	100%
+		:-o-transform perspective(400px) rotateX(90deg)
+		:opacity 0
+
+
+
+@keyframes flipOutX
+	0%
+		:transform perspective(400px) rotateX(0deg)
+		:opacity 1
+
+	100%
+		:transform perspective(400px) rotateX(90deg)
+		:opacity 0
+
+.flipOutX
+	:-webkit-animation-name flipOutX
+	:-webkit-backface-visibility visible !important
+	:-moz-animation-name flipOutX
+	:-moz-backface-visibility visible !important
+	:-o-animation-name flipOutX
+	:-o-backface-visibility visible !important
+	:animation-name flipOutX
+	:backface-visibility visible !important
+
+@-webkit-keyframes flipOutY
+	0%
+		:-webkit-transform perspective(400px) rotateY(0deg)
+		:opacity 1
+
+	100%
+		:-webkit-transform perspective(400px) rotateY(90deg)
+		:opacity 0
+
+
+@-moz-keyframes flipOutY
+	0%
+		:-moz-transform perspective(400px) rotateY(0deg)
+		:opacity 1
+
+	100%
+		:-moz-transform perspective(400px) rotateY(90deg)
+		:opacity 0
+
+
+@-o-keyframes flipOutY
+	0%
+		:-o-transform perspective(400px) rotateY(0deg)
+		:opacity 1
+
+	100%
+		:-o-transform perspective(400px) rotateY(90deg)
+		:opacity 0
+
+
+@keyframes flipOutY
+	0%
+		:transform perspective(400px) rotateY(0deg)
+		:opacity 1
+
+	100%
+		:transform perspective(400px) rotateY(90deg)
+		:opacity 0
+
+.flipOutY
+	:-webkit-backface-visibility visible !important
+	:-webkit-animation-name flipOutY
+	:-moz-backface-visibility visible !important
+	:-moz-animation-name flipOutY
+	:-o-backface-visibility visible !important
+	:-o-animation-name flipOutY
+	:backface-visibility visible !important
+	:animation-name flipOutY
+
+
+
+@-webkit-keyframes flipInY
+	0%
+		:-webkit-transform perspective(400px) rotateY(90deg)
+		:opacity 0
+
+	40%
+		:-webkit-transform perspective(400px) rotateY(-10deg)
+
+	70%
+		:-webkit-transform perspective(400px) rotateY(10deg)
+
+	100%
+		:-webkit-transform perspective(400px) rotateY(0deg)
+		:opacity 1
+
+
+@-moz-keyframes flipInY
+	0%
+		:-moz-transform perspective(400px) rotateY(90deg)
+		:opacity 0
+
+	40%
+		:-moz-transform perspective(400px) rotateY(-10deg)
+
+	70%
+		:-moz-transform perspective(400px) rotateY(10deg)
+
+	100%
+		:-moz-transform perspective(400px) rotateY(0deg)
+		:opacity 1
+
+
+@-o-keyframes flipInY
+	0%
+		:-o-transform perspective(400px) rotateY(90deg)
+		:opacity 0
+
+	40%
+		:-o-transform perspective(400px) rotateY(-10deg)
+
+	70%
+		:-o-transform perspective(400px) rotateY(10deg)
+
+	100%
+		:-o-transform perspective(400px) rotateY(0deg)
+		:opacity 1
+
+
+@keyframes flipInY
+	0%
+		:transform perspective(400px) rotateY(90deg)
+		:opacity 0
+
+	40%
+		:transform perspective(400px) rotateY(-10deg)
+
+	70%
+		:transform perspective(400px) rotateY(10deg)
+
+	100%
+		:transform perspective(400px) rotateY(0deg)
+		:opacity 1
+
+.flipInY
+	:-webkit-backface-visibility visible !important
+	:-webkit-animation-name flipInY
+	:-moz-backface-visibility visible !important
+	:-moz-animation-name flipInY
+	:-o-backface-visibility visible !important
+	:-o-animation-name flipInY
+	:backface-visibility visible !important
+	:animation-name flipInY
+
+
+@-webkit-keyframes flipInX
+	0%
+		:-webkit-transform perspective(400px) rotateX(90deg)
+		:opacity 0
+
+	40%
+		:-webkit-transform perspective(400px) rotateX(-10deg)
+
+	70%
+		:-webkit-transform perspective(400px) rotateX(10deg)
+
+	100%
+		:-webkit-transform perspective(400px) rotateX(0deg)
+		:opacity 1
+
+
+@-moz-keyframes flipInX
+	0%
+		:-moz-transform perspective(400px) rotateX(90deg)
+		:opacity 0
+
+	40%
+		:-moz-transform perspective(400px) rotateX(-10deg)
+
+	70%
+		:-moz-transform perspective(400px) rotateX(10deg)
+
+	100%
+		:-moz-transform perspective(400px) rotateX(0deg)
+		:opacity 1
+
+
+@-o-keyframes flipInX
+	0%
+		:-o-transform perspective(400px) rotateX(90deg)
+		:opacity 0
+
+	40%
+		:-o-transform perspective(400px) rotateX(-10deg)
+
+	70%
+		:-o-transform perspective(400px) rotateX(10deg)
+
+	100%
+		:-o-transform perspective(400px) rotateX(0deg)
+		:opacity 1
+
+
+@keyframes flipInX
+	0%
+		:transform perspective(400px) rotateX(90deg)
+		:opacity 0
+
+	40%
+		:transform perspective(400px) rotateX(-10deg)
+
+	70%
+		:transform perspective(400px) rotateX(10deg)
+
+	100%
+		:transform perspective(400px) rotateX(0deg)
+		:opacity 1
+
+.flipInX
+	:-webkit-backface-visibility visible !important
+	:-webkit-animation-name flipInX
+	:-moz-backface-visibility visible !important
+	:-moz-animation-name flipInX
+	:-o-backface-visibility visible !important
+	:-o-animation-name flipInX
+	:backface-visibility visible !important
+	:animation-name flipInX
+
+// ######################################################################
+// ######################################################################
+// ######################################################################
+// #####														#########
+// #####	http://www.minimamente.com/magic-css3-animations/	#########
+// #####														#########
+// ######################################################################
+// ######################################################################
+// ######################################################################
+
+@-webkit-keyframes magic
+	0%
+		:opacity 1
+		:-webkit-transform-origin 100% 200%
+		:-webkit-transform scale(1.0,1.0) rotate(0deg) translate3d(0,0,0)
+
+	100%
+		:opacity 0
+		:-webkit-transform-origin 200% 500%
+		:-webkit-transform scale(0.0,0.0) rotate(270deg) translate3d(-800px,0,0)
+
+@-moz-keyframes magic
+	0%
+		:opacity 1
+		:-moz-transform-origin 100% 200%
+		:-moz-transform scale(1.0,1.0) rotate(0deg) translate3d(0,0,0)
+
+	100%
+		:opacity 0
+		:-moz-transform-origin 200% 500%
+		:-moz-transform scale(0.0,0.0) rotate(270deg) translate3d(-800px,0,0)
+
+@-o-keyframes magic
+	0%
+		:opacity 1
+		:-o-transform-origin 100% 200%
+		:-o-transform scale(1.0,1.0) rotate(0deg) translate3d(0,0,0)
+
+	100%
+		:opacity 0
+		:-o-transform-origin 200% 500%
+		:-o-transform scale(0.0,0.0) rotate(270deg) translate3d(-800px,0,0)
+
+@keyframes magic
+	0%
+		:opacity 1
+		:transform-origin 100% 200%
+		:transform scale(1.0,1.0) rotate(0deg) translate3d(0,0,0)
+
+	100%
+		:opacity 0
+		:transform-origin 200% 500%
+		:transform scale(0.0,0.0) rotate(270deg) translate3d(-800px,0,0)
+
+.magic
+	:-webkit-animation-name magic
+	:-moz-animation-name magic
+	:-o-animation-name magic
+	:animation-name magic
+
+
+@-webkit-keyframes swap
+	0%
+		:opacity 0
+		:-webkit-transform-origin 0 100%
+		:-webkit-transform scale(0, 0) translate(-700px, 0)
+	100%
+		:opacity 1
+		:-webkit-transform-origin 100% 100%
+		:-webkit-transform scale(1, 1) translate(0, 0)
+
+
+@-moz-keyframes swap
+	0%
+		:opacity 0
+		:-moz-transform-origin 0 100%
+		:-moz-transform scale(0, 0) translate(-700px, 0)
+	100%
+		:opacity 1
+		:-moz-transform-origin 100% 100%
+		:-moz-transform scale(1, 1) translate(0, 0)
+
+
+@-o-keyframes swap
+	0%
+		:opacity 0
+		:-o-transform-origin 0 100%
+		:-o-transform scale(0, 0) translate(-700px, 0)
+	100%
+		:opacity 1
+		:-o-transform-origin 100% 100%
+		:-o-transform scale(1, 1) translate(0, 0)
+
+
+@keyframes swap
+	0%
+		:opacity 0
+		:transform-origin 0 100%
+		:transform scale(0, 0) translate(-700px, 0)
+	100%
+		:opacity 1
+		:transform-origin 100% 100%
+		:transform scale(1, 1) translate(0, 0)
+
+
+.swap
+	:-webkit-animation-name swap
+	:-moz-animation-name swap
+	:-o-animation-name swap
+	:animation-name swap
+
+@-webkit-keyframes twisterInDown
+	0%
+		:opacity 0
+		:-webkit-transform-origin 0 100%
+		:-webkit-transform scale(0, 0) rotate(360deg) translateY(-100%)
+	30%
+		:-webkit-transform-origin 0 100%
+		:-webkit-transform scale(0, 0) rotate(360deg) translateY(-100%)
+	100%
+		:opacity 1
+		:-webkit-transform-origin 100% 100%
+		:-webkit-transform scale(1, 1) rotate(0deg) translateY(0)
+
+
+@-moz-keyframes twisterInDown
+	0%
+		:opacity 0
+		:-moz-transform-origin 0 100%
+		:-moz-transform scale(0, 0) rotate(360deg) translateY(-100%)
+	30%
+		:-moz-transform-origin 0 100%
+		:-moz-transform scale(0, 0) rotate(360deg) translateY(-100%)
+	100%
+		:opacity 1
+		:-moz-transform-origin 100% 100%
+		:-moz-transform scale(1, 1) rotate(0deg) translateY(0)
+
+
+@-o-keyframes twisterInDown
+	0%
+		:opacity 0
+		:-o-transform-origin 0 100%
+		:-o-transform scale(0, 0) rotate(360deg) translateY(-100%)
+	30%
+		:-o-transform-origin 0 100%
+		:-o-transform scale(0, 0) rotate(360deg) translateY(-100%)
+	100%
+		:opacity 1
+		:-o-transform-origin 100% 100%
+		:-o-transform scale(1, 1) rotate(0deg) translateY(0)
+
+
+@keyframes twisterInDown
+	0%
+		:opacity 0
+		:transform-origin 0 100%
+		:transform scale(0, 0) rotate(360deg) translateY(-100%)
+	30%
+		:transform-origin 0 100%
+		:transform scale(0, 0) rotate(360deg) translateY(-100%)
+	100%
+		:opacity 1
+		:transform-origin 100% 100%
+		:transform scale(1, 1) rotate(0deg) translateY(0)
+
+
+.twisterInDown
+	:-webkit-animation-name twisterInDown
+	:-moz-animation-name twisterInDown
+	:-o-animation-name twisterInDown
+	:animation-name twisterInDown
+
+@-webkit-keyframes twisterInUp
+	0%
+		:opacity 0
+		:-webkit-transform-origin 100% 0
+		:-webkit-transform scale(0, 0) rotate(360deg) translateY(100%)
+	30%
+		:-webkit-transform-origin 100% 0
+		:-webkit-transform scale(0, 0) rotate(360deg) translateY(100%)
+	100%
+		:opacity 1
+		:-webkit-transform-origin 0 0
+		:-webkit-transform scale(1, 1) rotate(0deg) translateY(0)
+
+
+@-moz-keyframes twisterInUp
+	0%
+		:opacity 0
+		:-moz-transform-origin 0 100%
+		:-moz-transform scale(0, 0) rotate(360deg) translateY(-100%)
+	30%
+		:-moz-transform-origin 0 100%
+		:-moz-transform scale(0, 0) rotate(360deg) translateY(-100%)
+	100%
+		:opacity 1
+		:-moz-transform-origin 100% 100%
+		:-moz-transform scale(1, 1) rotate(0deg) translateY(0)
+
+
+@-o-keyframes twisterInUp
+	0%
+		:opacity 0
+		:-o-transform-origin 0 100%
+		:-o-transform scale(0, 0) rotate(360deg) translateY(-100%)
+	30%
+		:-o-transform-origin 0 100%
+		:-o-transform scale(0, 0) rotate(360deg) translateY(-100%)
+	100%
+		:opacity 1
+		:-o-transform-origin 100% 100%
+		:-o-transform scale(1, 1) rotate(0deg) translateY(0)
+
+
+@keyframes twisterInUp
+	0%
+		:opacity 0
+		:transform-origin 0 100%
+		:transform scale(0, 0) rotate(360deg) translateY(-100%)
+	30%
+		:transform-origin 0 100%
+		:transform scale(0, 0) rotate(360deg) translateY(-100%)
+	100%
+		:opacity 1
+		:transform-origin 100% 100%
+		:transform scale(1, 1) rotate(0deg) translateY(0)
+
+
+.twisterInUp
+	:-webkit-animation-name twisterInUp
+	:-moz-animation-name twisterInUp
+	:-o-animation-name twisterInUp
+	:animation-name twisterInUp
+
+
+@-webkit-keyframes perspectiveDown
+	0%
+		:-webkit-transform-origin 0 100%
+		:-webkit-transform perspective(800px) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:-webkit-transform-origin 0 100%
+		:-webkit-transform perspective(800px) rotateX(-180deg) translate3d(0, 0, 0)
+
+
+@-moz-keyframes perspectiveDown
+	0%
+		:-moz-transform-origin 0 100%
+		:-moz-transform perspective(800px) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:-moz-transform-origin 0 100%
+		:-moz-transform perspective(800px) rotateX(-180deg) translate3d(0, 0, 0)
+
+
+@-o-keyframes perspectiveDown
+	0%
+		:-o-transform-origin 0 100%
+		:-o-transform perspective(800px) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:-o-transform-origin 0 100%
+		:-o-transform perspective(800px) rotateX(-180deg) translate3d(0, 0, 0)
+
+
+@keyframes perspectiveDown
+	0%
+		:transform-origin 0 100%
+		:transform perspective(800px) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:transform-origin 0 100%
+		:transform perspective(800px) rotateX(-180deg) translate3d(0, 0, 0)
+
+
+.perspectiveDown
+	:-webkit-backface-visibility visible !important
+	:-moz-backface-visibility visible !important
+	:-o-backface-visibility visible !important
+	:backface-visibility visible !important
+	:-webkit-animation-name perspectiveDown
+	:-moz-animation-name perspectiveDown
+	:-o-animation-name perspectiveDown
+	:animation-name perspectiveDown
+
+@-webkit-keyframes perspectiveLeft
+	0%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform perspective(800px) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform perspective(800px) rotateY(-180deg) translate3d(0, 0, 0)
+
+
+@-moz-keyframes perspectiveLeft
+	0%
+		:-moz-transform-origin 0 0
+		:-moz-transform perspective(800px) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:-moz-transform-origin 0 0
+		:-moz-transform perspective(800px) rotateY(-180deg) translate3d(0, 0, 0)
+
+
+@-o-keyframes perspectiveLeft
+	0%
+		:-o-transform-origin 0 0
+		:-o-transform perspective(800px) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:-o-transform-origin 0 0
+		:-o-transform perspective(800px) rotateY(-180deg) translate3d(0, 0, 0)
+
+
+@keyframes perspectiveLeft
+	0%
+		:transform-origin 0 0
+		:transform perspective(800px) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:transform-origin 0 0
+		:transform perspective(800px) rotateY(-180deg) translate3d(0, 0, 0)
+
+
+.perspectiveLeft
+	:-webkit-backface-visibility visible !important
+	:-moz-backface-visibility visible !important
+	:-o-backface-visibility visible !important
+	:backface-visibility visible !important
+	:-webkit-animation-name perspectiveLeft
+	:-moz-animation-name perspectiveLeft
+	:-o-animation-name perspectiveLeft
+	:animation-name perspectiveLeft
+
+@-webkit-keyframes perspectiveRight
+	0%
+		:-webkit-transform-origin 100% 0
+		:-webkit-transform perspective(800px) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:-webkit-transform-origin 100% 0
+		:-webkit-transform perspective(800px) rotateY(180deg) translate3d(0, 0, 0)
+
+
+@-moz-keyframes perspectiveRight
+	0%
+		:-moz-transform-origin 100% 0
+		:-moz-transform perspective(800px) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:-moz-transform-origin 100% 0
+		:-moz-transform perspective(800px) rotateY(180deg) translate3d(0, 0, 0)
+
+
+@-o-keyframes perspectiveRight
+	0%
+		:-o-transform-origin 100% 0
+		:-o-transform perspective(800px) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:-o-transform-origin 100% 0
+		:-o-transform perspective(800px) rotateY(180deg) translate3d(0, 0, 0)
+
+
+@keyframes perspectiveRight
+	0%
+		:transform-origin 100% 0
+		:transform perspective(800px) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:transform-origin 100% 0
+		:transform perspective(800px) rotateY(180deg) translate3d(0, 0, 0)
+
+
+.perspectiveRight
+	:-webkit-backface-visibility visible !important
+	:-moz-backface-visibility visible !important
+	:-o-backface-visibility visible !important
+	:backface-visibility visible !important
+	:-webkit-animation-name perspectiveRight
+	:-moz-animation-name perspectiveRight
+	:-o-animation-name perspectiveRight
+	:animation-name perspectiveRight
+
+@-webkit-keyframes perspectiveUp
+	0%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform perspective(800px) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform perspective(800px) rotateX(180deg) translate3d(0, 0, 0)
+
+
+@-moz-keyframes perspectiveUp
+	0%
+		:-moz-transform-origin 0 0
+		:-moz-transform perspective(800px) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:-moz-transform-origin 0 0
+		:-moz-transform perspective(800px) rotateX(180deg) translate3d(0, 0, 0)
+
+
+@-o-keyframes perspectiveUp
+	0%
+		:-o-transform-origin 0 0
+		:-o-transform perspective(800px) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:-o-transform-origin 0 0
+		:-o-transform perspective(800px) rotateX(180deg) translate3d(0, 0, 0)
+
+
+@keyframes perspectiveUp
+	0%
+		:transform-origin 0 0
+		:transform perspective(800px) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:transform-origin 0 0
+		:transform perspective(800px) rotateX(180deg) translate3d(0, 0, 0)
+
+
+.perspectiveUp
+	:-webkit-backface-visibility visible !important
+	:-moz-backface-visibility visible !important
+	:-o-backface-visibility visible !important
+	:backface-visibility visible !important
+	:-webkit-animation-name perspectiveUp
+	:-moz-animation-name perspectiveUp
+	:-o-animation-name perspectiveUp
+	:animation-name perspectiveUp
+
+
+@-webkit-keyframes rotateDown
+	0%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform perspective(800) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:-webkit-transform-origin 50% 100%
+		:-webkit-transform perspective(800) rotateX(-180deg) translate3d(0, 0, 300px)
+
+
+@-moz-keyframes rotateDown
+	0%
+		:-moz-transform-origin 0 0
+		:-moz-transform perspective(800px) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:-moz-transform-origin 50% 100%
+		:-moz-transform perspective(800px) rotateX(-180deg) translate3d(0, 0, 300px)
+
+
+@-o-keyframes rotateDown
+	0%
+		:-o-transform-origin 0 0
+		:-o-transform perspective(800) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:-o-transform-origin 50% 100%
+		:-o-transform perspective(800) rotateX(-180deg) translate3d(0, 0, 300px)
+
+
+@keyframes rotateDown
+	0%
+		:transform-origin 0 0
+		:transform perspective(800px) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:transform-origin 50% 100%
+		:transform perspective(800px) rotateX(-180deg) translate3d(0, 0, 300px)
+
+
+.rotateDown
+	:-webkit-backface-visibility visible !important
+	:-moz-backface-visibility visible !important
+	:-o-backface-visibility visible !important
+	:backface-visibility visible !important
+	:-webkit-animation-name rotateDown
+	:-moz-animation-name rotateDown
+	:-o-animation-name rotateDown
+	:animation-name rotateDown
+
+@-webkit-keyframes rotateLeft
+	0%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform perspective(800) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:-webkit-transform-origin 50% 0
+		:-webkit-transform perspective(800) rotateY(180deg) translate3d(0, 0, 300px)
+
+
+@-moz-keyframes rotateLeft
+	0%
+		:-moz-transform-origin 0 0
+		:-moz-transform perspective(800px) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:-moz-transform-origin 50% 0
+		:-moz-transform perspective(800px) rotateY(180deg) translate3d(0, 0, 300px)
+
+
+@-o-keyframes rotateLeft
+	0%
+		:-o-transform-origin 0 0
+		:-o-transform perspective(800) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:-o-transform-origin 50% 0
+		:-o-transform perspective(800) rotateY(180deg) translate3d(0, 0, 300px)
+
+
+@keyframes rotateLeft
+	0%
+		:transform-origin 0 0
+		:transform perspective(800px) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:transform-origin 50% 0
+		:transform perspective(800px) rotateY(180deg) translate3d(0, 0, 300px)
+
+
+.rotateLeft
+	:-webkit-backface-visibility visible !important
+	:-moz-backface-visibility visible !important
+	:-o-backface-visibility visible !important
+	:backface-visibility visible !important
+	:-webkit-animation-name rotateLeft
+	:-moz-animation-name rotateLeft
+	:-o-animation-name rotateLeft
+	:animation-name rotateLeft
+
+@-webkit-keyframes rotateRight
+	0%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform perspective(800) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:-webkit-transform-origin 50% 0
+		:-webkit-transform perspective(800) rotateY(-180deg) translate3d(0, 0, 150px)
+
+
+@-moz-keyframes rotateRight
+	0%
+		:-moz-transform-origin 0 0
+		:-moz-transform perspective(800px) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:-moz-transform-origin 50% 0
+		:-moz-transform perspective(800px) rotateY(-180deg) translate3d(0, 0, 150px)
+
+
+@-o-keyframes rotateRight
+	0%
+		:-o-transform-origin 0 0
+		:-o-transform perspective(800) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:-o-transform-origin 50% 0
+		:-o-transform perspective(800) rotateY(-180deg) translate3d(0, 0, 150px)
+
+
+@keyframes rotateRight
+	0%
+		:transform-origin 0 0
+		:transform perspective(800px) rotateY(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:transform-origin 50% 0
+		:transform perspective(800px) rotateY(-180deg) translate3d(0, 0, 150px)
+
+
+.rotateRight
+	:-webkit-backface-visibility visible !important
+	:-moz-backface-visibility visible !important
+	:-o-backface-visibility visible !important
+	:backface-visibility visible !important
+	:-webkit-animation-name rotateRight
+	:-moz-animation-name rotateRight
+	:-o-animation-name rotateRight
+	:animation-name rotateRight
+
+@-webkit-keyframes rotateUp
+	0%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform perspective(800) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:-webkit-transform-origin 50% 0
+		:-webkit-transform perspective(800) rotateX(180deg) translate3d(0, 0, 100px)
+
+
+@-moz-keyframes rotateUp
+	0%
+		:-moz-transform-origin 0 0
+		:-moz-transform perspective(800px) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:-moz-transform-origin 50% 0
+		:-moz-transform perspective(800px) rotateX(180deg) translate3d(0, 0, 100px)
+
+
+@-o-keyframes rotateUp
+	0%
+		:-o-transform-origin 0 0
+		:-o-transform perspective(800) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:-o-transform-origin 50% 0
+		:-o-transform perspective(800) rotateX(180deg) translate3d(0, 0, 100px)
+
+
+@keyframes rotateUp
+	0%
+		:transform-origin 0 0
+		:transform perspective(800px) rotateX(0deg) translate3d(0, 0, 0)
+	100%
+		:opacity 0
+		:transform-origin 50% 0
+		:transform perspective(800px) rotateX(180deg) translate3d(0, 0, 100px)
+
+
+.rotateUp
+	:-webkit-backface-visibility visible !important
+	:-moz-backface-visibility visible !important
+	:-o-backface-visibility visible !important
+	:backface-visibility visible !important
+	:-webkit-animation-name rotateUp
+	:-moz-animation-name rotateUp
+	:-o-animation-name rotateUp
+	:animation-name rotateUp
+
+@-webkit-keyframes puffIn
+	0%
+		:opacity 0
+		:-webkit-transform-origin 50% 50%
+		:-webkit-transform scale(2, 2)
+		:-webkit-filter blur(2px)
+	100%
+		:opacity 1
+		:-webkit-transform-origin 50% 50%
+		:-webkit-transform scale(1, 1)
+
+
+@-moz-keyframes puffIn
+	0%
+		:opacity 0
+		:-moz-transform-origin 50% 50%
+		:-moz-transform scale(2, 2)
+		:-moz-filter blur(2px)
+	100%
+		:opacity 1
+		:-moz-transform-origin 50% 50%
+		:-moz-transform scale(1, 1)
+
+
+@-o-keyframes puffIn
+	0%
+		:opacity 0
+		:-o-transform-origin 50% 50%
+		:-o-transform scale(2, 2)
+		:-o-filter blur(2px)
+	100%
+		:opacity 1
+		:-o-transform-origin 50% 50%
+		:-o-transform scale(1, 1)
+
+
+@keyframes puffIn
+	0%
+		:opacity 0
+		:transform-origin 50% 50%
+		:transform scale(2, 2)
+		:filter blur(2px)
+	100%
+		:opacity 1
+		:transform-origin 50% 50%
+		:transform scale(1, 1)
+
+
+.puffIn
+	:-webkit-animation-name puffIn
+	:-moz-animation-name puffIn
+	:-o-animation-name puffIn
+	:animation-name puffIn
+
+@-webkit-keyframes puffOut
+	0%
+		:opacity 1
+		:-webkit-transform-origin 50% 50%
+		:-webkit-transform scale(1, 1)
+	100%
+		:opacity 0
+		:-webkit-transform-origin 50% 50%
+		:-webkit-transform scale(2, 2)
+		:-webkit-filter blur(2px)
+
+
+@-moz-keyframes puffOut
+	0%
+		:opacity 1
+		:-moz-transform-origin 50% 50%
+		:-moz-transform scale(1, 1)
+	100%
+		:opacity 0
+		:-moz-transform-origin 50% 50%
+		:-moz-transform scale(2, 2)
+		:-moz-filter blur(2px)
+
+
+@-o-keyframes puffOut
+	0%
+		:opacity 1
+		:-o-transform-origin 50% 50%
+		:-o-transform scale(1, 1)
+	100%
+		:opacity 0
+		:-o-transform-origin 50% 50%
+		:-o-transform scale(2, 2)
+		:-o-filter blur(2px)
+
+
+@keyframes puffOut
+	0%
+		:opacity 1
+		:transform-origin 50% 50%
+		:transform scale(1, 1)
+	100%
+		:opacity 0
+		:transform-origin 50% 50%
+		:transform scale(2, 2)
+		:filter blur(2px)
+
+
+.puffOut
+	:-webkit-animation-name puffOut
+	:-moz-animation-name puffOut
+	:-o-animation-name puffOut
+	:animation-name puffOut
+
+@-webkit-keyframes vanishIn
+	0%
+		:opacity 0
+		:-webkit-transform-origin 50% 50%
+		:-webkit-transform scale(2, 2)
+		:-webkit-filter blur(90px)
+	100%
+		:opacity 1
+		:-webkit-transform-origin 50% 50%
+		:-webkit-transform scale(1, 1)
+
+
+@-moz-keyframes vanishIn
+	0%
+		:opacity 0
+		:-moz-transform-origin 50% 50%
+		:-moz-transform scale(2, 2)
+		:-moz-filter blur(90px)
+	100%
+		:opacity 1
+		:-moz-transform-origin 50% 50%
+		:-moz-transform scale(1, 1)
+
+
+@-o-keyframes vanishIn
+	0%
+		:opacity 0
+		:-o-transform-origin 50% 50%
+		:-o-transform scale(2, 2)
+		:-o-filter blur(90px)
+	100%
+		:opacity 1
+		:-o-transform-origin 50% 50%
+		:-o-transform scale(1, 1)
+
+
+@keyframes vanishIn
+	0%
+		:opacity 0
+		:transform-origin 50% 50%
+		:transform scale(2, 2)
+		:filter blur(90px)
+	100%
+		:opacity 1
+		:transform-origin 50% 50%
+		:transform scale(1, 1)
+
+
+.vanishIn
+	:-webkit-animation-name vanishIn
+	:-moz-animation-name vanishIn
+	:-o-animation-name vanishIn
+	:animation-name vanishIn
+
+@-webkit-keyframes vanishOut
+	0%
+		:opacity 1
+		:-webkit-transform-origin 50% 50%
+		:-webkit-transform scale(1, 1)
+	100%
+		:opacity 0
+		:-webkit-transform-origin 50% 50%
+		:-webkit-transform scale(2, 2)
+		:-webkit-filter blur(20px)
+
+
+@-moz-keyframes vanishOut
+	0%
+		:opacity 1
+		:-moz-transform-origin 50% 50%
+		:-moz-transform scale(1, 1)
+	100%
+		:opacity 0
+		:-moz-transform-origin 50% 50%
+		:-moz-transform scale(2, 2)
+		:-moz-filter blur(20px)
+
+
+@-o-keyframes vanishOut
+	0%
+		:opacity 1
+		:-o-transform-origin 50% 50%
+		:-o-transform scale(1, 1)
+	100%
+		:opacity 0
+		:-o-transform-origin 50% 50%
+		:-o-transform scale(2, 2)
+		:-o-filter blur(20px)
+
+
+@keyframes vanishOut
+	0%
+		:opacity 1
+		:transform-origin 50% 50%
+		:transform scale(1, 1)
+	100%
+		:opacity 0
+		:transform-origin 50% 50%
+		:transform scale(2, 2)
+		:filter blur(20px)
+
+
+.vanishOut
+	:-webkit-animation-name vanishOut
+	:-moz-animation-name vanishOut
+	:-o-animation-name vanishOut
+	:animation-name vanishOut
+
+@-webkit-keyframes openDownLeft
+	0%
+		:-webkit-transform-origin bottom left
+		:-webkit-transform rotate(0)
+		:-webkit-animation-timing-function ease-out
+	100%
+		:-webkit-transform-origin bottom left
+		:-webkit-transform rotate(-110deg)
+		:-webkit-animation-timing-function ease-in-out
+
+
+@-moz-keyframes openDownLeft
+	0%
+		:-moz-transform-origin bottom left
+		:-moz-transform rotate(0)
+		:-moz-animation-timing-function ease-out
+	100%
+		:-moz-transform-origin bottom left
+		:-moz-transform rotate(-110deg)
+		:-moz-animation-timing-function ease-in-out
+
+
+@-o-keyframes openDownLeft
+	0%
+		:-o-transform-origin bottom left
+		:-o-transform rotate(0)
+		:-o-animation-timing-function ease-out
+	100%
+		:-o-transform-origin bottom left
+		:-o-transform rotate(-110deg)
+		:-o-animation-timing-function ease-in-out
+
+
+@keyframes openDownLeft
+	0%
+		:transform-origin bottom left
+		:transform rotate(0)
+		:animation-timing-function ease-out
+	100%
+		:transform-origin bottom left
+		:transform rotate(-110deg)
+		:animation-timing-function ease-in-out
+
+
+.openDownLeft
+	:-webkit-animation-name openDownLeft
+	:-moz-animation-name openDownLeft
+	:-o-animation-name openDownLeft
+	:animation-name openDownLeft
+
+@-webkit-keyframes openDownRight
+	0%
+		:-webkit-transform-origin bottom right
+		:-webkit-transform rotate(0)
+		:-webkit-animation-timing-function ease-out
+	100%
+		:-webkit-transform-origin bottom right
+		:-webkit-transform rotate(110deg)
+		:-webkit-animation-timing-function ease-in-out
+
+
+@-moz-keyframes openDownRight
+	0%
+		:-moz-transform-origin bottom right
+		:-moz-transform rotate(0)
+		:-moz-animation-timing-function ease-out
+	100%
+		:-moz-transform-origin bottom right
+		:-moz-transform rotate(110deg)
+		:-moz-animation-timing-function ease-in-out
+
+
+@-o-keyframes openDownRight
+	0%
+		:-o-transform-origin bottom right
+		:-o-transform rotate(0)
+		:-o-animation-timing-function ease-out
+	100%
+		:-o-transform-origin bottom right
+		:-o-transform rotate(110deg)
+		:-o-animation-timing-function ease-in-out
+
+
+@keyframes openDownRight
+	0%
+		:transform-origin bottom right
+		:transform rotate(0)
+		:animation-timing-function ease-out
+	100%
+		:transform-origin bottom right
+		:transform rotate(110deg)
+		:animation-timing-function ease-in-out
+
+
+.openDownRight
+	:-webkit-animation-name openDownRight
+	:-moz-animation-name openDownRight
+	:-o-animation-name openDownRight
+	:animation-name openDownRight
+
+@-webkit-keyframes openUpLeft
+	0%
+		:-webkit-transform-origin top left
+		:-webkit-transform rotate(0)
+		:-webkit-animation-timing-function ease-out
+	100%
+		:-webkit-transform-origin top left
+		:-webkit-transform rotate(110deg)
+		:-webkit-animation-timing-function ease-in-out
+
+
+@-moz-keyframes openUpLeft
+	0%
+		:-moz-transform-origin top left
+		:-moz-transform rotate(0)
+		:-moz-animation-timing-function ease-out
+	100%
+		:-moz-transform-origin top left
+		:-moz-transform rotate(110deg)
+		:-moz-animation-timing-function ease-in-out
+
+
+@-o-keyframes openUpLeft
+	0%
+		:-o-transform-origin top left
+		:-o-transform rotate(0)
+		:-o-animation-timing-function ease-out
+	100%
+		:-o-transform-origin top left
+		:-o-transform rotate(110deg)
+		:-o-animation-timing-function ease-in-out
+
+
+@keyframes openUpLeft
+	0%
+		:transform-origin top left
+		:transform rotate(0)
+		:animation-timing-function ease-out
+	100%
+		:transform-origin top left
+		:transform rotate(110deg)
+		:animation-timing-function ease-in-out
+
+
+.openUpLeft
+	:-webkit-animation-name openUpLeft
+	:-moz-animation-name openUpLeft
+	:-o-animation-name openUpLeft
+	:animation-name openUpLeft
+
+@-webkit-keyframes openUpRight
+	0%
+		:-webkit-transform-origin top right
+		:-webkit-transform rotate(0)
+		:-webkit-animation-timing-function ease-out
+	100%
+		:-webkit-transform-origin top right
+		:-webkit-transform rotate(-110deg)
+		:-webkit-animation-timing-function ease-in-out
+
+
+@-moz-keyframes openUpRight
+	0%
+		:-moz-transform-origin top right
+		:-moz-transform rotate(0)
+		:-moz-animation-timing-function ease-out
+	100%
+		:-moz-transform-origin top right
+		:-moz-transform rotate(-110deg)
+		:-moz-animation-timing-function ease-in-out
+
+
+@-o-keyframes openUpRight
+	0%
+		:-o-transform-origin top right
+		:-o-transform rotate(0)
+		:-o-animation-timing-function ease-out
+	100%
+		:-o-transform-origin top right
+		:-o-transform rotate(-110deg)
+		:-o-animation-timing-function ease-in-out
+
+
+@keyframes openUpRight
+	0%
+		:transform-origin top right
+		:transform rotate(0)
+		:animation-timing-function ease-out
+	100%
+		:transform-origin top right
+		:transform rotate(-110deg)
+		:animation-timing-function ease-in-out
+
+
+.openUpRight
+	:-webkit-animation-name openUpRight
+	:-moz-animation-name openUpRight
+	:-o-animation-name openUpRight
+	:animation-name openUpRight
+
+@-webkit-keyframes slideDown
+	0%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform translateY(0)
+	100%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform translateY(100%)
+
+
+@-moz-keyframes slideDown
+	0%
+		:-moz-transform-origin 0 0
+		:-moz-transform translateY(0)
+	100%
+		:-moz-transform-origin 0 0
+		:-moz-transform translateY(100%)
+
+
+@-o-keyframes slideDown
+	0%
+		:-o-transform-origin 0 0
+		:-o-transform translateY(0)
+	100%
+		:-o-transform-origin 0 0
+		:-o-transform translateY(100%)
+
+
+@-ms-keyframes slideDown
+	0%
+		:-ms-transform-origin 0 0
+		:-ms-transform translateY(0)
+	100%
+		:-ms-transform-origin 0 0
+		:-ms-transform translateY(100%)
+
+
+@keyframes slideDown
+	0%
+		:transform-origin 0 0
+		:transform translateY(0)
+	100%
+		:transform-origin 0 0
+		:transform translateY(100%)
+
+
+.slideDown
+	:-webkit-animation-name slideDown
+	:-moz-animation-name slideDown
+	:-o-animation-name slideDown
+	:animation-name slideDown
+
+@-webkit-keyframes slideLeft
+	0%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform translateX(0)
+	100%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform translateX(-100%)
+
+
+@-moz-keyframes slideLeft
+	0%
+		:-moz-transform-origin 0 0
+		:-moz-transform translateX(0)
+	100%
+		:-moz-transform-origin 0 0
+		:-moz-transform translateX(-100%)
+
+
+@-o-keyframes slideLeft
+	0%
+		:-o-transform-origin 0 0
+		:-o-transform translateX(0)
+	100%
+		:-o-transform-origin 0 0
+		:-o-transform translateX(-100%)
+
+
+@-ms-keyframes slideLeft
+	0%
+		:-ms-transform-origin 0 0
+		:-ms-transform translateX(0)
+	100%
+		:-ms-transform-origin 0 0
+		:-ms-transform translateX(-100%)
+
+
+@keyframes slideLeft
+	0%
+		:transform-origin 0 0
+		:transform translateX(0)
+	100%
+		:transform-origin 0 0
+		:transform translateX(-100%)
+
+
+.slideLeft
+	:-webkit-animation-name slideLeft
+	:-moz-animation-name slideLeft
+	:-o-animation-name slideLeft
+	:animation-name slideLeft
+
+@-webkit-keyframes slideRight
+	0%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform translateX(0)
+	100%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform translateX(100%)
+
+
+@-moz-keyframes slideRight
+	0%
+		:-moz-transform-origin 0 0
+		:-moz-transform translateX(0)
+	100%
+		:-moz-transform-origin 0 0
+		:-moz-transform translateX(100%)
+
+
+@-o-keyframes slideRight
+	0%
+		:-o-transform-origin 0 0
+		:-o-transform translateX(0)
+	100%
+		:-o-transform-origin 0 0
+		:-o-transform translateX(100%)
+
+
+@-ms-keyframes slideRight
+	0%
+		:-ms-transform-origin 0 0
+		:-ms-transform translateX(0)
+	100%
+		:-ms-transform-origin 0 0
+		:-ms-transform translateX(100%)
+
+
+@keyframes slideRight
+	0%
+		:transform-origin 0 0
+		:transform translateX(0)
+	100%
+		:transform-origin 0 0
+		:transform translateX(100%)
+
+
+.slideRight
+	:-webkit-animation-name slideRight
+	:-moz-animation-name slideRight
+	:-o-animation-name slideRight
+	:animation-name slideRight
+
+@-webkit-keyframes slideUp
+	0%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform translateY(0)
+	100%
+		:-webkit-transform-origin 0 0
+		:-webkit-transform translateY(-100%)
+
+
+@-moz-keyframes slideUp
+	0%
+		:-moz-transform-origin 0 0
+		:-moz-transform translateY(0)
+	100%
+		:-moz-transform-origin 0 0
+		:-moz-transform translateY(-100%)
+
+
+@-o-keyframes slideUp
+	0%
+		:-o-transform-origin 0 0
+		:-o-transform translateY(0)
+	100%
+		:-o-transform-origin 0 0
+		:-o-transform translateY(-100%)
+
+
+@-ms-keyframes slideUp
+	0%
+		:-ms-transform-origin 0 0
+		:-ms-transform translateY(0)
+	100%
+		:-ms-transform-origin 0 0
+		:-ms-transform translateY(-100%)
+
+
+@keyframes slideUp
+	0%
+		:transform-origin 0 0
+		:transform translateY(0)
+	100%
+		:transform-origin 0 0
+		:transform translateY(-100%)
+
+
+.slideUp
+	:-webkit-animation-name slideUp
+	:-moz-animation-name slideUp
+	:-o-animation-name slideUp
+	:animation-name slideUp
+
+@-webkit-keyframes rightRotation
+	0%
+		:-webkit-transform rotate(0)
+		:transform rotate(0)
+	100%
+		:-webkit-transform rotate(360deg)
+		:transform rotate(360deg)
+
+@keyframes rightRotation
+	0%
+		:-webkit-transform rotate(0)
+		:transform rotate(0)
+	100%
+		:-webkit-transform rotate(360deg)
+		:transform rotate(360deg)
+
+@-webkit-keyframes leftRotation
+	0%
+		:-webkit-transform rotate(0)
+		:transform rotate(0)
+	100%
+		:-webkit-transform rotate(-360deg)
+		:transform rotate(-360deg)
+
+@keyframes leftRotation
+	0%
+		:-webkit-transform rotate(0)
+		:transform rotate(0)
+	100%
+		:-webkit-transform rotate(-360deg)
+		:transform rotate(-360deg)
+
+@-webkit-keyframes light_fade_out_in
+	0%
+		:opacity 1
+	50%
+		:opacity 0.3
+	100%
+		:opacity 1
+
+@keyframes light_fade_out_in
+	0%
+		:opacity 1
+	50%
+		:opacity 0.3
+	100%
+		:opacity 1
+
+@-webkit-keyframes light_fade_in_out
+	0%
+		:opacity 0.3
+	50%
+		:opacity 1
+	100%
+		:opacity 0.3
+
+@keyframes light_fade_in_out
+	0%
+		:opacity 0.3
+	50%
+		:opacity 1
+	100%
+		:opacity 0.3
+
+
+@-webkit-keyframes sparkle_fade_out_in
+	0%
+		:opacity 1
+	45%
+		:opacity 0
+	90%
+		:opacity 1
+	100%
+		:opacity 1
+
+@keyframes sparkle_fade_out_in
+	0%
+		:opacity 1
+	45%
+		:opacity 0
+	90%
+		:opacity 1
+	100%
+		:opacity 1
+
+@-webkit-keyframes sparkle_fade_in_out
+	0%
+		:opacity 0
+	45%
+		:opacity 1
+	90%
+		:opacity 0
+	100%
+		:opacity 0
+
+@keyframes sparkle_fade_in_out
+	0%
+		:opacity 0
+	45%
+		:opacity 1
+	90%
+		:opacity 0
+	100%
+		:opacity 0
+
+
+// missle
+@-webkit-keyframes missle
+	0%
+		:opacity 1
+	100%
+		:opacity 0
+		:left 100%
+
+@keyframes lightning_1
+	0%
+		:opacity 1
+	100%
+		:opacity 0
+		:left 100%
+
+
+@-webkit-keyframes lightning_1
+	0%
+		:opacity 1
+	10%
+		:opacity 0
+	34%
+		:opacity 0
+	35%
+		:opacity 1
+	45%
+		:opacity 0
+	100%
+		:opacity 0
+
+@keyframes lightning_1
+	0%
+		:opacity 1
+	10%
+		:opacity 0
+	34%
+		:opacity 0
+	35%
+		:opacity 1
+	45%
+		:opacity 0
+	100%
+		:opacity 0
+
+@-webkit-keyframes lightning_2
+	0%
+		:opacity 0
+	1%
+		:opacity 0
+	1.5%
+		:opacity 1
+	11%
+		:opacity 0
+	35.5%
+		:opacity 0
+	36.5%
+		:opacity 1
+	46%
+		:opacity 0
+	100%
+		:opacity 0
+
+@keyframes lightning_2
+	0%
+		:opacity 0
+	1%
+		:opacity 0
+	1.5%
+		:opacity 1
+	11%
+		:opacity 0
+	35.5%
+		:opacity 0
+	36.5%
+		:opacity 1
+	46%
+		:opacity 0
+	100%
+		:opacity 0
+
+@-webkit-keyframes lightning_3
+	0%
+		:opacity 0
+	37%
+		:opacity 0
+	38%
+		:opacity 0.5
+	39.5%
+		:opacity 0
+	41%
+		:opacity 0.5
+	42.5%
+		:opacity 0
+	44%
+		:opacity 1
+	54%
+		:opacity 0
+
+@keyframes lightning_3
+	0%
+		:opacity 0
+	37%
+		:opacity 0
+	38%
+		:opacity 0.5
+	39.5%
+		:opacity 0
+	41%
+		:opacity 0.5
+	42.5%
+		:opacity 0
+	44%
+		:opacity 1
+	54%
+		:opacity 0
+
+/* GLOW */
+@-webkit-keyframes glow
+	0%
+		:-webkit-transform scale(1)
+		:opacity 0.6
+	50%
+		:-webkit-transform scale(1.2)
+		:opacity 1
+	100%
+		:-webkit-transform scale(1)
+		:opacity 0.6
+
+
+@-moz-keyframes glow
+	0%
+		:-moz-transform scale(1)
+		:opacity 0.6
+	50%
+		:-moz-transform scale(1.2)
+		:opacity 1
+	100%
+		:-moz-transform scale(1)
+		:opacity 0.6
+
+
+@-ms-keyframes glow
+	0%
+		:-ms-transform scale(1)
+		:opacity 0.6
+	50%
+		:-ms-transform scale(1.2)
+		:opacity 1
+	100%
+		:-ms-transform scale(1)
+		:opacity 0.6
+
+
+@-o-keyframes glow
+	0%
+		:-o-transform scale(1)
+		:opacity 0.6
+	50%
+		:-o-transform scale(1.2)
+		:opacity 1
+	100%
+		:-o-transform scale(1)
+		:opacity 0.6
+
+@keyframes glow
+	0%
+		:transform scale(1)
+		:opacity 0.6
+	50%
+		:transform scale(1.2)
+		:opacity 1
+	100%
+		:transform scale(1)
+		:opacity 0.6
+
+
+.glow
+	:-webkit-animation-name glow
+	:-moz-animation-name glow
+	:-ms-animation-name glow
+	:-o-animation-name glow
+	:animation-name glow
+
+
+@-webkit-keyframes zoomIn
+	0%
+		:opacity 0
+		:-webkit-transform scale3d(0.3, 0.3, 0.3)
+		:transform scale3d(0.3, 0.3, 0.3)
+	50%
+		:opacity 1
+
+
+@-moz-keyframes zoomIn
+	0%
+		:opacity 0
+		:-moz-transform scale3d(0.3, 0.3, 0.3)
+		:transform scale3d(0.3, 0.3, 0.3)
+	50%
+		:opacity 1
+
+
+@-ms-keyframes zoomIn
+	0%
+		:opacity 0
+		:-ms-transform scale3d(0.3, 0.3, 0.3)
+		:transform scale3d(0.3, 0.3, 0.3)
+	50%
+		:opacity 1
+
+
+@-o-keyframes zoomIn
+	0%
+		:opacity 0
+		:-o-transform scale3d(0.3, 0.3, 0.3)
+		:transform scale3d(0.3, 0.3, 0.3)
+	50%
+		:opacity 1
+
+
+@keyframes zoomIn
+	0%
+		:opacity 0
+		:-webkit-transform scale3d(0.3, 0.3, 0.3)
+		:transform scale3d(0.3, 0.3, 0.3)
+	50%
+		:opacity 1
+
+
+.zoomIn
+	:-webkit-animation-name zoomIn
+	:-moz-animation-name zoomIn
+	:-ms-animation-name zoomIn
+	:-o-animation-name zoomIn
+	:animation-name zoomIn
+
+@-webkit-keyframes zoomInDown
+	0%
+		:opacity 0
+		:-webkit-transform scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-webkit-transform scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+@-moz-keyframes zoomInDown
+	0%
+		:opacity 0
+		:-moz-transform scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		:-moz-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-moz-transform scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		:-moz-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+
+@-ms-keyframes zoomInDown
+	0%
+		:opacity 0
+		:-ms-transform scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		:-ms-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-ms-transform scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		:-ms-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+@-o-keyframes zoomInDown
+	0%
+		:opacity 0
+		:-o-transform scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		:-o-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-o-transform scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		:-o-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+
+@keyframes zoomInDown
+	0%	
+		:opacity 0
+		:-webkit-transform scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-webkit-transform scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+
+.zoomInDown
+	:-webkit-animation-name zoomInDown
+	:-moz-animation-name zoomInDown
+	:-ms-animation-name zoomInDown
+	:-o-animation-name zoomInDown
+	:animation-name zoomInDown
+
+@-webkit-keyframes zoomInLeft
+	0%
+		:opacity 0
+		:-webkit-transform scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-webkit-transform scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+@-moz-keyframes zoomInLeft
+	0%
+		:opacity 0
+		:-moz-transform scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0)
+		:-moz-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-moz-transform scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0)
+		:-moz-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+@-ms-keyframes zoomInLeft
+	0%
+		:opacity 0
+		:-ms-transform scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0)
+		:-ms-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-ms-transform scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0)
+		:-ms-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+@-o-keyframes zoomInLeft
+	0%
+		:opacity 0
+		:-o-transform scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0)
+		:-o-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-o-transform scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0)
+		:-o-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+
+@keyframes zoomInLeft
+	0%
+		:opacity 0
+		:-webkit-transform scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-webkit-transform scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+
+.zoomInLeft
+	:-webkit-animation-name zoomInLeft
+	:-moz-animation-name zoomInLeft
+	:-ms-animation-name zoomInLeft
+	:-o-animation-name zoomInLeft
+	:animation-name zoomInLeft
+
+@-webkit-keyframes zoomInRight
+	0%
+		:opacity 0
+		:-webkit-transform scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-webkit-transform scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+@-moz-keyframes zoomInRight
+	0%
+		:opacity 0
+		:-moz-transform scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0)
+		:-moz-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-moz-transform scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0)
+		:-moz-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+@-ms-keyframes zoomInRight
+	0%
+		:opacity 0
+		:-ms-transform scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0)
+		:-ms-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-ms-transform scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0)
+		:-ms-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+@-o-keyframes zoomInRight
+	0%
+		:opacity 0
+		:-o-transform scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0)
+		:-o-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-o-transform scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0)
+		:-o-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+
+@keyframes zoomInRight
+	0%
+		:opacity 0
+		:-webkit-transform scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-webkit-transform scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+
+.zoomInRight
+	:-webkit-animation-name zoomInRight
+	:-moz-animation-name zoomInRight
+	:-ms-animation-name zoomInRight
+	:-o-animation-name zoomInRight
+	:animation-name zoomInRight
+
+@-webkit-keyframes zoomInUp
+	0%
+		:opacity 0
+		:-webkit-transform scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-webkit-transform scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+@-moz-keyframes zoomInUp
+	0%
+		:opacity 0
+		:-moz-transform scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0)
+		:-moz-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-moz-transform scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0)
+		:-moz-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+@-ms-keyframes zoomInUp
+	0%
+		:opacity 0
+		:-ms-transform scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0)
+		:-ms-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-ms-transform scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0)
+		:-ms-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+
+@-o-keyframes zoomInUp
+	0%
+		:opacity 0
+		:-o-transform scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0)
+		:-o-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-o-transform scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0)
+		:-o-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+
+@keyframes zoomInUp
+	0%
+		:opacity 0
+		:-webkit-transform scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0)
+		:transform scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		:animation-timing-function cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	60%
+		:opacity 1
+		:-webkit-transform scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0)
+		:transform scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0)
+		:-webkit-animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+		:animation-timing-function cubic-bezier(0.175, 0.885, 0.32, 1)
+
+
+.zoomInUp
+	:-webkit-animation-name zoomInUp
+	:-moz-animation-name zoomInUp
+	:-ms-animation-name zoomInUp
+	:-o-animation-name zoomInUp
+	:animation-name zoomInUp
+
+
+@-moz-keyframes foolishIn
+	0%
+		:opacity 0
+		:-moz-transform-origin 50% 50%
+		:-moz-transform scale(0, 0) rotate(360deg)
+	20%
+		:opacity 1
+		:-moz-transform-origin 0% 100%
+		:-moz-transform scale(0.5, 0.5) rotate(0deg)
+	40%
+		:opacity 1
+		:-moz-transform-origin 100% 100%
+		:-moz-transform scale(0.5, 0.5) rotate(0deg)
+	60%
+		:opacity 1
+		:-moz-transform-origin 0%
+		:-moz-transform scale(0.5, 0.5) rotate(0deg)
+	80%
+		:opacity 1
+		:-moz-transform-origin 0% 0%
+		:-moz-transform scale(0.5, 0.5) rotate(0deg)
+	100%
+		:opacity 1
+		:-moz-transform-origin 50% 50%
+		:-moz-transform scale(1, 1) rotate(0deg)
+
+
+@-webkit-keyframes foolishIn
+	0%
+		:opacity 0
+		:-webkit-transform-origin 50% 50%
+		:-webkit-transform scale(0, 0) rotate(360deg)
+	20%
+		:opacity 1
+		:-webkit-transform-origin 0% 100%
+		:-webkit-transform scale(0.5, 0.5) rotate(0deg)
+	40%
+		:opacity 1
+		:-webkit-transform-origin 100% 100%
+		:-webkit-transform scale(0.5, 0.5) rotate(0deg)
+	60%
+		:opacity 1
+		:-webkit-transform-origin 0%
+		:-webkit-transform scale(0.5, 0.5) rotate(0deg)
+	80%
+		:opacity 1
+		:-webkit-transform-origin 0% 0%
+		:-webkit-transform scale(0.5, 0.5) rotate(0deg)
+	100%
+		:opacity 1
+		:-webkit-transform-origin 50% 50%
+		:-webkit-transform scale(1, 1) rotate(0deg)
+
+
+@-o-keyframes foolishIn
+	0%
+		:opacity 0
+		:-o-transform-origin 50% 50%
+		:-o-transform scale(0, 0) rotate(360deg)
+	20%
+		:opacity 1
+		:-o-transform-origin 0% 100%
+		:-o-transform scale(0.5, 0.5) rotate(0deg)
+	40%
+		:opacity 1
+		:-o-transform-origin 100% 100%
+		:-o-transform scale(0.5, 0.5) rotate(0deg)
+	60%
+		:opacity 1
+		:-o-transform-origin 0%
+		:-o-transform scale(0.5, 0.5) rotate(0deg)
+	80%
+		:opacity 1
+		:-o-transform-origin 0% 0%
+		:-o-transform scale(0.5, 0.5) rotate(0deg)
+	100%
+		:opacity 1
+		:-o-transform-origin 50% 50%
+		:-o-transform scale(1, 1) rotate(0deg)
+
+
+@-ms-keyframes foolishIn
+	0%
+		:opacity 0
+		:filter alpha(opacity = 0)
+		:-ms-transform-origin 50% 50%
+		:-ms-transform scale(0, 0) rotate(360deg)
+	20%
+		:opacity 1
+		:filter alpha(opacity = 100)
+		:-ms-transform-origin 0% 100%
+		:-ms-transform scale(0.5, 0.5) rotate(0deg)
+	40%
+		:opacity 1
+		:filter alpha(opacity = 100)
+		:-ms-transform-origin 100% 100%
+		:-ms-transform scale(0.5, 0.5) rotate(0deg)
+	60%
+		:opacity 1
+		:filter alpha(opacity = 100)
+		:-ms-transform-origin 0%
+		:-ms-transform scale(0.5, 0.5) rotate(0deg)
+	80%
+		:opacity 1
+		:filter alpha(opacity = 100)
+		:-ms-transform-origin 0% 0%
+		:-ms-transform scale(0.5, 0.5) rotate(0deg)
+	100%
+		:opacity 1
+		:filter alpha(opacity = 100)
+		:-ms-transform-origin 50% 50%
+		:-ms-transform scale(1, 1) rotate(0deg)
+
+
+@keyframes foolishIn
+	0%
+		:opacity 0
+		:transform-origin 50% 50%
+		:transform scale(0, 0) rotate(360deg)
+	20%
+		:opacity 1
+		:transform-origin 0% 100%
+		:transform scale(0.5, 0.5) rotate(0deg)
+	40%
+		:opacity 1
+		:transform-origin 100% 100%
+		:transform scale(0.5, 0.5) rotate(0deg)
+	60%
+		:opacity 1
+		:transform-origin 0%
+		:transform scale(0.5, 0.5) rotate(0deg)
+	80%
+		:opacity 1
+		:transform-origin 0% 0%
+		:transform scale(0.5, 0.5) rotate(0deg)
+	100%
+		:opacity 1
+		:transform-origin 50% 50%
+		:transform scale(1, 1) rotate(0deg)	
+
+.foolishIn 
+	:-webkit-animation-name foolishIn
+	:-moz-animation-name foolishIn
+	:-ms-animation-name foolishIn
+	:-o-animation-name foolishIn
+	:animation-name foolishIn
+
+
+@-moz-keyframes tinUpIn
+	0%
+		:opacity 0
+		:-moz-transform scale(1, 1) translateY(-900%)
+	50%, 70%, 90%
+		:opacity 1
+		:-moz-transform scale(1.1, 1.1) translateY(0)
+	60%, 80%, 100%
+		:opacity 1
+		:-moz-transform scale(1, 1) translateY(0)
+
+
+@-webkit-keyframes tinUpIn
+	0%
+		:opacity 0
+		:-webkit-transform scale(1, 1) translateY(-900%)
+	50%, 70%, 90%
+		:opacity 1
+		:-webkit-transform scale(1.1, 1.1) translateY(0)
+	60%, 80%, 100%
+		:opacity 1
+		:-webkit-transform scale(1, 1) translateY(0)
+
+
+@-o-keyframes tinUpIn
+	0%
+		:opacity 0
+		:-o-transform scale(1, 1) translateY(-900%)
+	50%, 70%, 90%
+		:opacity 1
+		:-o-transform scale(1.1, 1.1) translateY(0)
+	60%, 80%, 100%
+		:opacity 1
+		:-o-transform scale(1, 1) translateY(0)
+
+
+@-ms-keyframes tinUpIn
+	0%
+		:opacity 0
+		:filter alpha(opacity = 0)
+		:-ms-transform scale(1, 1) translateY(-900%)
+	50%, 70%, 90%
+		:opacity 1
+		:filter alpha(opacity = 100)
+		:-ms-transform scale(1.1, 1.1) translateY(0)
+	60%, 80%, 100%
+		:opacity 1
+		:filter alpha(opacity = 100)
+		:-ms-transform scale(1, 1) translateY(0)
+
+
+@keyframes tinUpIn
+	0%
+		:opacity 0
+		:transform scale(1, 1) translateY(-900%)
+	50%, 70%, 90%
+		:opacity 1
+		:transform scale(1.1, 1.1) translateY(0)
+	60%, 80%, 100%
+		:opacity 1
+		:transform scale(1, 1) translateY(0)
+
+.tinUpIn
+	:-webkit-animation-name tinUpIn
+	:-moz-animation-name tinUpIn
+	:-ms-animation-name tinUpIn
+	:-o-animation-name tinUpIn
+	:animation-name tinUpIn
+
+
+
+
+@-moz-keyframes tinDownIn
+	0%
+		:opacity 0
+		:-moz-transform scale(1, 1) translateY(900%)
+	50%, 70%, 90%
+		:opacity 1
+		:-moz-transform scale(1.1, 1.1) translateY(0)
+	60%, 80%, 100%
+		:opacity 1
+		:-moz-transform scale(1, 1) translateY(0)
+
+
+@-webkit-keyframes tinDownIn
+	0%
+		:opacity 0
+		:-webkit-transform scale(1, 1) translateY(900%)
+	50%, 70%, 90%
+		:opacity 1
+		:-webkit-transform scale(1.1, 1.1) translateY(0)
+	60%, 80%, 100%
+		:opacity 1
+		:-webkit-transform scale(1, 1) translateY(0)
+
+
+@-o-keyframes tinDownIn
+	0%
+		:opacity 0
+		:-o-transform scale(1, 1) translateY(900%)
+	50%, 70%, 90%
+		:opacity 1
+		:-o-transform scale(1.1, 1.1) translateY(0)
+	60%, 80%, 100%
+		:opacity 1
+		:-o-transform scale(1, 1) translateY(0)
+
+
+@-ms-keyframes tinDownIn
+	0%
+		:opacity 0
+		:filter alpha(opacity = 0)
+		:-ms-transform scale(1, 1) translateY(900%)
+	50%, 70%, 90%
+		:opacity 1
+		:filter alpha(opacity = 100)
+		:-ms-transform scale(1.1, 1.1) translateY(0)
+	60%, 80%, 100%
+		:opacity 1
+		:filter alpha(opacity = 100)
+		:-ms-transform scale(1, 1) translateY(0)
+
+
+@keyframes tinDownIn
+	0%
+		:opacity 0
+		:transform scale(1, 1) translateY(900%)
+	50%, 70%, 90%
+		:opacity 1
+		:transform scale(1.1, 1.1) translateY(0)
+	60%, 80%, 100%
+		:opacity 1
+		:transform scale(1, 1) translateY(0)
+
+
+.tinDownIn 
+	:-webkit-animation-name tinDownIn
+	:-moz-animation-name tinDownIn
+	:-ms-animation-name tinDownIn
+	:-o-animation-name tinDownIn
+	:animation-name tinDownIn
+
+
+@-moz-keyframes boingInUp
+	0%
+		:opacity 0
+		:-moz-transform-origin 50% 0%
+		:-moz-transform perspective(800px) rotateX(-90deg)
+	50%
+		:opacity 1
+		:-moz-transform-origin 50% 0%
+		:-moz-transform perspective(800px) rotateX(50deg)
+	100%
+		:opacity 1
+		:-moz-transform-origin 50% 0%
+		:-moz-transform perspective(800px) rotateX(0deg)
+
+
+@-webkit-keyframes boingInUp
+	0%
+		:opacity 0
+		:-webkit-transform-origin 50% 0%
+		:-webkit-transform perspective(800px) rotateX(-90deg)
+	50%
+		:opacity 1
+		:-webkit-transform-origin 50% 0%
+		:-webkit-transform perspective(800px) rotateX(50deg)
+	100%
+		:opacity 1
+		:-webkit-transform-origin 50% 0%
+		:-webkit-transform perspective(800px) rotateX(0deg)
+
+
+@-o-keyframes boingInUp
+	0%
+		:opacity 0
+		:-o-transform-origin 50% 0%
+		:-o-transform perspective(800px) rotateX(-90deg)
+	50%
+		:opacity 1
+		:-o-transform-origin 50% 0%
+		:-o-transform perspective(800px) rotateX(50deg)
+	100%
+		:opacity 1
+		:-o-transform-origin 50% 0%
+		:-o-transform perspective(800px) rotateX(0deg)
+
+
+@-ms-keyframes boingInUp
+	0%
+		:opacity 0
+		:-ms-transform-origin 50% 0%
+		:-ms-transform perspective(800px) rotateX(-90deg)
+	50%
+		:opacity 1
+		:-ms-transform-origin 50% 0%
+		:-ms-transform perspective(800px) rotateX(50deg)
+	100%
+		:opacity 1
+		:-ms-transform-origin 50% 0%
+		:-ms-transform perspective(800px) rotateX(0deg)
+
+
+@keyframes boingInUp
+	0%
+		:opacity 0
+		:transform-origin 50% 0%
+		:transform perspective(800px) rotateX(-90deg)
+	50%
+		:opacity 1
+		:transform-origin 50% 0%
+		:transform perspective(800px) rotateX(50deg)
+	100%
+		:opacity 1
+		:transform-origin 50% 0%
+		:transform perspective(800px) rotateX(0deg)
+
+.boingInUp
+	:-webkit-animation-name boingInUp
+	:-moz-animation-name boingInUp
+	:-ms-animation-name boingInUp
+	:-o-animation-name boingInUp
+	:animation-name boingInUp
+
+
+@-moz-keyframes boingOutDown
+	0%
+		:opacity 1
+		:-moz-transform-origin 100% 100%
+		:-moz-transform perspective(800px) rotateX(0deg) rotateY(0deg)
+	20%
+		:opacity 1
+		:-moz-transform-origin 100% 100%
+		:-moz-transform perspective(800px) rotateX(0deg) rotateY(10deg)
+	30%
+		:opacity 1
+		:-moz-transform-origin 0% 100%
+		:-moz-transform perspective(800px) rotateX(0deg) rotateY(0deg)
+	40%
+		:opacity 1
+		:-moz-transform-origin 0% 100%
+		:-moz-transform perspective(800px) rotateX(10deg) rotateY(10deg)
+	100%
+		:opacity 0
+		:-moz-transform-origin 100% 100%
+		:-moz-transform perspective(800px) rotateX(90deg) rotateY(0deg)
+
+
+@-webkit-keyframes boingOutDown
+	0%
+		:opacity 1
+		:-webkit-transform-origin 100% 100%
+		:-webkit-transform perspective(800px) rotateX(0deg) rotateY(0deg)
+	20%
+		:opacity 1
+		:-webkit-transform-origin 100% 100%
+		:-webkit-transform perspective(800px) rotateX(0deg) rotateY(10deg)
+	30%
+		:opacity 1
+		:-webkit-transform-origin 0% 100%
+		:-webkit-transform perspective(800px) rotateX(0deg) rotateY(0deg)
+	40%
+		:opacity 1
+		:-webkit-transform-origin 0% 100%
+		:-webkit-transform perspective(800px) rotateX(10deg) rotateY(10deg)
+	100%
+		:opacity 0
+		:-webkit-transform-origin 100% 100%
+		:-webkit-transform perspective(800px) rotateX(90deg) rotateY(0deg)
+
+
+@-o-keyframes boingOutDown
+	0%
+		:opacity 1
+		:-o-transform-origin 100% 100%
+		:-o-transform perspective(800px) rotateX(0deg) rotateY(0deg)
+	20%
+		:opacity 1
+		:-o-transform-origin 100% 100%
+		:-o-transform perspective(800px) rotateX(0deg) rotateY(10deg)
+	30%
+		:opacity 1
+		:-o-transform-origin 0% 100%
+		:-o-transform perspective(800px) rotateX(0deg) rotateY(0deg)
+	40%
+		:opacity 1
+		:-o-transform-origin 0% 100%
+		:-o-transform perspective(800px) rotateX(10deg) rotateY(10deg)
+	100%
+		:opacity 0
+		:-o-transform-origin 100% 100%
+		:-o-transform perspective(800px) rotateX(90deg) rotateY(0deg)
+
+
+@-ms-keyframes boingOutDown
+	0%
+		:opacity 1
+		:-ms-transform-origin 100% 100%
+		:-ms-transform perspective(800px) rotateX(0deg) rotateY(0deg)
+	20%
+		:opacity 1
+		:-ms-transform-origin 100% 100%
+		:-ms-transform perspective(800px) rotateX(0deg) rotateY(10deg)
+	30%
+		:opacity 1
+		:-ms-transform-origin 0% 100%
+		:-ms-transform perspective(800px) rotateX(0deg) rotateY(0deg)
+	40%
+		:opacity 1
+		:-ms-transform-origin 0% 100%
+		:-ms-transform perspective(800px) rotateX(10deg) rotateY(10deg)
+	100%
+		:opacity 0
+		:-ms-transform-origin 100% 100%
+		:-ms-transform perspective(800px) rotateX(90deg) rotateY(0deg)
+
+
+@keyframes boingOutDown
+	0%
+		:opacity 1
+		:transform-origin 100% 100%
+		:transform perspective(800px) rotateX(0deg) rotateY(0deg)
+	20%
+		:opacity 1
+		:transform-origin 100% 100%
+		:transform perspective(800px) rotateX(0deg) rotateY(10deg)
+	30%
+		:opacity 1
+		:transform-origin 0% 100%
+		:transform perspective(800px) rotateX(0deg) rotateY(0deg)
+	40%
+		:opacity 1
+		:transform-origin 0% 100%
+		:transform perspective(800px) rotateX(10deg) rotateY(10deg)
+	100%
+		:opacity 0
+		:transform-origin 100% 100%
+		:transform perspective(800px) rotateX(90deg) rotateY(0deg)
+
+
+.boingOutDown
+	:-webkit-animation-name boingOutDown
+	:-moz-animation-name boingOutDown
+	:-ms-animation-name boingOutDown
+	:-o-animation-name boingOutDown
+	:animation-name boingOutDown
+
+
+
+
+@-webkit-keyframes floating
+	0%, 100%
+		:-webkit-transform translateY(-35px)
+		:-webkit-transform-origin center center
+	20%, 80%
+		:-webkit-transform translateY(-28px)
+		:-webkit-transform-origin center center
+	40%, 60%
+		:-webkit-transform translateY(-21px)
+		:-webkit-transform-origin center center
+	50%
+		:-webkit-transform translateY(-18px)
+		:-webkit-transform-origin center center
+
+@-moz-keyframes floating
+	0%, 100%
+		:-moz-transform translateY(-35px)
+		:-moz-transform-origin center center
+	20%, 80%
+		:-moz-transform translateY(-28px)
+		:-moz-transform-origin center center
+	40%, 60%
+		:-moz-transform translateY(-21px)
+		:-moz-transform-origin center center
+	50%
+		:-moz-transform translateY(-18px)
+		:-moz-transform-origin center center
+
+@-ms-keyframes floating
+	0%, 100%
+		:-ms-transform translateY(-35px)
+		:-ms-transform-origin center center
+	20%, 80%
+		:-ms-transform translateY(-28px)
+		:-ms-transform-origin center center
+	40%, 60%
+		:-ms-transform translateY(-21px)
+		:-ms-transform-origin center center
+	50%
+		:-ms-transform translateY(-18px)
+		:-ms-transform-origin center center
+
+@-o-keyframes floating
+	0%, 100%
+		:-o-transform translateY(-35px)
+		:-o-transform-origin center center
+	20%, 80%
+		:-o-transform translateY(-28px)
+		:-o-transform-origin center center
+	40%, 60%
+		:-o-transform translateY(-21px)
+		:-o-transform-origin center center
+	50%
+		:-o-transform translateY(-18px)
+		:-o-transform-origin center center
+
+@keyframes floating
+	0%, 100%
+		:transform translateY(-35px)
+		:transform-origin center center
+	20%, 80%
+		:transform translateY(-28px)
+		:transform-origin center center
+	40%, 60%
+		:transform translateY(-21px)
+		:transform-origin center center
+	50%
+		:transform translateY(-18px)
+		:transform-origin center center
+
+
+.floating
+	:-webkit-animation-name floating
+	:-moz-animation-name floating
+	:-ms-animation-name floating
+	:-o-animation-name floating
+	:animation-name floating
+
+
+
+@-webkit-keyframes loading-overlay-animation-2d
+	0%
+		:-moz-transform scale(0.5) rotate(0deg) translate(0, -260px)
+		:-ms-transform scale(0.5) rotate(0deg) translate(0, -260px)
+		:-webkit-transform scale(0.5) rotate(0deg) translate(0, -260px)
+		:transform scale(0.5) rotate(0deg) translate(0, -260px)
+
+	100%
+		:-moz-transform scale(0.5) rotate(360deg) translate(0, -260px)
+		:-ms-transform scale(0.5) rotate(360deg) translate(0, -260px)
+		:-webkit-transform scale(0.5) rotate(360deg) translate(0, -260px)
+		:transform scale(0.5) rotate(360deg) translate(0, -260px)
+
+
+@-moz-keyframes loading-overlay-animation-2d
+	0%
+		:-moz-transform scale(0.5) rotate(0deg) translate(0, -260px)
+		:-ms-transform scale(0.5) rotate(0deg) translate(0, -260px)
+		:-webkit-transform scale(0.5) rotate(0deg) translate(0, -260px)
+		:transform scale(0.5) rotate(0deg) translate(0, -260px)
+
+	100% 
+		:-moz-transform scale(0.5) rotate(360deg) translate(0, -260px)
+		:-ms-transform scale(0.5) rotate(360deg) translate(0, -260px)
+		:-webkit-transform scale(0.5) rotate(360deg) translate(0, -260px)
+		:transform scale(0.5) rotate(360deg) translate(0, -260px)
+
+
+
+@-ms-keyframes loading-overlay-animation-2d 
+	0%
+		:-moz-transform scale(0.5) rotate(0deg) translate(0, -260px)
+		:-ms-transform scale(0.5) rotate(0deg) translate(0, -260px)
+		:-webkit-transform scale(0.5) rotate(0deg) translate(0, -260px)
+		:transform scale(0.5) rotate(0deg) translate(0, -260px)
+
+	100% 
+		:-moz-transform scale(0.5) rotate(360deg) translate(0, -260px)
+		:-ms-transform scale(0.5) rotate(360deg) translate(0, -260px)
+		:-webkit-transform scale(0.5) rotate(360deg) translate(0, -260px)
+		:transform scale(0.5) rotate(360deg) translate(0, -260px)
+
+
+
+@keyframes loading-overlay-animation-2d 
+	0%
+		:-moz-transform scale(0.5) rotate(0deg) translate(0, -260px)
+		:-ms-transform scale(0.5) rotate(0deg) translate(0, -260px)
+		:-webkit-transform scale(0.5) rotate(0deg) translate(0, -260px)
+		:transform scale(0.5) rotate(0deg) translate(0, -260px)
+
+	100%
+		:-moz-transform scale(0.5) rotate(360deg) translate(0, -260px)
+		:-ms-transform scale(0.5) rotate(360deg) translate(0, -260px)
+		:-webkit-transform scale(0.5) rotate(360deg) translate(0, -260px)
+		:transform scale(0.5) rotate(360deg) translate(0, -260px)
+
+
+
+@-webkit-keyframes loading-overlay-animation-3d 
+	0%
+		:-webkit-transform scale3d(0.5, 0.5, 0.5) rotateY(0deg) translateZ(220px)
+
+	50%
+		:opacity 0.1
+		:-webkit-transform scale3d(0.5, 0.5, 0.5) rotateY(180deg) translateZ(220px)
+
+	100% 
+		:-webkit-transform scale3d(0.5, 0.5, 0.5) rotateY(360deg) translateZ(220px)
+
+
+
+
+
+
+
+

@@ -1,0 +1,959 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"sort",
+				"SortByName"
+			],
+			[
+				"rank",
+				"Ranking"
+			],
+			[
+				"border",
+				"border_box"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"square",
+				"squareVertexPositionBuffer"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"DB",
+				"DB_USER"
+			],
+			[
+				"paddin",
+				"padding"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"txt",
+				"text-align"
+			],
+			[
+				"bak",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2392,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/app.js",
+			"settings":
+			{
+				"buffer_size": 457,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/controllers.js",
+			"settings":
+			{
+				"buffer_size": 3552,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/directives/directives.js",
+			"settings":
+			{
+				"buffer_size": 9938,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/factories/factories.js",
+			"settings":
+			{
+				"buffer_size": 6811,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/partials/_home.html",
+			"settings":
+			{
+				"buffer_size": 127,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sass/sources/global.sass",
+			"settings":
+			{
+				"buffer_size": 14118,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 5946,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sass/config.rb",
+			"settings":
+			{
+				"buffer_size": 831,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 66.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			]
+		],
+		"width": 514.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/wamp/www/ryanair",
+		"/D/wamp/www/ryanair/app",
+		"/D/wamp/www/ryanair/app/controllers",
+		"/D/wamp/www/ryanair/css",
+		"/D/wamp/www/ryanair/images",
+		"/D/wamp/www/ryanair/js",
+		"/D/wamp/www/ryanair/js/sources"
+	],
+	"file_history":
+	[
+		"/C/Users/alecs/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/alecs/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/D/wamp/www/ryanair/css/sources/global.css",
+		"/D/wamp/www/ryanair/js/sources/misc.js",
+		"/D/wamp/www/ryanair/.gitignore",
+		"/D/wamp/www/ryanair/README.md",
+		"/D/wamp/www/ryanair/LICENSE",
+		"/D/wamp/www/riplife/e1/css/global.css",
+		"/D/wamp/www/riplife/e2/sass/sources/common/_animate.sass",
+		"/D/wamp/www/riplife/e2/sass/sources/common/_base.sass",
+		"/C/Users/alecs/Desktop/infoQ/infoq_files/site.css",
+		"/C/Users/alecs/Desktop/infoQ/infoq.html",
+		"/D/wamp/www/riplife/e1/sass/sources/common/_paths.sass",
+		"/D/wamp/www/isa_prj/html/testing/ibe3/sass/sources/global.sass",
+		"/D/wamp/www/isa_prj/html/testing/carousel/sass/sources/global.sass",
+		"/D/wamp/www/isa_prj/html/testing/checkin/sass/sources/global.sass",
+		"/D/wamp/www/isa_prj/html/testing/fleet/sass/sources/global.sass",
+		"/D/wamp/www/isa_prj/html/testing/cesar/sass/sources/global.sass",
+		"/D/wamp/www/isa_prj/html/testing/cesar_latest/js/sources/misc.js",
+		"/D/wamp/www/isa_prj/html/testing/gmail_app/app/final-section/js/factories/InboxFactory.js",
+		"/D/wamp/www/isa_prj/html/testing/gmail_app/app/final-section/js/factories/EmailFactory.js",
+		"/D/wamp/www/isa_prj/html/testing/gmail_app/app/final-section/js/directives/InboxDrctv.js",
+		"/D/wamp/www/isa_prj/html/testing/gmail_app/app/final-section/js/directives/EmailDrctv.js",
+		"/D/wamp/www/isa_prj/html/testing/gmail_app/app/final-section/js/controllers/InboxCtrl.js",
+		"/D/wamp/www/isa_prj/html/testing/gmail_app/app/final-section/js/controllers/EmailCtrl.js",
+		"/D/wamp/www/isa_prj/html/testing/fleet/index.html",
+		"/D/wamp/www/riplife/e1/index.html",
+		"/D/wamp/www/isa_prj/html/testing/index.html",
+		"/D/wamp/www/riplife/e2/css/global.css",
+		"/D/wamp/www/riplife/e1/sass/sources/global.sass",
+		"/D/wamp/www/riplife/e1/sass/sources/common/_animate.sass",
+		"/D/wamp/www/riplife/e1/sass/sources/common/_base.sass",
+		"/D/wamp/www/riplife/e1/sass/config.rb",
+		"/C/Users/alecs/AppData/Roaming/Sublime Text 3/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
+		"/D/wamp/www/isa_prj/html/testing/fleet/sass/config.rb",
+		"/D/wamp/www/webgl/webgl-lessons-master/lesson04/index.html",
+		"/D/wamp/www/webgl/webgl-lessons-master/lesson03/index.html",
+		"/D/wamp/www/webgl/misc.js",
+		"/D/wamp/www/webgl/index2.html",
+		"/D/wamp/www/webgl/index.html",
+		"/D/wamp/www/webgl/webgl-lessons-master/example03/particles-01.html",
+		"/C/Users/alecs/Music/iTunes/iTunes Music Library.xml",
+		"/D/wamp/www/nodejs/index.html",
+		"/D/wamp/www/appdynamics/apm.html",
+		"/D/wamp/www/appdynamics/devops.html",
+		"/D/wamp/www/appdynamics/java.html",
+		"/D/wamp/www/appdynamics/css/site.css",
+		"/D/wamp/www/appdynamics/index.html",
+		"/D/wamp/www/appdynamics/mobile.html",
+		"/D/wamp/www/appdynamics/analytics.html",
+		"/C/Users/alecs/Desktop/appdynamics/css/iepngfix.htc",
+		"/C/Users/alecs/Desktop/appdynamics/analytics.html",
+		"/C/Users/alecs/Desktop/appdynamics/devops.html",
+		"/C/Users/alecs/Desktop/appdynamics/apm.html",
+		"/C/Users/alecs/Desktop/appdynamics/mobile.html",
+		"/C/Users/alecs/Desktop/appdynamics/index.html",
+		"/C/Users/alecs/Desktop/appdynamics/css/site.css",
+		"/C/Users/alecs/Desktop/appdynamics/js/__utm.js",
+		"/D/_desktop/webgl/index.html",
+		"/C/Users/alecs/Desktop/appdynamics/_mobile.html",
+		"/C/Users/alecs/Desktop/appdynamics/_data.html",
+		"/C/Users/alecs/Desktop/appdynamics/_cloud.html",
+		"/C/Users/alecs/Desktop/ibmminiportal_26aug2012/index.html",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/config.php",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/wp-config.php",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/wp-config 2.php",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/wp-settings.php",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/.htaccess",
+		"/D/Downloads/error_log",
+		"/D/Downloads/error_log (2)",
+		"/D/wamp/www/qconferences/archives-box.html",
+		"/D/wamp/www/qconferences/index.html",
+		"/D/wamp/www/qconferences/css/screen.css",
+		"/D/wamp/www/qconferences/css/history_popup.css",
+		"/D/Downloads/access_log-2015-02-03-07",
+		"/D/Downloads/access_log-2015-02-03-08",
+		"/D/Downloads/error_log (1)",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/header.php",
+		"/D/wamp/www/meet_bistrian_bk/html/config.php",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/.htaccess 2",
+		"/D/wamp/www/qconferences/sass/sources/screen.sass",
+		"/D/wamp/www/meet_bistrian_bk/templates/site/category.tpl",
+		"/D/wamp/www/meet_bistrian_bk/templates/site/projects.tpl",
+		"/D/wamp/www/meet_bistrian_bk/templates/site/inc/bottom.tpl",
+		"/D/wamp/www/meet_bistrian_bk/templates/site/testimonials.tpl",
+		"/D/wamp/www/meet_bistrian_bk/templates/site/home.tpl",
+		"/D/wamp/www/meet_bistrian_bk/public_html/css/site.css",
+		"/D/wamp/www/meet_bistrian_bk/public_html/.htaccess",
+		"/D/wamp/www/meet_bistrian_bk/.htaccess",
+		"/D/wamp/www/meet_bistrian_bk/engine/include/translit.php",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/utile.php",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/header.tpl",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/bottom.tpl",
+		"/D/wamp/www/meet_bistrian_bk/public_html/sitemap.xml",
+		"/D/wamp/www/meet_bistrian_bk/libs/smarty/sysplugins/smarty_internal_template.php",
+		"/D/wamp/www/meet_bistrian_bk/libs/smarty/sysplugins/smarty_internal_cache.php",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/config 2.php",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/db.php",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/init.php",
+		"/D/wamp/www/meet_bistrian_bk/libs/db/adapter/db_mysql.php",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/db_mysql.php",
+		"/D/wamp/www/meet_bistrian_bk/libs/db/database.php",
+		"/D/wamp/www/meet_bistrian_bk/libs/db/db.legacy.php",
+		"/D/wamp/www/meet_bistrian_bk/libs/db/db.lib.php",
+		"/D/wamp/www/meet_bistrian_bk/tmp/templates_c/dc33ce386fb1c65b0b2780d7f8fb1d794b2b297c.file.chenar_bottom.tpl.php",
+		"/D/wamp/www/meet_bistrian_bk/libs/db/db_table.php",
+		"/D/wamp/www/meet_bistrian_bk/tmp/templates_c/bd42a03a485ec446246e68eb668bf2bd0de2b409.file.ifr_utile.tpl.php",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/error_log",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/config 3.php",
+		"/C/Users/alecs/AppData/Local/Temp/fz3temp-1/index.php",
+		"/D/wamp/www/meet_bistrian_bk/public_html/init.php",
+		"/D/wamp/www/igiena/online/public_html/config.php",
+		"/D/wamp/www/igiena/online/public_html/DB.php",
+		"/D/wamp/www/meet_bistrian_bk/public_html/config.php",
+		"/D/wamp/www/momobisite/site/config.php",
+		"/D/wamp/www/meet_bistrian_bk/public_html/mint/config/db.php",
+		"/D/Downloads/admin-2-/config.php",
+		"/D/wamp/www/meetbistrian/www/config.php",
+		"/D/wamp/www/_vivat/site/.htaccess",
+		"/D/_uTorrent/torrents/Banging.Wet.Asses.XXX.1080p.MP4-QUAGMIRE.torrent",
+		"/C/Users/alecs/Desktop/print_css/article3.html",
+		"/C/Users/alecs/Desktop/print_css/article2.html",
+		"/C/Users/alecs/Desktop/print_css/article_files/site.css",
+		"/C/Users/alecs/Desktop/print_css/article.html",
+		"/C/Users/alecs/Desktop/print_css/list_articles.html",
+		"/C/Users/alecs/Desktop/print_css/styles/print.css",
+		"/D/wamp/www/world_coderally/register_5.html",
+		"/D/wamp/www/world_coderally/register_4.html"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"D:\\wamp\\www\\ryanair",
+			"D:\\wamp\\www\\meet_bistrian_bk\\templates",
+			"D:\\wamp\\www\\meet_bistrian_bk"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"default_line_ending",
+			"WeightBalanceApp",
+			"widget_rvc4_type1",
+			"header",
+			"widget_rvc4_type1",
+			"entrypdf ",
+			"related_editorial",
+			"img_cover2",
+			"ebooks_type",
+			"site.css",
+			".related_editorial",
+			"min_",
+			"console",
+			"@for",
+			"for",
+			"for ",
+			"@for",
+			"Mustache",
+			"SortByName",
+			"console",
+			"drivers",
+			"GetData",
+			"output",
+			"{{",
+			"style",
+			"header",
+			"ie)",
+			"show_info",
+			"-moz-animation-name",
+			"fadein",
+			"-ms-animation-name",
+			"logo",
+			"chil",
+			"animate",
+			"border_box",
+			"pyramidVertexPositionBuffer",
+			"gl_FragColor",
+			"mat4",
+			"serviceSmall",
+			"mobile",
+			"Analytics",
+			"panesContent",
+			"seeMore",
+			"details2",
+			"d1d1d1",
+			"font-fa",
+			"details2",
+			"tabs2",
+			"livereload",
+			"qcon_history",
+			"-prev",
+			".arch",
+			".archives",
+			"QCon San Francisco",
+			"utile",
+			"/utile.php?obj=image",
+			".project ul li span",
+			"$ctype",
+			"ctype",
+			"index",
+			"DB_NAME",
+			"db201394",
+			"text_info",
+			"blocknote",
+			"all_comments",
+			"random_links",
+			"logo",
+			"text_info_article",
+			".text_info",
+			"script type=\"text/javascript\"",
+			"script type=\"text/javascript\"44444",
+			"google",
+			"article_page_left ",
+			"header",
+			"#header { float:left; text-align:left; margin:1px 0 0 0; display:block; width:989px; clear:both;}\nwrapper",
+			"#de2910",
+			"#00b91f",
+			"#005696",
+			"#00b91f",
+			"_eu",
+			"#009c39",
+			"#002776",
+			"_bra",
+			"_bea",
+			"#00b91f",
+			"#fe0000",
+			"_na",
+			"button_setup",
+			"button_setup ",
+			"#ed1c24",
+			"#27ae60",
+			"brand",
+			".big",
+			"a.gray",
+			"youCanVisit",
+			"read_later_saved",
+			"read_later",
+			"reading_list",
+			"loadin",
+			".right-arrow",
+			".left-arrow",
+			"pixel",
+			"year-archives",
+			"font-family:'Helvetica', 'Arial', sans-serif;",
+			"family",
+			"45px",
+			"iframe",
+			"scroll",
+			"qcon-archives",
+			" href=\"#\"",
+			"timeline",
+			"social",
+			"<?php echo UI_PATH ?>",
+			"UI_PATH",
+			"1px solid #cfcfcf",
+			".php",
+			"white",
+			"menu",
+			"run_macro_file",
+			"ctrl+e",
+			"shift+k",
+			"ctrl+d",
+			"5",
+			"f5",
+			"command",
+			"toggle_side_bar",
+			"open",
+			"toggle"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#ff9933",
+			"#128807",
+			"#de2910",
+			"#00b91f",
+			"#005696",
+			"#00b91f",
+			"#009c39",
+			"#002776",
+			"#fe0000",
+			"#00b91f",
+			".bx-next",
+			".bx-prev",
+			"font-family: \"Open Sans\", sans-serif;",
+			" href=\"javascript:;\"",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								565,
+								565
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 457,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								250,
+								250
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/controllers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1052,
+								1052
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/directives/directives.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9938,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								646,
+								646
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/factories/factories.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6811,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5957,
+								5957
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/partials/_home.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 127,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								127,
+								127
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "sass/sources/global.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								220,
+								220
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Gruntfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5946,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								366,
+								366
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sass/config.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 831,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ryanair.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"app",
+				"app\\app.js"
+			],
+			[
+				"index.",
+				"index.html"
+			],
+			[
+				"config",
+				"sass\\config.rb"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"css",
+				"css\\sources\\global.css"
+			],
+			[
+				"sass",
+				"sass\\sources\\global.sass"
+			],
+			[
+				"global.css",
+				"e2\\css\\global.css"
+			],
+			[
+				"global.",
+				"e1\\css\\global.css"
+			],
+			[
+				"path.sass",
+				"e1\\sass\\sources\\common\\_paths.sass"
+			],
+			[
+				"base.sass",
+				"e2\\sass\\sources\\common\\_base.sass"
+			],
+			[
+				"animate.sass",
+				"e2\\sass\\sources\\common\\_animate.sass"
+			],
+			[
+				"global.sass",
+				"e2\\sass\\sources\\global.sass"
+			],
+			[
+				"inde",
+				"appdynamics\\index.html"
+			],
+			[
+				"ana",
+				"appdynamics\\analytics.html"
+			],
+			[
+				"dev",
+				"appdynamics\\devops.html"
+			],
+			[
+				"apm",
+				"appdynamics\\apm.html"
+			],
+			[
+				"tes",
+				"templates\\site\\testimonials.tpl"
+			],
+			[
+				"site.css",
+				"public_html\\css\\site.css"
+			],
+			[
+				"db/database.php",
+				"libs\\db\\database.php"
+			],
+			[
+				"db",
+				"libs\\db\\db.legacy.php"
+			],
+			[
+				"screen.sas",
+				"qconferences\\sass\\sources\\screen.sass"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 308.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

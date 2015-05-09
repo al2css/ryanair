@@ -1,0 +1,185 @@
+// Mobile application stylesheet
+// @version 1.0
+
+// Imports ============================================================
+
+@import paths
+@import animate.sass
+
+// Mobile CSS reset ===================================================
+
+*
+	:-moz-box-sizing border-box
+	:-webkit-box-sizing border-box
+	:box-sizing border-box
+	:-webkit-tap-highlight-color rgba(0,0,0,0) !important
+
+html, body, p, iframe
+	:margin 0
+	:padding 0
+	:border 0
+	:-webkit-font-smoothing antialiased
+	:height 100%
+
+body
+	:font-family Helvetica, Arial, Verdana, sans-serif
+	:line-height 1.5
+	:font-size 16px
+	:color #141124
+	:word-wrap break-word
+	:-webkit-text-size-adjust none
+	:-webkit-touch-callout none
+	:-webkit-tap-highlight-color rgba(0,0,0,0)
+	:-webkit-user-select none
+	//:text-rendering optimizeLegibility
+	:-webkit-transition-property height, min-height
+	:-webkit-transition-duration .1s
+	:-webkit-transition-timing-function ease
+	:position relative
+	:height 100%
+	:overflow hidden
+	:word-wrap break-word
+
+a
+	:text-decoration none
+
+h1, h2, h3, h4, h5, h6
+	:font-weight normal
+
+p img
+	:float left
+	:margin 0 10px 5px 0
+	:padding 0
+
+img
+	:border 0
+	:max-width 100%
+
+table
+	:width auto
+	:border-collapse collapse
+	:border-spacing 0
+
+input[type="text"], input[type="email"], input[type="search"], input[type="password"]
+	:-webkit-appearance none
+	:-moz-appearance none
+	:-webkit-box-flex 1
+
+
+// Mixins =============================================================
+
+// Rounded borders
+
+=rounded_borders($width: 5px, $rounding: 5px, $border: false, $color: unquote("#CCC"))
+	:-moz-border-radius $rounding $rounding
+	:-webkit-border-radius $rounding $rounding
+	:-o-border-radius $rounding $rounding
+	:border-radius $rounding $rounding
+	@if $border == true
+		:border $width $color solid
+
+// Opacity
+
+=opacity($value)
+	:opacity $value
+	:-moz-opacity $value
+
+// Transition
+
+=transition($effect)
+	:-webkit-transition  unquote($effect)
+	:-moz-transition  unquote($effect)
+	:-o-transition  unquote($effect)
+	:transition  unquote($effect)
+
+// Background position
+
+=bgpos($x, $y, $important: false)
+	@if $important == false
+		:background-position $x $y
+	@else
+		:background-position $x $y !important
+
+// Disable selection
+
+=unselectable
+	:-webkit-user-select none
+	:-moz-user-select none
+
+=radius($border_radius: 5px, $side: none)
+	@if $side == none
+		:-moz-border-radius $border_radius
+		:-webkit-border-radius $border_radius
+		:border-radius $border_radius
+	@else
+		@if $side == top
+			:-moz-border-radius-topleft $border_radius
+			:-moz-border-radius-topright $border_radius
+			:-webkit-border-radius $border_radius $border_radius 0 0
+			:border-radius $border_radius $border_radius 0 0
+		@if $side == bottom
+			:-moz-border-radius-bottomright $border_radius
+			:-moz-border-radius-bottomleft $border_radius
+			:-webkit-border-radius 0 0 $border_radius $border_radius
+			:border-radius 0 0 $border_radius $border_radius
+		@if $side == left
+			:-moz-border-radius-topleft $border_radius
+			:-moz-border-radius-bottomleft $border_radius
+			:-webkit-border-radius $border_radius 0 0 $border_radius
+			:border-radius $border_radius 0 0 $border_radius
+		@if $side == right
+			:-moz-border-radius-topright $border_radius
+			:-moz-border-radius-bottomright $border_radius
+			:-webkit-border-radius 0 $border_radius $border_radius 0
+			:border-radius 0 $border_radius $border_radius 0
+		@if $side == top-left
+			:-moz-border-radius-topleft $border_radius
+			:-webkit-border-radius $border_radius 0 0 0
+			:border-radius $border_radius 0 0 0
+		@if $side == top-right
+			:-moz-border-radius-topright $border_radius
+			:-webkit-border-radius 0 $border_radius 0 0
+			:border-radius 0 $border_radius 0 0
+		@if $side == bottom-left
+			:-moz-border-radius-bottomleft $border_radius
+			:-webkit-border-radius 0 0 $border_radius 0
+			:border-radius 0 0 $border_radius 0
+		@if $side == bottom-right
+			:-moz-border-radius-bottomright $border_radius
+			:-webkit-border-radius 0 0 0 $border_radius
+			:border-radius 0 0 0 $border_radius
+
+// Gradient
+
+=gradient($start, $end, $image:none)
+	@if $image == none
+		:background-color $end
+		:background-image linear-gradient($start 0%, $end 100%)
+	@else
+		:background-color $end
+		:background-image image_url($image)
+		:background-image image_url($image), linear-gradient($start 0%, $end 100%)
+
+=text_overflow($type: ellipsis)
+	:text-overflow $type
+	:-o-text-overflow $type
+
+// High Quality images
+
+=high_quality
+	:image-rendering optimizeQuality
+
+=border_box
+	:-webkit-box-sizing border-box
+	:-moz-box-sizing border-box
+	:box-sizing border-box
+
+=box_flex($flex: 1)
+	:box-flex $flex
+	:-webkit-box-flex $flex
+	:-moz-box-flex $flex
+
+=display_box
+	:display box
+	:display -webkit-box
+	:display -moz-box

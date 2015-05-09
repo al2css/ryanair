@@ -1,0 +1,20 @@
+<div class="inbox">
+    <div class="search-bar">
+        <div class="inbox__count">
+            You have {{ notificationPage.notification.length && notificationPage.notification.length || 'no' }} notifications
+        </div>
+        <div ng-hide="!notificationPage.notification.length" class="inbox__search__box">
+            <input type="text" class="inbox__search" ng-model="notificationPage.search" value="" placeholder="Search by 'from', e.g. TicketMaster">
+        </div>
+    </div>
+    <ul class="inbox__list">
+        <li ng-show="!notificationPage.notification.length" class="no-emails">No notifications!</li>
+        <li ng-repeat="item in notificationPage.notification | orderBy:'date' | filter: notificationPage.search" ng-class="{'unread' : item.unread}">
+            <div class="inbox__list-info">
+                <p class="inbox__list-from"> From: {{ item.from }} </p>
+                <p class="inbox__list-date"> Date: {{ item.date | date: 'dd/MM/yyyy' }} </p>
+                <p class="inbox__list-subject">Subject: {{ item.subject }} </p>
+            </div>
+        </li>
+    </ul>
+</div>
