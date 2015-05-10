@@ -1,6 +1,6 @@
 RyanairApp.controller('MapCtrl', ['$scope', '$location', 'AirportsFactory',
     function($scope, $location, AirportsFactory) {
-        // this.title = 'Ryanair\'s European destinations on Map';
+        // this.title = 'Ryanair\'s European Destinations on Map';
         this.title = 'Destinations on Map';
         this.airports = {};
 
@@ -15,7 +15,7 @@ RyanairApp.controller('MapCtrl', ['$scope', '$location', 'AirportsFactory',
 
         var mapOptions = {
             zoom: 4,
-            center: new google.maps.LatLng(48.085417915489565, 18.6328125),
+            center: new google.maps.LatLng(48.085417915489565, 18.6328125), // Central Europe
             mapTypeId: google.maps.MapTypeId.TERRAIN
         };
         var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
@@ -35,10 +35,11 @@ RyanairApp.controller('MapCtrl', ['$scope', '$location', 'AirportsFactory',
 
         };
 
-        $scope.openInfoWindow = function(e, selectedMarker) {
-            e.preventDefault();
-            google.maps.event.trigger(selectedMarker, 'click');
-        };
+        // $scope.openInfoWindow = function(e, selectedMarker) {
+        //     e.preventDefault();
+        //     console.warn(selectedMarker);
+        //     // google.maps.event.trigger(selectedMarker, 'click');
+        // };
 
         $scope.getClass = function(path) {
             if ($location.path().substr(0, path.length) == path) {
@@ -54,20 +55,20 @@ RyanairApp.controller('MapCtrl', ['$scope', '$location', 'AirportsFactory',
 
 RyanairApp.controller('DestinationsCtrl', ['$scope', '$location', 'AirportsFactory',
     function($scope, $location, AirportsFactory) {
-        // this.title = 'Ryanair\'s European destinations';
+        // this.title = 'Ryanair\'s European Sestinations';
         this.title = 'Destinations';
         this.airports = {};
-        this.countries = {};
+        $scope.selected = {};
 
         AirportsFactory.getAirports()
             .then(angular.bind(this, function then() {
                 this.airports = AirportsFactory.airports;
             }));
 
-        AirportsFactory.getCountries()
-            .then(angular.bind(this, function then() {
-                this.countries = AirportsFactory.countries;
-            }));
+		$scope.openInfoWindow = function(e, selectedMarker) {
+            e.preventDefault();
+            $scope.selected = selectedMarker;
+        };
 
         $scope.getClass = function(path) {
             if ($location.path().substr(0, path.length) == path) {
