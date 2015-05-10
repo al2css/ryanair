@@ -30,3 +30,5 @@
 
 # Debug files
 *.dSYM/
+*.sass-cache/
+/node_modules/

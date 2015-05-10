@@ -1,15 +1,17 @@
-<div class="menu" id="menu" data-ng-include="'app/partials/_menu.html'"></div>
+<header class="header">
+	<a href="#/map" title="" class="logo"></a>
+    <section id="menu" class="menu" data-ng-include="'app/partials/_menu.html'"></section>
+</header>
 
-<div class="inside_page map"> 
-	<section class="title"><h1>{{ map.title }}</h1></section>
-	
-	<div class="clear"></div>	 
+<div class="inside_page map">
+    <section class="title">
+        <h1>{{ map.title }}</h1></section>
+    <div class="clear"></div>
+    
+    <div id="map_container" class="map_container">
+        <div id="map_canvas" class="map_canvas"></div>
+        <div class="clear"></div>
+    </div>
 
-	<div id="map_container" style="width:100%; height: 100%; display: block; float: left; ">
-	    <div id="map_canvas" class="map_canvas" style="width:100%; height:600px"></div>
-	    
-	    <div class="clear"></div>
-	</div>
-
-	<div class="clear"></div>
+    <div class="clear"></div>
 </div>

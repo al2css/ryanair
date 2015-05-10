@@ -1,17 +1,20 @@
-<div class="menu" id="menu" data-ng-include="'app/partials/_menu.html'"></div>
+<header class="header">
+	<a href="#/map" title="" class="logo"></a>
+    <section id="menu" class="menu" data-ng-include="'app/partials/_menu.html'"></section>
+</header>
 
-<div class="inside_page destinations"> 
-	<section class="title"><h1>{{ destinations.title }}</h1></section>
-	
-	<div class="clear"></div>	 
+<div class="inside_page destinations">
+    <section class="title">
+        <h1>{{ destinations.title }}</h1></section>
+    <div class="clear"></div>
+    
+    <input type="text" class="inbox__search" ng-model="destinations.search" value="" placeholder="Search by Country or City ">
 
-	 <input type="text" class="inbox__search" ng-model="destinations.search" value="" placeholder="Search by Country or City ">
+    <ul class="list_destinations">
+	    <li ng-repeat="airport in destinations.airports | orderBy : 'name' | filter: destinations.search">
+	        <a href="javascript:;" ng-click="openInfoWindow($event, airport)">{{airport.name}}</a>
+	    </li>
+    </ul>
 
-	<div class="clear"></div>	 
-
-	<div id="class" ng-repeat="airport in destinations.airports | orderBy : 'name' | filter: destinations.search">
-         <a href="javascript:;" ng-click="openInfoWindow($event, airport)">{{airport.name}}</a>
-    </div>
-
-	<div class="clear"></div>
+    <div class="clear"></div>
 </div>

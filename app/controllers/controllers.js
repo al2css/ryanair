@@ -1,43 +1,44 @@
-RyanairApp.controller('MapCtrl', ['$scope', '$location', 'AirportsFactory', 
+RyanairApp.controller('MapCtrl', ['$scope', '$location', 'AirportsFactory',
     function($scope, $location, AirportsFactory) {
-        this.title = 'Ryanair\'s European destinations on Map';
+        // this.title = 'Ryanair\'s European destinations on Map';
+        this.title = 'Destinations on Map';
         this.airports = {};
 
         AirportsFactory.getAirports()
-			.then(angular.bind(this, function then() {
-			    this.airports = AirportsFactory.airports;
+            .then(angular.bind(this, function then() {
+                this.airports = AirportsFactory.airports;
 
-			    for (var i = 0, len = this.airports.length; i < len; i++){
-			        createMarker(this.airports[i]);
-			    }
-			}));
+                for (var i = 0, len = this.airports.length; i < len; i++) {
+                    createMarker(this.airports[i]);
+                }
+            }));
 
         var mapOptions = {
-	        zoom: 4,
-	        center: new google.maps.LatLng(48.085417915489565, 18.6328125),
-	        mapTypeId: google.maps.MapTypeId.TERRAIN
-	    };
-	    var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-	    var infoWindow = new google.maps.InfoWindow();
-	    var createMarker = function (info){
-	        var marker = new google.maps.Marker({
-	            position: new google.maps.LatLng(info.latitude, info.longitude),
-	            map: map,
-	            title: info.name
-	        });
-	        marker.content = '<div class="infoWindowContent">' + info.country.name + '</div>';
-	        
-	        google.maps.event.addListener(marker, 'click', function(){
-	            infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
-	            infoWindow.open(map, marker);
-	        });
-	        
-	    };
+            zoom: 4,
+            center: new google.maps.LatLng(48.085417915489565, 18.6328125),
+            mapTypeId: google.maps.MapTypeId.TERRAIN
+        };
+        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+        var infoWindow = new google.maps.InfoWindow();
+        var createMarker = function(info) {
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(info.latitude, info.longitude),
+                map: map,
+                title: info.name
+            });
+            marker.content = '<div class="infoWindowContent">' + info.country.name + '</div>';
 
-	    $scope.openInfoWindow = function(e, selectedMarker){
-	        e.preventDefault();
-	        google.maps.event.trigger(selectedMarker, 'click');
-	    };
+            google.maps.event.addListener(marker, 'click', function() {
+                infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
+                infoWindow.open(map, marker);
+            });
+
+        };
+
+        $scope.openInfoWindow = function(e, selectedMarker) {
+            e.preventDefault();
+            google.maps.event.trigger(selectedMarker, 'click');
+        };
 
         $scope.getClass = function(path) {
             if ($location.path().substr(0, path.length) == path) {
@@ -51,21 +52,22 @@ RyanairApp.controller('MapCtrl', ['$scope', '$location', 'AirportsFactory',
 ]);
 
 
-RyanairApp.controller('DestinationsCtrl', ['$scope', '$location', 'AirportsFactory', 
+RyanairApp.controller('DestinationsCtrl', ['$scope', '$location', 'AirportsFactory',
     function($scope, $location, AirportsFactory) {
-        this.title = 'Ryanair\'s European destinations';
+        // this.title = 'Ryanair\'s European destinations';
+        this.title = 'Destinations';
         this.airports = {};
         this.countries = {};
 
         AirportsFactory.getAirports()
-			.then(angular.bind(this, function then() {
-			    this.airports = AirportsFactory.airports;
-			}));
+            .then(angular.bind(this, function then() {
+                this.airports = AirportsFactory.airports;
+            }));
 
-		AirportsFactory.getCountries()
-			.then(angular.bind(this, function then() {
-			    this.countries = AirportsFactory.countries;
-			}));
+        AirportsFactory.getCountries()
+            .then(angular.bind(this, function then() {
+                this.countries = AirportsFactory.countries;
+            }));
 
         $scope.getClass = function(path) {
             if ($location.path().substr(0, path.length) == path) {

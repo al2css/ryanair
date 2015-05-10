@@ -14,7 +14,8 @@ $pc_huge: 1450px !default
 $menu_orange: #f39c12
 $menu_green: #00ae4a
 $menu_red: #c0392b
-$menu_blue: #2c3e50
+$menu_blue: #22356b
+$menu_lightblue: #426dab
 $menu_gray: #898787
 $menu_light_blue: #f39c12
 
@@ -68,10 +69,6 @@ $dropzone_height: 700
 .caps
 	:text-transform uppercase
 
-.muiemica
-	:display flex
-	:float left
-
 html
 	:width 100%
 	:height 100%
@@ -79,7 +76,8 @@ html
 body
 	// :font-family $open-sans
 	// :font-family $varela-round
-	:font-family $lato
+	// :font-family $lato
+	:font-family $bitter
 	:font-weight 300
 	:color #231f20
 	:background-color #FFF
@@ -233,11 +231,6 @@ body
 		:padding 0
 		:margin 0 auto
 		:display block
-		// :background
-		// 	:color transparent
-		// 	:image image_url(unquote("accelaero_aeroline_bg.jpg"))
-		// 	:repeat no-repeat
-		// 	:position 80% top
 		:position relative
 		:z-index 1000
 		:-webkit-backface-visibility hidden
@@ -250,323 +243,254 @@ body
 		.title
 			:float left
 			:width 100%
-			:padding 0
-			:margin 20px 0
+			:text-align center
+			:margin 0
 			:clear both
 			+border_box
-			:padding 0 10px
+			:text-transform uppercase
+			:font-size 1.7em
+			:font-weight 700
+
+			h1
+				:text-align center
 
 		.content
 			:float left
 			:width 100%
+			:height 100%
 			:clear both
 			:padding 0
 			:margin 0
 			:display block
+			:position relative
 			// +transition(all 0.2s ease-in)
 			
-			.flightsRoadmap
+			.header
 				:float left
 				:width 100%
 				:clear both
-				:margin 0 0 20px 0
-				+border_box
-				:padding 0px
-				:background
-					:color rgba(237, 186, 198, 0.4)
-				:height 80px
-				:position relative
-
-				.timespan
-					:position absolute
-					:top 0
-					:left 0
-					:width 100%
-					:height 100%
-					:z-index 1
-					:text-align left
-
-					&> div
-						:float left
-						:text-align left
-						:padding 0
-						:margin 0
-						:display inline-block
-						:height 100%
-						:position relative
-						:width 8.3333%
-						:background
-							:color transparent
-
-						&.current_hour
-							:background
-								:color rgba(190, 89, 27, 0.1)
-
-						&> span
-							:position absolute
-							:top 3px
-							:left 10px
-							:font-weight 300 !important
-							:font-size 0.7em
-							:color black
-							:color rgba(0,0,0,0.6)
-							:text-shadow 0px 1px 0px rgba(255, 255, 255, 0.8)
-						
-						&> q
-							:display block
-							:position absolute
-							:width 1px
-							:height 100%
-							:left 0
-							:top 0
-							:bottom 0
-							:box-shadow 1px 0px 0px rgba(255,255,255,0.2)
-							:background
-								:color rgba(0,0,0,0.1)
-							+unselectable
-
-				.roadmap
-					:float left
-					// :position relative
-					:position absolute
-					:bottom 0px
-					:left 0px
-					:z-index 10
-					:text-align left
-					:padding 25px 0 0 0
-					:margin 0
-					:height 100%
-					:width auto
-					+prepare_animation
-					:-webkit-animation-name bounceIn
-					:-moz-animation-name bounceIn
-					:-ms-animation-name bounceIn
-					:-o-animation-name bounceIn
-					:animation-name bounceIn
-					// :-webkit-animation-delay 1s
-					// :-moz-animation-delay 1s
-					// :-ms-animation-delay 1s
-					// :-o-animation-delay 1s
-					// :animation-delay 1s
-					+border_box
-					@for $i from 1 through 24
-						&:nth-child(#{$i})
-							// :z-index 10 + (35 - $i)
-							// :top 45 - (5 * $i)px
-							:-webkit-animation-delay #{$i/10}s
-							:-moz-animation-delay #{$i/10}s
-							:-o-animation-delay #{$i/10}s
-							:-ms-animation-delay #{$i/10}s
-							:animation-delay #{$i/10}s
-
-							// &> h2
-								// :margin-top #{$i*5}px
-
-					&> q
-						:position absolute
-						:top 25px
-						:bottom 0px
-						:left 0px
-						:width 2px
-						:background
-							:color rgba(0,0,0,0.6)
-
-					&> h2
-						:margin 0
-						:font-size 0.48em
-						:font-weight 700
-						:padding 0 0 0 5px
-						:color black
-						:text-shadow 0px 1px 0px rgba(255, 255, 255, 0.8)
-
-						.tooltip
-							:width 250px !important
-
-						.tooltip-inner
-							:max-width 100% !important
-							:width auto !important
-							:text-shadow 0 0 0 rgba(0,0,0,0)
-
-			
-			.menu
-				:float left
-				:width 100%
-				:clear both
-				:margin 0 0 20px 0
-				+border_box
-				:padding 10px
-
-				.main_menu
-					:float left
-					:width 100%
-					:clear both
-					:padding 0
-					:margin 0
-					:text-align left
-
-					&> li
-						:display inline
-						:float left
-
-						&> a
-							:padding 10px
-							:display inline-block
-							:float left
-							:color black
-
-						&.current
-							&> a
-								:color red
-			
-			.inside_page, .login_page
-				:float left
-				:width 100%
-				:clear both
-				:padding 0
 				:margin 0
+				:padding 0
+				:clear both
+				:position relative
+				:height 150px
+				:margin-bottom 40px
 				:display block
 				:background
-					:color rgb(219, 218, 218)
-				:position relative
-				:z-index 10
-				+prepare_animation
-				:-webkit-animation-name fadeInDown
-				:-moz-animation-name fadeInDown
-				:-ms-animation-name fadeInDown
-				:-o-animation-name fadeInDown
-				:animation-name fadeInDown
+					:color $menu_lightblue
+					:repeat no-repeat
+					:position 0 0
+				:border-bottom 1px solid black
+				+media-query(phone)
+					:background-image none
+					:height auto
 
-				// my_flights
-				// .all_assigned_flights, .closest_flights, .all_available_flights, .flight_details
-				
-				&> div
+				.logo
 					:float left
-					:width 100%
-					:clear both
-					:padding 0
-					:margin 0
-					:text-align left
+					:width 112px
+					:height 100%
 					:position relative
+					:z-index 100
+					:margin 0 2%
+					:display block
+					:background
+						// :image image_url(unquote("ryanair_logo.png"))
+						:repeat no-repeat
+						:position center center
+					+media-query(phone)
+						:float none
+						:margin 10px auto
+						:clear both
+						:height 43px
 
-					&.error
-						+prepare_animation
-						:-webkit-animation-name bounceIn
-						:-moz-animation-name bounceIn
-						:-ms-animation-name bounceIn
-						:-o-animation-name bounceIn
-						:animation-name bounceIn
-						:background
-							:color red
+				.menu
+					:float left
+					:width auto
+					:height 130px
+					:margin 20px 0 0 0
+					:padding 0
+					:position relative
+					:font-weight 400
+					+media-query(phone)
+						:height auto
+						:width 100%
+						:display block
+						:clear both
+						:margin-bottom 20px
 
-					&.module
-						&.directive
-
-							&> div
-								:float left
-								:width 100%
-								:clear both
-								:padding 0
-								:margin 0
-								:text-align left
-								:position relative
-
-								.search-bar
-									:float left
-									:width 100%
-									:clear both
-									:padding 0
-									:margin 0
-									:text-align left
-									:position relative
-
-									&> div
-										:float left
-										:position relative
-										:padding 0
-										:margin 0
-									
-										&.inbox__count
-											:float left
-											:width 80%
-
-										&.inbox__search__box
-											:float right
-											:width auto
-											:padding 0 20px
-
-
-								.inbox__list
-									&> li
-										:float left
-										:width 100%
-										:clear both
-										:width 100%
-										:margin 0 0 20px 0
-										:display block
-										:padding 20px
-										+border_box
-
-										&.unread
-											&> div
-												:font-weight 700
-												p
-													:font-weight 700
-
-										&> div
-											:float left
-											:position relative
-											:width 50%
-
-											&.inbox__list-info
-												:float left
-												:width 80%
-											&.inbox__list-actions
-												:float right
-												:width auto
-												:padding 0 20px
-
-										&.no-emails
-											:background
-												:color red
-
-
-					.flight, .flight_details
-						:float left
-						:width 25%
-						:padding 20px
-						+border_box
-						:text-align left
+					&> a
+						:padding 0
 						:margin 0
+						:float left
+						:display inline-block
+						// +transition(all 0.2s ease-in)
+						:color white
+						:text-transform uppercase
+						:font-weight 400
+						:font-size 1.1em
+						:height 130px
+						:line-height 130px
+						:text-shadow 0 1px 1px rgba(0,0,0, 0.4)
+						:text-align center
 						:position relative
+						+media-query(phone)
+							:height auto
+							:line-height normal
+							:padding 10px 0
+							:width 100%
+							:clear both
+							:text-align center
+							:margin 0
+						+media-query(pc_huge)
+							:margin 0 10px
+						+media-query(pc)
+							:margin 0 10px
+						+media-query(tablet)
+							:margin 0
+						+media-query(phone)
+							:margin 0
 
-						h2, p
+						&> span
+							:float left
+							:text-align center
+							:padding 0 12px
+							:margin 0
+							:width 100%
+							:height 100%
+							:position relative
+							:z-index 10
+							+border_box
+							+media-query(phone)
+								:padding 0
+
+						&> em, &> q
 							:float left
 							:text-align left
-							:padding 0
-							:margin 0 0 5px 0
-							:clear both
-							:width 100%
-							:font-size 1em
+							:text-indent -6000em
+							:display block
+							:width 12px
+							:height 100%
+							:position absolute
+							:top 0
+							:bottom 0
+							:z-index 20
+							+rotate(4)
+							:background-color transparent
+							// +transition(all 0.2s ease-in)
+							+media-query(phone)
+								:display none
 
-						h2
-							:font-weight 300
-							:font-size 1.4em
+						&> em
+							:left -5px
+							:top 1px
+						&> q
+							:right -6px	
 
-						p
-							&.size1
-								:margin-bottom 20px
-								:font-size 1.1em
+						&:first-child
+							:margin-left 0px
 
+						&:last-child
+							:margin-right 0px
 
-					.flight_details
+						&.current, &:hover
+							:color $menu_lightblue
+							:background-color white
+							:text-shadow 0 1px 1px rgba(0,0,0, 0.1)
+
+							&> em, &> q
+								:background-color white
+
+			.inside_page
+				:float left
+				:width 100%
+				:clear both
+				:display block
+				:padding 10px
+				:margin 0 0 20px 0
+				+border_box
+				:position relative
+
+				&.destinations
+
+					.inbox__search
+						:float left
+						:width 90%
+						:margin 20px 5% 50px 5%
+						:padding 10px
+						+border_box
+						:font-family $bitter
+						:color $menu_blue
+						:text-transform uppercase
+						:outline none
+						:border 1px solid #ADB1B7
+						:box-shadow 0 0 15px 0px rgba(0,0,0,0.2) inset
+						+transition(all 0.2s ease-in)
+
+						&:focus
+							:box-shadow 0 0 5px 0px rgba(0,0,0,0.2) inset
+
+					ul.list_destinations
+						:float left
+						:width 100%
+						:clear both
+						:margin 0
 						:width 100%
 
-			
+						li
+							:float left
+							:padding 5px
+							:margin 3px 0
+							:display inline-block
+							+prepare_animation
+							:-webkit-animation-name bounceIn
+							:-moz-animation-name bounceIn
+							:-ms-animation-name bounceIn
+							:-o-animation-name bounceIn
+							:animation-name bounceIn
+							// @for $i from 1 through 200
+							// 	&:nth-child(#{$i})
+							// 		:-webkit-animation-delay #{$i/800}s
+							// 		:-moz-animation-delay #{$i/800}s
+							// 		:-o-animation-delay #{$i/800}s
+							// 		:-ms-animation-delay #{$i/800}s
+							// 		:animation-delay #{$i/800}s
 
-			.login_page
-				:background
-					:color white
-					:text-align center
+							&> a
+								:padding 3px 5px
+								:color black
+								:text-shadow 0 1px 0 rgba(255,255,255,0.3)
+								:background
+									:color lighten($menu_lightblue, 48%)
+								+transition(all 0.2s ease-in)
+								:z-index 8
+								:position relative
+
+								&:hover
+									:background
+										:color lighten($menu_lightblue, 44%)
+									// +scale(1.1)
+									:z-index 10
+
+
+				&.map
+					:position absolute
+					:bottom 0
+					:top 190px
+					:left 0
+					:right 0
+					:z-index 100
+					:margin-bottom 0
+					:padding 10px 0
+
+					.map_container, .map_canvas
+						:width 100%
+						:float left
+						:height 100%
+						:clear both
+						:text-align left
+						:margin 0
+						:padding 0
+			
 
 	
 .advancedLoader
@@ -596,8 +520,8 @@ body
 		:display inline-block
 		:position absolute
 		:top 0
-		:background-color $menu_red
-		+gradient($menu_red, $menu_red, unquote("noiz.png"))
+		:background-color $menu_blue
+		+gradient($menu_blue, $menu_blue, unquote("noiz.png"))
 		+radius(100%)
 		:-webkit-animation bounceSmall 2.0s infinite ease-in-out
 		:-moz-animation bounceSmall 2.0s infinite ease-in-out
@@ -617,142 +541,3 @@ body
 
 
 
-.loading-overlay
-	:display block
-	:width 100%
-	:height 100%
-	:clear both
-	:position fixed
-	:z-index 4000
-	:top 0
-	:left 0
-	:right 0
-	:bottom 0
-	:background
-		:color rgba(0,0,0,0.5)
-
-
-	.loading-overlay-inner
-		:display table
-		:vertical-align middle
-		:text-align center
-		:position relative
-		:width 100%
-		:height 100%
-
-		.loading-overlay-contents
-			:display table-cell
-			:vertical-align middle
-			:padding 50px
-			:text-align center
-
-		.loading-overlay-body
-			:position relative
-			:display inline-block
-			:text-align center
-			:max-width 70%
-			:perspective 300px
-
-			&> strong
-				:margin 0 auto
-				:text-align center
-
-		.loading-overlay-symbol
-			:display block
-			:position absolute
-			:left 50%
-			:top 50%
-			:animation loading-overlay-animation-2d 4s infinite linear
-
-			&.csstransforms3d
-				:-webkit-animation block
-				:-webkit-transform-style preserve-3d
-				:-webkit-transform rotateZ(30deg)
-
-				.picto
-					:-webkit-animation loading-overlay-animation-3d 3s infinite linear
-
-
-		.picto, .picto-block
-			:position relative
-			:padding 0 15px
-
-			&:after
-				:position absolute
-				:top 50%
-				:left 50%
-				:margin-left -15px
-				:margin-top -15px
-				:font-family $swiss-piktos
-				:font-size 4em
-				:color #47423f
-				:content attr(data-icon)
-				:text-align left
-				:font-style normal
-				:font-weight normal
-				:font-variant normal
-				:text-transform none !important
-				:speak none
-				:display inline-block
-				:text-decoration none
-				:width 30px
-				:line-height 1em
-				:-webkit-font-smoothing antialiased
-
-
-		.picto
-			:display inline
-			:display -webkit-inline-box
-			:min-height 1ex
-			:max-height 1em
-			:letter-spacing 1ex
-			:text-decoration none
-			:padding 0
-
-			&:before
-				:content ''
-
-		.picto-block
-			:display inline-block
-			:vertical-align middle
-			:letter-spacing -1ex
-			:text-decoration none
-			:width 30px
-			:height 30px
-			:max-height none
-			:padding 0
-			+border_box
-
-		.picto-large
-			:padding 0 30px
-
-			&.after
-				:width 60px
-				:height 60px
-				:margin-left -30px
-				:margin-top -30px
-				:font-size 5em
-
-		.picto-gray:after
-			:color $menu_gray
-
-		.picto-orange:after
-			:color $menu_orange
-
-		.picto-blue:after
-			:color $menu_blue
-
-		.picto-green:after
-			:color $menu_green
-
-		.picto-red:after
-			:color $menu_red
-
-		.picto-white:after
-			:color white
-
-		// pictolists
-		.picto-flight:after
-			content: ""
-
-		
