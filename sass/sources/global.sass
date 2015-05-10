@@ -412,34 +412,34 @@ body
 					:color black
 					:color rgba(0,0,0,0.7)
 				:z-index 1000
-				:-webkit-backface-visibility hidden
-				:-moz-backface-visibility hidden
-				:-ms-backface-visibility hidden
-				:backface-visibility hidden
-				:-webkit-animation-duration .5s
-				:-webkit-animation-delay .1s
-				:-webkit-animation-timing-function ease
-				:-webkit-animation-fill-mode both
-				:-moz-animation-duration .5s
-				:-moz-animation-delay .1s
-				:-moz-animation-timing-function ease
-				:-moz-animation-fill-mode both
-				:-ms-animation-duration .5s
-				:-ms-animation-delay .1s
-				:-ms-animation-timing-function ease
-				:-ms-animation-fill-mode both
-				:animation-duration .5s
-				:animation-delay .1s
-				:animation-timing-function ease
-				:animation-fill-mode both
-				:-webkit-background-clip padding-box
-				:-moz-background-clip padding-box
-				:background-clip padding-box
-				:-webkit-animation-name fadeIn
-				:-moz-animation-name fadeIn
-				:-ms-animation-name fadeIn
-				:-o-animation-name fadeIn
-				:animation-name fadeIn
+				// :-webkit-backface-visibility hidden
+				// :-moz-backface-visibility hidden
+				// :-ms-backface-visibility hidden
+				// :backface-visibility hidden
+				// :-webkit-animation-duration .5s
+				// :-webkit-animation-delay .1s
+				// :-webkit-animation-timing-function ease
+				// :-webkit-animation-fill-mode both
+				// :-moz-animation-duration .5s
+				// :-moz-animation-delay .1s
+				// :-moz-animation-timing-function ease
+				// :-moz-animation-fill-mode both
+				// :-ms-animation-duration .5s
+				// :-ms-animation-delay .1s
+				// :-ms-animation-timing-function ease
+				// :-ms-animation-fill-mode both
+				// :animation-duration .5s
+				// :animation-delay .1s
+				// :animation-timing-function ease
+				// :animation-fill-mode both
+				// :-webkit-background-clip padding-box
+				// :-moz-background-clip padding-box
+				// :background-clip padding-box
+				// :-webkit-animation-name fadeIn
+				// :-moz-animation-name fadeIn
+				// :-ms-animation-name fadeIn
+				// :-o-animation-name fadeIn
+				// :animation-name fadeIn
 
 				&> div
 					:position absolute
@@ -451,12 +451,12 @@ body
 						:color white
 					+border_box
 					:padding 3%
-					+prepare_animation
-					:-webkit-animation-name bounceInDown
-					:-moz-animation-name bounceInDown
-					:-ms-animation-name bounceInDown
-					:-o-animation-name bounceInDown
-					:animation-name bounceInDown
+					// +prepare_animation
+					// :-webkit-animation-name bounceInDown
+					// :-moz-animation-name bounceInDown
+					// :-ms-animation-name bounceInDown
+					// :-o-animation-name bounceInDown
+					// :animation-name bounceInDown
 
 					.close
 						:position absolute
@@ -513,6 +513,18 @@ body
 						:right 10px
 						:top 170px
 						:display block
+
+						.map_canvas
+							:width 100%
+							:float left
+							:height 100%
+							:clear both
+							:text-align left
+							:margin 0
+							:padding 0
+
+							img
+								:max-width none !important
 					
 
 			.inside_page
@@ -611,19 +623,19 @@ body
 							:max-width none !important
 						
 
-						.infoWindowTitle, .infoWindowContent
-							:float left
-							:width 100%
-							:font-size 1.1em
-							:margin 0 0 4px 0
-							:font-weight 400
-							:text-transform uppercase
+.infoWindowTitle, .infoWindowContent
+	:float left
+	:width 100%
+	:font-size 1.1em
+	:margin 0 0 4px 0
+	:font-weight 400
+	:text-transform uppercase
 
-						.infoWindowTitle
-							:font-size 1.3em
-							:padding-bottom 1px
-							:border-bottom 1px solid rgba(0,0,0,0.1)
-							:margin-bottom 10px
+.infoWindowTitle
+	:font-size 1.3em
+	:padding-bottom 1px
+	:border-bottom 1px solid rgba(0,0,0,0.1)
+	:margin-bottom 10px
 
 			
 
