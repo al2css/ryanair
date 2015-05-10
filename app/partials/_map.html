@@ -1,12 +1,14 @@
 <header class="header">
 	<a href="#/destinations" title="" class="logo"></a>
-    <section id="menu" class="menu" data-ng-include="'app/partials/_menu.html'"></section>
+    <!-- <section id="menu" class="menu" data-ng-include="'app/partials/_menu.html'"></section> -->
 </header>
 
 <div class="inside_page map">
     <section class="title">
         <h1>{{ map.title }}</h1></section>
     <div class="clear"></div>
+
+    <input type="text" class="inbox__search" ng-model="map.search" value="" placeholder="Search by Country or City " />
     
     <div id="map_container" class="map_container">
         <div id="map_canvas" class="map_canvas"></div>

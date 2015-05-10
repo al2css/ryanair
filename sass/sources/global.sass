@@ -170,457 +170,284 @@ div
 	:padding 0
 	:margin 0
 
-body
-	&.home
-		// +transition(all 0.2s ease-in)
-		// :background
-		// 	:color white
-		// 	:image image_url(unquote("bg_home_day.jpg"))
-		// 	:repeat no-repeat
-		// 	:position center center
-		// 	:attachment fixed
-		// 	:size cover
-		// :-webkit-background-size cover
-		// :-moz-background-size cover
-		// :-o-background-size cover
-		// :background-size cover
-		// +media-query(phone)
-		// 	:background-image none
+#site
+	:width 100%
+	:height 100%
+	:min-width $min_width !important
+	:clear both
+	:padding 0
+	:margin 0 auto
+	:display block
+	:position relative
+	:z-index 1000
+	:-webkit-backface-visibility hidden
+	:-moz-backface-visibility hidden
+	:-ms-backface-visibility hidden
+	:-o-backface-visibility hidden
+	:backface-visibility hidden
+	+unselectable
 
-		// &.day
-		// 	:background
-		// 		:image image_url(unquote("bg_home_day.jpg"))
-		// 	+media-query(phone)
-		// 		:background-image none
+	.title
+		:float left
+		:width 100%
+		:text-align center
+		:margin 0
+		:clear both
+		+border_box
+		:text-transform uppercase
+		:font-size 1.7em
+		:font-weight 700
 
-		// &.night
-		// 	:background
-		// 		:image image_url(unquote("bg_home_night.jpg"))
-		// 	+media-query(phone)
-		// 		:background-image none
+		h1
+			:text-align center
+			:margin-top 10px
 
-		// #page
-		// 	:height 100%
-		// 	:background
-		// 		:color transparent
-		// 		:image none
-
-		// 	.wrapper
-		// 		:position absolute
-		// 		:left 0
-		// 		:bottom 0
-		// 		+media-query(phone)
-		// 			:position relative
-		// 			:bottom auto
-		// 			:left auto
-		// 		+media-query(tablet)
-		// 			:bottom 0
-		// 			:margin-bottom 0
-		// 		+media-query(pc)
-		// 			:bottom 0%
-		// 			:margin-bottom 0
-		// 		+media-query(pc_huge)
-		// 			:bottom 4%
-		// 			:margin-bottom 0
-
-	#site
+	.content
+		:float left
 		:width 100%
 		:height 100%
-		:min-width $min_width !important
 		:clear both
 		:padding 0
-		:margin 0 auto
+		:margin 0
 		:display block
 		:position relative
-		:z-index 1000
-		:-webkit-backface-visibility hidden
-		:-moz-backface-visibility hidden
-		:-ms-backface-visibility hidden
-		:-o-backface-visibility hidden
-		:backface-visibility hidden
-		+unselectable
-
-		.title
+		// +transition(all 0.2s ease-in)
+		
+		.header
 			:float left
 			:width 100%
-			:text-align center
+			:clear both
 			:margin 0
-			:clear both
-			+border_box
-			:text-transform uppercase
-			:font-size 1.7em
-			:font-weight 700
-
-			h1
-				:text-align center
-
-		.content
-			:float left
-			:width 100%
-			:height 100%
-			:clear both
 			:padding 0
-			:margin 0
-			:display block
+			:clear both
 			:position relative
-			// +transition(all 0.2s ease-in)
-			
-			.header
+			:height 80px
+			:margin-bottom 20px
+			:display block
+			:background
+				:color $menu_lightblue
+				:repeat no-repeat
+				:position 0 0
+			:border-bottom 1px solid black
+			+prepare_animation
+			:-webkit-animation-name bounceInDown
+			:-moz-animation-name bounceInDown
+			:-ms-animation-name bounceInDown
+			:-o-animation-name bounceInDown
+			:animation-name bounceInDown
+			+media-query(phone)
+				:background-image none
+				:height auto
+
+			.logo
+				:float none
+				:width 223px
+				:height 100%
+				:position relative
+				:z-index 100
+				:margin 0px auto
+				:display block
+				:background
+					:image image_url(unquote("ryanair.png"))
+					:repeat no-repeat
+					:position center center
+				+media-query(phone)
+					:float none
+					:margin 10px auto
+					:clear both
+					:height 43px
+
+
+			// .menu
+			// 	:float left
+			// 	:width auto
+			// 	:height 130px
+			// 	:margin 20px 0 0 0
+			// 	:padding 0
+			// 	:position relative
+			// 	:font-weight 400
+			// 	+media-query(phone)
+			// 		:height auto
+			// 		:width 100%
+			// 		:display block
+			// 		:clear both
+			// 		:margin-bottom 20px
+
+			// 	&> a
+			// 		:padding 0
+			// 		:margin 0
+			// 		:float left
+			// 		:display inline-block
+			// 		// +transition(all 0.2s ease-in)
+			// 		:color white
+			// 		:text-transform uppercase
+			// 		:font-weight 400
+			// 		:font-size 1.1em
+			// 		:height 130px
+			// 		:line-height 130px
+			// 		:text-shadow 0 1px 1px rgba(0,0,0, 0.4)
+			// 		:text-align center
+			// 		:position relative
+			// 		+media-query(phone)
+			// 			:height auto
+			// 			:line-height normal
+			// 			:padding 10px 0
+			// 			:width 100%
+			// 			:clear both
+			// 			:text-align center
+			// 			:margin 0
+			// 		+media-query(pc_huge)
+			// 			:margin 0 10px
+			// 		+media-query(pc)
+			// 			:margin 0 10px
+			// 		+media-query(tablet)
+			// 			:margin 0
+			// 		+media-query(phone)
+			// 			:margin 0
+
+			// 		&> span
+			// 			:float left
+			// 			:text-align center
+			// 			:padding 0 12px
+			// 			:margin 0
+			// 			:width 100%
+			// 			:height 100%
+			// 			:position relative
+			// 			:z-index 10
+			// 			+border_box
+			// 			+media-query(phone)
+			// 				:padding 0
+
+			// 		&> em, &> q
+			// 			:float left
+			// 			:text-align left
+			// 			:text-indent -6000em
+			// 			:display block
+			// 			:width 12px
+			// 			:height 100%
+			// 			:position absolute
+			// 			:top 0
+			// 			:bottom 0
+			// 			:z-index 20
+			// 			+rotate(4)
+			// 			:background-color transparent
+			// 			// +transition(all 0.2s ease-in)
+			// 			+media-query(phone)
+			// 				:display none
+
+			// 		&> em
+			// 			:left -5px
+			// 			:top 1px
+			// 		&> q
+			// 			:right -6px	
+
+			// 		&:first-child
+			// 			:margin-left 0px
+
+			// 		&:last-child
+			// 			:margin-right 0px
+
+			// 		&.current, &:hover
+			// 			:color $menu_lightblue
+			// 			:background-color white
+			// 			:text-shadow 0 1px 1px rgba(0,0,0, 0.1)
+
+			// 			&> em, &> q
+			// 				:background-color white
+
+
+		.inside_page
+			:float left
+			:width 100%
+			:clear both
+			:display block
+			:padding 10px
+			:margin 0
+			+border_box
+			:position relative
+
+			.inbox__search
+				:float left
+				:width 90%
+				:margin 20px 5% 40px 5%
+				:padding 10px
+				+border_box
+				:font-family $bitter
+				:color $menu_blue
+				:text-transform uppercase
+				:outline none
+				:border 1px solid #ADB1B7
+				:box-shadow 0 0 15px 0px rgba(0,0,0,0.2) inset
+				+transition(all 0.2s ease-in)
+
+				&:focus
+					:box-shadow 0 0 5px 0px rgba(0,0,0,0.2) inset
+
+			ul.list_destinations
 				:float left
 				:width 100%
 				:clear both
 				:margin 0
-				:padding 0
-				:clear both
-				:position relative
-				:height 150px
-				:margin-bottom 40px
-				:display block
-				:background
-					:color $menu_lightblue
-					:repeat no-repeat
-					:position 0 0
-				:border-bottom 1px solid black
-				+media-query(phone)
-					:background-image none
-					:height auto
-
-				.logo
-					:float left
-					:width 223px
-					:height 100%
-					:position relative
-					:z-index 100
-					:margin 0 2%
-					:display block
-					:background
-						// :image image_url(unquote("ryanair.png"))
-						:repeat no-repeat
-						:position center center
-					+media-query(phone)
-						:float none
-						:margin 10px auto
-						:clear both
-						:height 43px
-
-				.menu
-					:float left
-					:width auto
-					:height 130px
-					:margin 20px 0 0 0
-					:padding 0
-					:position relative
-					:font-weight 400
-					+media-query(phone)
-						:height auto
-						:width 100%
-						:display block
-						:clear both
-						:margin-bottom 20px
-
-					&> a
-						:padding 0
-						:margin 0
-						:float left
-						:display inline-block
-						// +transition(all 0.2s ease-in)
-						:color white
-						:text-transform uppercase
-						:font-weight 400
-						:font-size 1.1em
-						:height 130px
-						:line-height 130px
-						:text-shadow 0 1px 1px rgba(0,0,0, 0.4)
-						:text-align center
-						:position relative
-						+media-query(phone)
-							:height auto
-							:line-height normal
-							:padding 10px 0
-							:width 100%
-							:clear both
-							:text-align center
-							:margin 0
-						+media-query(pc_huge)
-							:margin 0 10px
-						+media-query(pc)
-							:margin 0 10px
-						+media-query(tablet)
-							:margin 0
-						+media-query(phone)
-							:margin 0
-
-						&> span
-							:float left
-							:text-align center
-							:padding 0 12px
-							:margin 0
-							:width 100%
-							:height 100%
-							:position relative
-							:z-index 10
-							+border_box
-							+media-query(phone)
-								:padding 0
-
-						&> em, &> q
-							:float left
-							:text-align left
-							:text-indent -6000em
-							:display block
-							:width 12px
-							:height 100%
-							:position absolute
-							:top 0
-							:bottom 0
-							:z-index 20
-							+rotate(4)
-							:background-color transparent
-							// +transition(all 0.2s ease-in)
-							+media-query(phone)
-								:display none
-
-						&> em
-							:left -5px
-							:top 1px
-						&> q
-							:right -6px	
-
-						&:first-child
-							:margin-left 0px
-
-						&:last-child
-							:margin-right 0px
-
-						&.current, &:hover
-							:color $menu_lightblue
-							:background-color white
-							:text-shadow 0 1px 1px rgba(0,0,0, 0.1)
-
-							&> em, &> q
-								:background-color white
-
-			.destionation_info		
 				:width 100%
-				:height 100%			
-				:position absolute
-				:top 0
-				:left 0
-				:right 0
-				:bottom 0
-				:background
-					:color black
-					:color rgba(0,0,0,0.7)
-				:z-index 1000
-				// :-webkit-backface-visibility hidden
-				// :-moz-backface-visibility hidden
-				// :-ms-backface-visibility hidden
-				// :backface-visibility hidden
-				// :-webkit-animation-duration .5s
-				// :-webkit-animation-delay .1s
-				// :-webkit-animation-timing-function ease
-				// :-webkit-animation-fill-mode both
-				// :-moz-animation-duration .5s
-				// :-moz-animation-delay .1s
-				// :-moz-animation-timing-function ease
-				// :-moz-animation-fill-mode both
-				// :-ms-animation-duration .5s
-				// :-ms-animation-delay .1s
-				// :-ms-animation-timing-function ease
-				// :-ms-animation-fill-mode both
-				// :animation-duration .5s
-				// :animation-delay .1s
-				// :animation-timing-function ease
-				// :animation-fill-mode both
-				// :-webkit-background-clip padding-box
-				// :-moz-background-clip padding-box
-				// :background-clip padding-box
-				// :-webkit-animation-name fadeIn
-				// :-moz-animation-name fadeIn
-				// :-ms-animation-name fadeIn
-				// :-o-animation-name fadeIn
-				// :animation-name fadeIn
 
-				&> div
-					:position absolute
-					:top 10%
-					:left 10%
-					:bottom 10%
-					:right 10%
-					:background
-						:color white
-					+border_box
-					:padding 3%
-					// +prepare_animation
-					// :-webkit-animation-name bounceInDown
-					// :-moz-animation-name bounceInDown
-					// :-ms-animation-name bounceInDown
-					// :-o-animation-name bounceInDown
-					// :animation-name bounceInDown
+				li
+					:float left
+					:padding 5px
+					:margin 3px 0
+					:display inline-block
+					+prepare_animation
+					:-webkit-animation-name bounceIn
+					:-moz-animation-name bounceIn
+					:-ms-animation-name bounceIn
+					:-o-animation-name bounceIn
+					:animation-name bounceIn
+					// @for $i from 1 through 200
+					// 	&:nth-child(#{$i})
+					// 		:-webkit-animation-delay #{$i/800}s
+					// 		:-moz-animation-delay #{$i/800}s
+					// 		:-o-animation-delay #{$i/800}s
+					// 		:-ms-animation-delay #{$i/800}s
+					// 		:animation-delay #{$i/800}s
 
-					.close
-						:position absolute
-						:top 15px
-						:right 15px
-						:display block
+					.airport
+						:padding 3px 5px
+						:color black
+						:text-shadow 0 1px 0 rgba(255,255,255,0.3)
 						:background
-							:image image_url(unquote("close_pop2.png"))
-							:repeat no-repeat
-							:position center center
-						:width 25px
-						:height 25px
-						:text-align left
-						:text-indent -5000em
-						:z-index 50
+							:color lighten($menu_lightblue, 48%)
+						+transition(all 0.2s ease-in)
+						:z-index 8
+						:position relative
+						:cursor pointer
 
 						&:hover
-							+scale(1.1)
+							:background
+								:color lighten($menu_lightblue, 44%)
+							:z-index 10
 
-					h2, h3, h4, p
-						:width 100%
-						:float left
-						:text-align center
-						:line-height 120%
-						:padding 0
-						:margin 0 0 5px 0
-						:font-size 1.2em
-						:font-weight 400
-						:position relative
-						:z-index 20
-
-						em
-							:font-style normal
-							:font-weight 700
-
-					h3
-						:font-size 1em
-						:font-weight 400
-					h4
-						:font-size 0.9em
-						:font-weight 400
-					p
-						:font-size 0.8em
-						:font-weight 400
-
-					.minimap
-						:background
-							:color gray
-						:position absolute
-						:padding 0
-						:margin 0
-						:bottom 10px
-						:left 10px
-						:right 10px
-						:top 170px
-						:display block
-
-						.map_canvas
-							:width 100%
-							:float left
-							:height 100%
-							:clear both
-							:text-align left
-							:margin 0
-							:padding 0
-
-							img
-								:max-width none !important
 					
+			&.map
+				:position absolute
+				:bottom 0
+				:top 80px
+				:left 0
+				:right 0
+				:z-index 100
+				:margin-bottom 0
+				:padding 10px 0
 
-			.inside_page
-				:float left
-				:width 100%
-				:clear both
-				:display block
-				:padding 10px
-				:margin 0 0 20px 0
-				+border_box
-				:position relative
+				.map_container, .map_canvas
+					:width 100%
+					:float left
+					:height 100%
+					:clear both
+					:text-align left
+					:margin 0
+					:padding 0
 
-				&.destinations
-
-					.inbox__search
-						:float left
-						:width 90%
-						:margin 20px 5% 50px 5%
-						:padding 10px
-						+border_box
-						:font-family $bitter
-						:color $menu_blue
-						:text-transform uppercase
-						:outline none
-						:border 1px solid #ADB1B7
-						:box-shadow 0 0 15px 0px rgba(0,0,0,0.2) inset
-						+transition(all 0.2s ease-in)
-
-						&:focus
-							:box-shadow 0 0 5px 0px rgba(0,0,0,0.2) inset
-
-					ul.list_destinations
-						:float left
-						:width 100%
-						:clear both
-						:margin 0
-						:width 100%
-
-						li
-							:float left
-							:padding 5px
-							:margin 3px 0
-							:display inline-block
-							+prepare_animation
-							:-webkit-animation-name bounceIn
-							:-moz-animation-name bounceIn
-							:-ms-animation-name bounceIn
-							:-o-animation-name bounceIn
-							:animation-name bounceIn
-							// @for $i from 1 through 200
-							// 	&:nth-child(#{$i})
-							// 		:-webkit-animation-delay #{$i/800}s
-							// 		:-moz-animation-delay #{$i/800}s
-							// 		:-o-animation-delay #{$i/800}s
-							// 		:-ms-animation-delay #{$i/800}s
-							// 		:animation-delay #{$i/800}s
-
-							.airport
-								:padding 3px 5px
-								:color black
-								:text-shadow 0 1px 0 rgba(255,255,255,0.3)
-								:background
-									:color lighten($menu_lightblue, 48%)
-								+transition(all 0.2s ease-in)
-								:z-index 8
-								:position relative
-								:cursor pointer
-
-								&:hover
-									:background
-										:color lighten($menu_lightblue, 44%)
-									:z-index 10
-
-						
-				&.map
-					:position absolute
-					:bottom 0
-					:top 190px
-					:left 0
-					:right 0
-					:z-index 100
-					:margin-bottom 0
-					:padding 10px 0
-
-					.map_container, .map_canvas
-						:width 100%
-						:float left
-						:height 100%
-						:clear both
-						:text-align left
-						:margin 0
-						:padding 0
-
-					.map_canvas
-						img
-							:max-width none !important
+				.map_canvas
+					img
+						:max-width none !important
 						
 
 .infoWindowTitle, .infoWindowContent
