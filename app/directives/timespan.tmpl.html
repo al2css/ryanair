@@ -1,9 +1,0 @@
-<div class="timespan" id="timespan">
-	
-	<div class="hour" ng-repeat="n in [] | getArrayFilter:timespan.hours" ng-class="{'current_hour' : $index === timespan.currentHour }" ng-style="{ 'width': timespan.timespanWidth + '%' }" id="gotohour{{ $index }}">
-		<span>{{ $index }}</span>
-		<q></q>
-	</div>
-
-	<div class="clear"></div>
-</div>

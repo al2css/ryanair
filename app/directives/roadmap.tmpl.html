@@ -1,7 +1,0 @@
-<div class="roadmap flight{{ flights.id }}" id="flightId{{ flights.id }}" ng-repeat="flights in roadmap.flights.assigned_flights | orderBy:'departing_time'" ng-style="roadmap.setFlightToHour(flights.departing_time)">
-	<q></q>
-	<h2>
-		<a href="javascript:;" title="" tooltip-placement="top" tooltip-html-unsafe="Flight: <b>{{ flights.from }} - {{ flights.to }}</b><br/> Departing time: <b>{{ flights.departing_time * 1000 | date:'MMM d, y HH:mm' }}</b>" ng-click="goToFlight(flights.id);">{{ flights.from_code }} - {{ flights.to_code }}</a>
-	</h2>
-	<div class="clear"></div>
-</div>
