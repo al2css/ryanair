@@ -14,7 +14,9 @@ RyanairApp.controller('MapCtrl', ['$scope', '$location', 'AirportsFactory',
             }));
 
         var mapOptions = {
-            zoom: 4,
+            zoom: 5,
+            minZoom: 4, 
+            maxZoom: 8, 
             center: new google.maps.LatLng(48.085417915489565, 18.6328125), // Central Europe
             mapTypeId: google.maps.MapTypeId.TERRAIN
         };
@@ -24,12 +26,13 @@ RyanairApp.controller('MapCtrl', ['$scope', '$location', 'AirportsFactory',
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(info.latitude, info.longitude),
                 map: map,
-                title: info.name
+                title: info.name,
+                animation: google.maps.Animation.DROP
             });
-            marker.content = '<div class="infoWindowContent">' + info.country.name + '</div>';
+            marker.content = '<p class="infoWindowContent">' + info.country.name + '</p>';
 
             google.maps.event.addListener(marker, 'click', function() {
-                infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
+                infoWindow.setContent('<h2 class="infoWindowTitle">' + marker.title + '</h2>' + marker.content);
                 infoWindow.open(map, marker);
             });
 
