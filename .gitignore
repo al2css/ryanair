@@ -32,3 +32,4 @@
 *.dSYM/
 *.sass-cache/
 /node_modules/
+Gruntfile.js
