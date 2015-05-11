@@ -7,26 +7,22 @@ RyanairApp.controller('MapCtrl', ['$scope', '$filter', 'AirportsFactory',
         AirportsFactory.getAirports()
             .then(angular.bind(this, function then() {
                 $scope.airports = AirportsFactory.airports;
-				$scope.copyAirports = $scope.airports;
+                $scope.copyAirports = $scope.airports;
 
-				initializeMap();
+                initializeMap();
 
-				$scope.$watch('map.search', function(val) { 
-				    $scope.airports = $filter('filter')($scope.copyAirports, val);
-				    
-				    clearMarkers();
-				    
-				    for (var i = 0, len = $scope.airports.length; i < len; i++) {
-				        addMarker($scope.airports[i]);
-				    }
+                $scope.$watch('map.search', function(val) {
+                    $scope.airports = $filter('filter')($scope.copyAirports, val);
 
-				    // console.log('val: ', val);
-				    // console.log('$scope.airports: ', $scope.airports);
-				});
+                    clearMarkers();
+
+                    for (var i = 0, len = $scope.airports.length; i < len; i++) {
+                        addMarker($scope.airports[i]);
+                    }
+
+                });
 
             }));
-
-        // console.warn('$scope: ', $scope);
 
     }
 ]);
