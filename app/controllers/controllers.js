@@ -9,15 +9,15 @@ RyanairApp.controller('MapCtrl', ['$scope', '$filter', 'AirportsFactory',
                 $scope.airports = AirportsFactory.airports;
                 $scope.copyAirports = $scope.airports;
 
-                initializeMap();
+                generateMaps.initializeMap();
 
                 $scope.$watch('map.search', function(val) {
                     $scope.airports = $filter('filter')($scope.copyAirports, val);
 
-                    clearMarkers();
+                    generateMaps.clearMarkers();
 
                     for (var i = 0, len = $scope.airports.length; i < len; i++) {
-                        addMarker($scope.airports[i]);
+                        generateMaps.addMarker($scope.airports[i]);
                     }
 
                 });
