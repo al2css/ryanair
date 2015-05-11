@@ -186,6 +186,7 @@ div
 	:-o-backface-visibility hidden
 	:backface-visibility hidden
 	+unselectable
+	:overflow hidden
 
 	.title
 		:float left
@@ -221,7 +222,8 @@ div
 			:padding 0
 			:clear both
 			:position relative
-			:height 80px
+			:z-index 100
+			:height 70px
 			:margin-bottom 20px
 			:display block
 			:background
@@ -237,7 +239,6 @@ div
 			:animation-name bounceInDown
 			+media-query(phone)
 				:background-image none
-				:height auto
 
 			.logo
 				:float none
@@ -248,7 +249,7 @@ div
 				:margin 0px auto
 				:display block
 				:background
-					// :image image_url(unquote("ryanair.png"))
+					:image image_url(unquote("ryanair.png"))
 					:repeat no-repeat
 					:position center center
 				+media-query(phone)
@@ -259,14 +260,30 @@ div
 
 
 		.inside_page
-			:float left
 			:width 100%
 			:clear both
 			:display block
-			:padding 10px
 			:margin 0
 			+border_box
-			:position relative
+			:position absolute
+			:bottom 0
+			:top 70px
+			:left 0
+			:right 0
+			:z-index 100
+			:padding 10px 0
+			:z-index 80
+
+			.title
+				:position relative
+				:z-index 50
+				+prepare_animation
+				:-webkit-animation-name bounceInDown
+				:-moz-animation-name bounceInDown
+				:-ms-animation-name bounceInDown
+				:-o-animation-name bounceInDown
+				:animation-name bounceInDown
+				:text-shadow 0px 0px 15px rgba(255,255,255,1), 0px 0px 15px rgba(255,255,255,1)
 
 			.inbox__search
 				:float left
@@ -281,6 +298,14 @@ div
 				:border 1px solid #ADB1B7
 				:box-shadow 0 0 15px 0px rgba(0,0,0,0.2) inset
 				+transition(all 0.2s ease-in)
+				:position relative
+				:z-index 60
+				+prepare_animation
+				:-webkit-animation-name bounceIn
+				:-moz-animation-name bounceIn
+				:-ms-animation-name bounceIn
+				:-o-animation-name bounceIn
+				:animation-name bounceIn
 
 				&:focus
 					:box-shadow 0 0 5px 0px rgba(0,0,0,0.2) inset
@@ -327,29 +352,24 @@ div
 								:color lighten($menu_lightblue, 44%)
 							:z-index 10
 
-					
-			&.map
+			.map_container, .map_canvas
+				:width 100%
+				:float left
+				:height 100%
+				:clear both
+				:text-align left
+				:margin 0
+				:padding 0
 				:position absolute
-				:bottom 0
-				:top 80px
+				:top 0
 				:left 0
+				:bottom 0
 				:right 0
-				:z-index 100
-				:margin-bottom 0
-				:padding 10px 0
+				:z-index 40
 
-				.map_container, .map_canvas
-					:width 100%
-					:float left
-					:height 100%
-					:clear both
-					:text-align left
-					:margin 0
-					:padding 0
-
-				.map_canvas
-					img
-						:max-width none !important
+			.map_canvas
+				img
+					:max-width none !important
 						
 
 .infoWindowTitle, .infoWindowContent
